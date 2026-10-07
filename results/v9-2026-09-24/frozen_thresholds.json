@@ -1,0 +1,32 @@
+{
+  "anatomical_population": {
+    "fixed_030": 0.3,
+    "calibration_macro_fpr20": 0.7364401624708695,
+    "calibration_macro_recall94": 0.2943042956835911
+  },
+  "anatomical_personal": {
+    "fixed_030": 0.3,
+    "calibration_macro_fpr20": 0.7342094122180298,
+    "calibration_macro_recall94": 0.28769973629539086
+  },
+  "population": {
+    "fixed_030": 0.3,
+    "calibration_macro_fpr20": 0.7741470318149098,
+    "calibration_macro_recall94": 0.26298191866536563
+  },
+  "scalar": {
+    "fixed_030": 0.3,
+    "calibration_macro_fpr20": 0.7695153532730048,
+    "calibration_macro_recall94": 0.25612724119964575
+  },
+  "rewired_population": {
+    "fixed_030": 0.3,
+    "calibration_macro_fpr20": 0.7699695259833597,
+    "calibration_macro_recall94": 0.2973963298764212
+  },
+  "rewired_personal": {
+    "fixed_030": 0.3,
+    "calibration_macro_fpr20": 0.7686965497142103,
+    "calibration_macro_recall94": 0.29438844872559056
+  }
+}

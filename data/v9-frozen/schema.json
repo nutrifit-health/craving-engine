@@ -1,0 +1,566 @@
+[
+  {
+    "name": "pn_sleepDeficit",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: sleepDeficit",
+    "available_if": null
+  },
+  {
+    "name": "pn_circadianVulnerability",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: circadianVulnerability",
+    "available_if": null
+  },
+  {
+    "name": "pn_reactiveHypoglycemia",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: reactiveHypoglycemia",
+    "available_if": null
+  },
+  {
+    "name": "pn_glycogenDepletion",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: glycogenDepletion",
+    "available_if": null
+  },
+  {
+    "name": "pn_leptinSuppression",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: leptinSuppression",
+    "available_if": null
+  },
+  {
+    "name": "pn_ghrelinHunger",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: ghrelinHunger",
+    "available_if": null
+  },
+  {
+    "name": "pn_acuteStressCortisol",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: acuteStressCortisol",
+    "available_if": null
+  },
+  {
+    "name": "pn_dopamineDepletion",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: dopamineDepletion",
+    "available_if": null
+  },
+  {
+    "name": "pn_sugarPriming",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: sugarPriming",
+    "available_if": null
+  },
+  {
+    "name": "pn_alcoholDisinhibition",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: alcoholDisinhibition",
+    "available_if": null
+  },
+  {
+    "name": "pn_proteinDebt",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: proteinDebt",
+    "available_if": null
+  },
+  {
+    "name": "pn_dehydration",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: dehydration",
+    "available_if": null
+  },
+  {
+    "name": "pn_workoutFatigue",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: workoutFatigue",
+    "available_if": null
+  },
+  {
+    "name": "pn_habitInstability",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: habitInstability",
+    "available_if": null
+  },
+  {
+    "name": "pn_palatabilityExposure",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: palatabilityExposure",
+    "available_if": null
+  },
+  {
+    "name": "pn_cumulativeCalorieDeficit",
+    "unit": "0..1",
+    "semantics": "Actual TS encodeCravingContext: cumulativeCalorieDeficit",
+    "available_if": null
+  },
+  {
+    "name": "local_hour",
+    "unit": "h",
+    "semantics": "Доступное локальное время решения",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_count",
+    "unit": "count",
+    "semantics": "Записанные приёмы за последние 6 часов, включая границы",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_calories",
+    "unit": "kcal",
+    "semantics": "Сумма calories только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_protein",
+    "unit": "g",
+    "semantics": "Сумма protein только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_fat",
+    "unit": "g",
+    "semantics": "Сумма fat только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_carbs",
+    "unit": "g",
+    "semantics": "Сумма carbs только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_fiber",
+    "unit": "g",
+    "semantics": "Сумма fiber только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_sugars",
+    "unit": "g",
+    "semantics": "Сумма sugars только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_addedSugars",
+    "unit": "g",
+    "semantics": "Сумма addedSugars только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_starch",
+    "unit": "g",
+    "semantics": "Сумма starch только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_6h_alcohol",
+    "unit": "g",
+    "semantics": "Сумма alcohol только в доступных приёмах за 6 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_count",
+    "unit": "count",
+    "semantics": "Записанные приёмы за последние 24 часов, включая границы",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_calories",
+    "unit": "kcal",
+    "semantics": "Сумма calories только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_protein",
+    "unit": "g",
+    "semantics": "Сумма protein только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_fat",
+    "unit": "g",
+    "semantics": "Сумма fat только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_carbs",
+    "unit": "g",
+    "semantics": "Сумма carbs только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_fiber",
+    "unit": "g",
+    "semantics": "Сумма fiber только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_sugars",
+    "unit": "g",
+    "semantics": "Сумма sugars только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_addedSugars",
+    "unit": "g",
+    "semantics": "Сумма addedSugars только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_starch",
+    "unit": "g",
+    "semantics": "Сумма starch только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "meals_24h_alcohol",
+    "unit": "g",
+    "semantics": "Сумма alcohol только в доступных приёмах за 24 часов",
+    "available_if": null
+  },
+  {
+    "name": "last_meal_present",
+    "unit": "0/1",
+    "semantics": "Есть доступный приём в 48-часовом payload",
+    "available_if": null
+  },
+  {
+    "name": "last_meal_age_hours",
+    "unit": "h",
+    "semantics": "Возраст последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "previous_meal_gap_present",
+    "unit": "0/1",
+    "semantics": "Есть два разных времени доступных приёмов",
+    "available_if": null
+  },
+  {
+    "name": "previous_meal_gap_hours",
+    "unit": "h",
+    "semantics": "Интервал между двумя последними разными временами приёмов",
+    "available_if": "previous_meal_gap_present"
+  },
+  {
+    "name": "last_meal_calories",
+    "unit": "kcal",
+    "semantics": "calories последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_protein",
+    "unit": "g",
+    "semantics": "protein последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_fat",
+    "unit": "g",
+    "semantics": "fat последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_carbs",
+    "unit": "g",
+    "semantics": "carbs последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_fiber",
+    "unit": "g",
+    "semantics": "fiber последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_sugars",
+    "unit": "g",
+    "semantics": "sugars последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_addedSugars",
+    "unit": "g",
+    "semantics": "addedSugars последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_starch",
+    "unit": "g",
+    "semantics": "starch последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "last_meal_alcohol",
+    "unit": "g",
+    "semantics": "alcohol последнего доступного приёма",
+    "available_if": "last_meal_present"
+  },
+  {
+    "name": "sleep_sleepHours_present",
+    "unit": "0/1",
+    "semantics": "Поле sleep.sleepHours присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "sleep_sleepHours",
+    "unit": "h",
+    "semantics": "Наблюдаемое sleep.sleepHours; ноль с отдельной маской при пропуске",
+    "available_if": "sleep_sleepHours_present"
+  },
+  {
+    "name": "sleep_sleepQuality_present",
+    "unit": "0/1",
+    "semantics": "Поле sleep.sleepQuality присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "sleep_sleepQuality",
+    "unit": "0..100",
+    "semantics": "Наблюдаемое sleep.sleepQuality; ноль с отдельной маской при пропуске",
+    "available_if": "sleep_sleepQuality_present"
+  },
+  {
+    "name": "wellbeing_stressLevel_present",
+    "unit": "0/1",
+    "semantics": "Поле wellbeing.stressLevel присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "wellbeing_stressLevel",
+    "unit": "0..100",
+    "semantics": "Наблюдаемое wellbeing.stressLevel; ноль с отдельной маской при пропуске",
+    "available_if": "wellbeing_stressLevel_present"
+  },
+  {
+    "name": "wellbeing_energyScore_present",
+    "unit": "0/1",
+    "semantics": "Поле wellbeing.energyScore присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "wellbeing_energyScore",
+    "unit": "0..100",
+    "semantics": "Наблюдаемое wellbeing.energyScore; ноль с отдельной маской при пропуске",
+    "available_if": "wellbeing_energyScore_present"
+  },
+  {
+    "name": "wellbeing_moodScore_present",
+    "unit": "0/1",
+    "semantics": "Поле wellbeing.moodScore присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "wellbeing_moodScore",
+    "unit": "0..100",
+    "semantics": "Наблюдаемое wellbeing.moodScore; ноль с отдельной маской при пропуске",
+    "available_if": "wellbeing_moodScore_present"
+  },
+  {
+    "name": "body_weightKg_present",
+    "unit": "0/1",
+    "semantics": "Поле body.weightKg присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "body_weightKg",
+    "unit": "kg",
+    "semantics": "Наблюдаемое body.weightKg; ноль с отдельной маской при пропуске",
+    "available_if": "body_weightKg_present"
+  },
+  {
+    "name": "body_bodyFatPercent_present",
+    "unit": "0/1",
+    "semantics": "Поле body.bodyFatPercent присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "body_bodyFatPercent",
+    "unit": "%",
+    "semantics": "Наблюдаемое body.bodyFatPercent; ноль с отдельной маской при пропуске",
+    "available_if": "body_bodyFatPercent_present"
+  },
+  {
+    "name": "body_bmrKcal_present",
+    "unit": "0/1",
+    "semantics": "Поле body.bmrKcal присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "body_bmrKcal",
+    "unit": "kcal/day",
+    "semantics": "Наблюдаемое body.bmrKcal; ноль с отдельной маской при пропуске",
+    "available_if": "body_bmrKcal_present"
+  },
+  {
+    "name": "body_ageYears_present",
+    "unit": "0/1",
+    "semantics": "Поле body.ageYears присутствует в payload",
+    "available_if": null
+  },
+  {
+    "name": "body_ageYears",
+    "unit": "years",
+    "semantics": "Наблюдаемое body.ageYears; ноль с отдельной маской при пропуске",
+    "available_if": "body_ageYears_present"
+  },
+  {
+    "name": "sleep_present",
+    "unit": "0/1",
+    "semantics": "Секция sleep присутствует",
+    "available_if": null
+  },
+  {
+    "name": "sleep_age_hours",
+    "unit": "h",
+    "semantics": "Возраст наблюдения sleep",
+    "available_if": "sleep_present"
+  },
+  {
+    "name": "wellbeing_present",
+    "unit": "0/1",
+    "semantics": "Секция wellbeing присутствует",
+    "available_if": null
+  },
+  {
+    "name": "wellbeing_age_hours",
+    "unit": "h",
+    "semantics": "Возраст наблюдения wellbeing",
+    "available_if": "wellbeing_present"
+  },
+  {
+    "name": "body_gender_present",
+    "unit": "0/1",
+    "semantics": "Измерение содержит поддерживаемый пол male/female",
+    "available_if": null
+  },
+  {
+    "name": "body_gender_female",
+    "unit": "0/1",
+    "semantics": "Наблюдаемый пол female",
+    "available_if": "body_gender_present"
+  },
+  {
+    "name": "workouts_count",
+    "unit": "count",
+    "semantics": "Число доступных завершённых тренировок в payload",
+    "available_if": null
+  },
+  {
+    "name": "workouts_duration_minutes",
+    "unit": "min",
+    "semantics": "Сумма длительностей доступных тренировок",
+    "available_if": null
+  },
+  {
+    "name": "workouts_calories",
+    "unit": "kcal",
+    "semantics": "Сумма калорий доступных тренировок",
+    "available_if": null
+  },
+  {
+    "name": "workouts_present",
+    "unit": "0/1",
+    "semantics": "Есть завершённая доступная тренировка",
+    "available_if": null
+  },
+  {
+    "name": "last_workout_age_hours",
+    "unit": "h",
+    "semantics": "Возраст завершения последней тренировки",
+    "available_if": "workouts_present"
+  },
+  {
+    "name": "workouts_sessionRpe_present",
+    "unit": "0/1",
+    "semantics": "Есть доступное поле тренировок sessionRpe",
+    "available_if": null
+  },
+  {
+    "name": "workouts_sessionRpe",
+    "unit": "1..10",
+    "semantics": "max наблюдаемого sessionRpe",
+    "available_if": "workouts_sessionRpe_present"
+  },
+  {
+    "name": "workouts_fatigueScore_present",
+    "unit": "0/1",
+    "semantics": "Есть доступное поле тренировок fatigueScore",
+    "available_if": null
+  },
+  {
+    "name": "workouts_fatigueScore",
+    "unit": "0..10",
+    "semantics": "max наблюдаемого fatigueScore",
+    "available_if": "workouts_fatigueScore_present"
+  },
+  {
+    "name": "workouts_volumeLoadKg_present",
+    "unit": "0/1",
+    "semantics": "Есть доступное поле тренировок volumeLoadKg",
+    "available_if": null
+  },
+  {
+    "name": "workouts_volumeLoadKg",
+    "unit": "kg",
+    "semantics": "sum наблюдаемого volumeLoadKg",
+    "available_if": "workouts_volumeLoadKg_present"
+  },
+  {
+    "name": "habits_waterMl",
+    "unit": "ml",
+    "semantics": "Наблюдаемое поле habits.waterMl из payload",
+    "available_if": null
+  },
+  {
+    "name": "habits_targetWaterMl",
+    "unit": "ml",
+    "semantics": "Наблюдаемое поле habits.targetWaterMl из payload",
+    "available_if": null
+  },
+  {
+    "name": "habits_alcoholUnits24h",
+    "unit": "10g units",
+    "semantics": "Наблюдаемое поле habits.alcoholUnits24h из payload",
+    "available_if": null
+  },
+  {
+    "name": "engagement_loggingStreakDays",
+    "unit": "days",
+    "semantics": "Доступная агрегированная история логирования loggingStreakDays",
+    "available_if": null
+  },
+  {
+    "name": "engagement_todayCompleteness",
+    "unit": "0..1",
+    "semantics": "Доступная агрегированная история логирования todayCompleteness",
+    "available_if": null
+  },
+  {
+    "name": "engagement_dropoffRisk",
+    "unit": "0..1",
+    "semantics": "Доступная агрегированная история логирования dropoffRisk",
+    "available_if": null
+  },
+  {
+    "name": "engagement_daysSinceLastLog_present",
+    "unit": "0/1",
+    "semantics": "Известна давность последней записи",
+    "available_if": null
+  },
+  {
+    "name": "engagement_daysSinceLastLog",
+    "unit": "days",
+    "semantics": "Давность последней доступной записи",
+    "available_if": "engagement_daysSinceLastLog_present"
+  },
+  {
+    "name": "populated_sections",
+    "unit": "count",
+    "semantics": "Число заполненных секций production payload",
+    "available_if": null
+  }
+]

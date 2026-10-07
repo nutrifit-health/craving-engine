@@ -1,0 +1,785 @@
+{
+  "source_run": "run-v9-20260924T001842Z",
+  "source_artifact": "report.json",
+  "source_manifest_sha256": "7405d213c86267deb1bb450bb156482b7712f75ae0fe31144877102632e8fd36",
+  "selection": "splits.development.<model>.operating_points.calibration_macro_recall94; threshold, macro, pooled, notifications copied without recomputation",
+  "status": "historical_excerpt_not_a_standalone_rerun",
+  "operating_point": "calibration_macro_recall94",
+  "split": "development",
+  "models": {
+    "anatomical_population": {
+      "threshold": 0.2943042956835911,
+      "macro": {
+        "recall": {
+          "mean": 0.9446921513255961,
+          "ci95": [
+            0.9172915992243227,
+            0.967217688138671
+          ],
+          "upper95": 0.9646831931924209,
+          "users": 40
+        },
+        "false_positive_rate": {
+          "mean": 0.8567105848182628,
+          "ci95": [
+            0.8076543166038064,
+            0.9016879607167037
+          ],
+          "upper95": 0.8954366387908252,
+          "users": 40
+        },
+        "youden_j": {
+          "mean": 0.08798156650733349,
+          "ci95": [
+            0.06356177725756228,
+            0.11384349596520253
+          ],
+          "upper95": 0.10982581074376434,
+          "users": 40
+        },
+        "brier": {
+          "mean": 0.18202030150805532,
+          "ci95": [
+            0.16378390365212736,
+            0.19906734941151996
+          ],
+          "upper95": 0.19613401588927576,
+          "users": 40
+        },
+        "auc": {
+          "mean": 0.730732139535257,
+          "ci95": [
+            0.7090420511654927,
+            0.7522557233906068
+          ],
+          "upper95": 0.7484297267873088,
+          "users": 40
+        },
+        "candidate_brier": {
+          "mean": 0.18202030150805532,
+          "ci95": [
+            0.16378390365212736,
+            0.19906734941151996
+          ],
+          "upper95": 0.19613401588927576,
+          "users": 40
+        },
+        "candidate_auc": {
+          "mean": 0.730732139535257,
+          "ci95": [
+            0.7090420511654927,
+            0.7522557233906068
+          ],
+          "upper95": 0.7484297267873088,
+          "users": 40
+        }
+      },
+      "pooled": {
+        "decisions": 7200,
+        "scored": 7200,
+        "events": 4191,
+        "observed_feedback": 5446,
+        "brier": 0.18202030150805532,
+        "candidate_brier": 0.18202030150805532,
+        "bss_training_prevalence": 0.2517551858382394,
+        "auc": 0.8024827133171393,
+        "candidate_auc": 0.8024827133171393,
+        "threshold": 0.2943042956835911,
+        "true_positives": 4047,
+        "false_positives": 2417,
+        "recall": 0.9656406585540444,
+        "precision": 0.6260829207920792,
+        "false_positive_rate": 0.8032568959787305,
+        "false_alarms_per_caught": 0.5972325179145046,
+        "mean_gamma": 0.0,
+        "users_with_open_gate": 0,
+        "youden_j": 0.16238376257531384,
+        "false_negatives": 144,
+        "true_negatives": 592
+      },
+      "notifications": {
+        "2": {
+          "rolling_seven_day_limit": 2,
+          "threshold": 0.2943042956835911,
+          "notifications": 2040,
+          "caught_events": 1254,
+          "false_notifications": 786,
+          "events_missed_by_classifier": 144,
+          "detected_events_blocked_by_limit": 2793,
+          "recall": 0.2992125984251969,
+          "precision": 0.6147058823529412,
+          "false_alarms_per_caught": 0.6267942583732058
+        },
+        "3": {
+          "rolling_seven_day_limit": 3,
+          "threshold": 0.2943042956835911,
+          "notifications": 3032,
+          "caught_events": 1890,
+          "false_notifications": 1142,
+          "events_missed_by_classifier": 144,
+          "detected_events_blocked_by_limit": 2157,
+          "recall": 0.4509663564781675,
+          "precision": 0.6233509234828496,
+          "false_alarms_per_caught": 0.6042328042328042
+        },
+        "7": {
+          "rolling_seven_day_limit": 7,
+          "threshold": 0.2943042956835911,
+          "notifications": 6464,
+          "caught_events": 4047,
+          "false_notifications": 2417,
+          "events_missed_by_classifier": 144,
+          "detected_events_blocked_by_limit": 0,
+          "recall": 0.9656406585540444,
+          "precision": 0.6260829207920792,
+          "false_alarms_per_caught": 0.5972325179145046
+        }
+      }
+    },
+    "anatomical_personal": {
+      "threshold": 0.28769973629539086,
+      "macro": {
+        "recall": {
+          "mean": 0.9395707873230279,
+          "ci95": [
+            0.9099763502738771,
+            0.9643749449149336
+          ],
+          "upper95": 0.9611998261313777,
+          "users": 40
+        },
+        "false_positive_rate": {
+          "mean": 0.8548763176764267,
+          "ci95": [
+            0.8069052277006644,
+            0.8996786897853781
+          ],
+          "upper95": 0.8933903259206553,
+          "users": 40
+        },
+        "youden_j": {
+          "mean": 0.08469446964660121,
+          "ci95": [
+            0.060093458289514186,
+            0.11073729936942121
+          ],
+          "upper95": 0.10650622609449825,
+          "users": 40
+        },
+        "brier": {
+          "mean": 0.17796345503099825,
+          "ci95": [
+            0.16082888196946768,
+            0.1941807408213078
+          ],
+          "upper95": 0.191121705294526,
+          "users": 40
+        },
+        "auc": {
+          "mean": 0.72796856052534,
+          "ci95": [
+            0.7052113156589976,
+            0.7503891511980425
+          ],
+          "upper95": 0.7465987960926034,
+          "users": 40
+        },
+        "candidate_brier": {
+          "mean": 0.17304955199137176,
+          "ci95": [
+            0.15646550051678124,
+            0.189085328232365
+          ],
+          "upper95": 0.18572291919497538,
+          "users": 40
+        },
+        "candidate_auc": {
+          "mean": 0.7275577169460007,
+          "ci95": [
+            0.7061439085417586,
+            0.7483005416804592
+          ],
+          "upper95": 0.7452191128443231,
+          "users": 40
+        }
+      },
+      "pooled": {
+        "decisions": 7200,
+        "scored": 7200,
+        "events": 4191,
+        "observed_feedback": 5446,
+        "brier": 0.17796345503099822,
+        "candidate_brier": 0.17304955199137176,
+        "bss_training_prevalence": 0.26843197580704437,
+        "auc": 0.8098850668229147,
+        "candidate_auc": 0.8222597775749345,
+        "threshold": 0.28769973629539086,
+        "true_positives": 4051,
+        "false_positives": 2386,
+        "recall": 0.966595084705321,
+        "precision": 0.6293304334317229,
+        "false_positive_rate": 0.7929544699235627,
+        "false_alarms_per_caught": 0.5889903727474698,
+        "mean_gamma": 0.084234818363857,
+        "users_with_open_gate": 21,
+        "youden_j": 0.1736406147817583,
+        "false_negatives": 140,
+        "true_negatives": 623
+      },
+      "notifications": {
+        "2": {
+          "rolling_seven_day_limit": 2,
+          "threshold": 0.28769973629539086,
+          "notifications": 2038,
+          "caught_events": 1253,
+          "false_notifications": 785,
+          "events_missed_by_classifier": 140,
+          "detected_events_blocked_by_limit": 2798,
+          "recall": 0.2989739918873777,
+          "precision": 0.6148184494602551,
+          "false_alarms_per_caught": 0.6264964086193137
+        },
+        "3": {
+          "rolling_seven_day_limit": 3,
+          "threshold": 0.28769973629539086,
+          "notifications": 3025,
+          "caught_events": 1887,
+          "false_notifications": 1138,
+          "events_missed_by_classifier": 140,
+          "detected_events_blocked_by_limit": 2164,
+          "recall": 0.4502505368647101,
+          "precision": 0.623801652892562,
+          "false_alarms_per_caught": 0.6030736618971914
+        },
+        "7": {
+          "rolling_seven_day_limit": 7,
+          "threshold": 0.28769973629539086,
+          "notifications": 6437,
+          "caught_events": 4051,
+          "false_notifications": 2386,
+          "events_missed_by_classifier": 140,
+          "detected_events_blocked_by_limit": 0,
+          "recall": 0.966595084705321,
+          "precision": 0.6293304334317229,
+          "false_alarms_per_caught": 0.5889903727474698
+        }
+      }
+    },
+    "population": {
+      "threshold": 0.26298191866536563,
+      "macro": {
+        "recall": {
+          "mean": 0.9330160499999792,
+          "ci95": [
+            0.8840960262625531,
+            0.9685296322554725
+          ],
+          "upper95": 0.9647043458751792,
+          "users": 40
+        },
+        "false_positive_rate": {
+          "mean": 0.8297003234921443,
+          "ci95": [
+            0.7695632370494596,
+            0.8847547809073196
+          ],
+          "upper95": 0.8759652669196157,
+          "users": 40
+        },
+        "youden_j": {
+          "mean": 0.10331572650783483,
+          "ci95": [
+            0.07162984846219765,
+            0.13830969136493787
+          ],
+          "upper95": 0.13128683308390784,
+          "users": 40
+        },
+        "brier": {
+          "mean": 0.1732082910481873,
+          "ci95": [
+            0.1547683139248039,
+            0.19116924413145703
+          ],
+          "upper95": 0.18811264502093047,
+          "users": 40
+        },
+        "auc": {
+          "mean": 0.739104701279617,
+          "ci95": [
+            0.7131802270974454,
+            0.7632578909015424
+          ],
+          "upper95": 0.7592790202195019,
+          "users": 40
+        },
+        "candidate_brier": {
+          "mean": 0.1732082910481873,
+          "ci95": [
+            0.1547683139248039,
+            0.19116924413145703
+          ],
+          "upper95": 0.18811264502093047,
+          "users": 40
+        },
+        "candidate_auc": {
+          "mean": 0.739104701279617,
+          "ci95": [
+            0.7131802270974454,
+            0.7632578909015424
+          ],
+          "upper95": 0.7592790202195019,
+          "users": 40
+        }
+      },
+      "pooled": {
+        "decisions": 7200,
+        "scored": 7200,
+        "events": 4191,
+        "observed_feedback": 5446,
+        "brier": 0.1732082910481873,
+        "candidate_brier": 0.1732082910481873,
+        "bss_training_prevalence": 0.28797939310691956,
+        "auc": 0.8171320366427958,
+        "candidate_auc": 0.8171320366427958,
+        "threshold": 0.26298191866536563,
+        "true_positives": 4056,
+        "false_positives": 2264,
+        "recall": 0.9677881173944166,
+        "precision": 0.6417721518987342,
+        "false_positive_rate": 0.7524094383516118,
+        "false_alarms_per_caught": 0.5581854043392505,
+        "mean_gamma": 0.0,
+        "users_with_open_gate": 0,
+        "youden_j": 0.21537867904280483,
+        "false_negatives": 135,
+        "true_negatives": 745
+      },
+      "notifications": {
+        "2": {
+          "rolling_seven_day_limit": 2,
+          "threshold": 0.26298191866536563,
+          "notifications": 2011,
+          "caught_events": 1285,
+          "false_notifications": 726,
+          "events_missed_by_classifier": 135,
+          "detected_events_blocked_by_limit": 2771,
+          "recall": 0.30660940109759005,
+          "precision": 0.6389855793137742,
+          "false_alarms_per_caught": 0.5649805447470817
+        },
+        "3": {
+          "rolling_seven_day_limit": 3,
+          "threshold": 0.26298191866536563,
+          "notifications": 2977,
+          "caught_events": 1900,
+          "false_notifications": 1077,
+          "events_missed_by_classifier": 135,
+          "detected_events_blocked_by_limit": 2156,
+          "recall": 0.4533524218563589,
+          "precision": 0.6382264024185421,
+          "false_alarms_per_caught": 0.5668421052631579
+        },
+        "7": {
+          "rolling_seven_day_limit": 7,
+          "threshold": 0.26298191866536563,
+          "notifications": 6320,
+          "caught_events": 4056,
+          "false_notifications": 2264,
+          "events_missed_by_classifier": 135,
+          "detected_events_blocked_by_limit": 0,
+          "recall": 0.9677881173944166,
+          "precision": 0.6417721518987342,
+          "false_alarms_per_caught": 0.5581854043392505
+        }
+      }
+    },
+    "scalar": {
+      "threshold": 0.25612724119964575,
+      "macro": {
+        "recall": {
+          "mean": 0.9295468408964858,
+          "ci95": [
+            0.88160246936632,
+            0.9642752832471362
+          ],
+          "upper95": 0.9606952335556609,
+          "users": 40
+        },
+        "false_positive_rate": {
+          "mean": 0.8339201933536817,
+          "ci95": [
+            0.7754259878189593,
+            0.8870745901636562
+          ],
+          "upper95": 0.879739639462657,
+          "users": 40
+        },
+        "youden_j": {
+          "mean": 0.09562664754280395,
+          "ci95": [
+            0.06530801305918858,
+            0.12867251340363536
+          ],
+          "upper95": 0.12307329257747458,
+          "users": 40
+        },
+        "brier": {
+          "mean": 0.17090133283189957,
+          "ci95": [
+            0.15353242439874948,
+            0.18803086371828384
+          ],
+          "upper95": 0.18513493684964372,
+          "users": 40
+        },
+        "auc": {
+          "mean": 0.73619418991439,
+          "ci95": [
+            0.7094702288939261,
+            0.761579029932688
+          ],
+          "upper95": 0.7577307908979375,
+          "users": 40
+        },
+        "candidate_brier": {
+          "mean": 0.16520644582494495,
+          "ci95": [
+            0.14871632290082676,
+            0.18168273449014322
+          ],
+          "upper95": 0.17893142664985,
+          "users": 40
+        },
+        "candidate_auc": {
+          "mean": 0.7335750964418752,
+          "ci95": [
+            0.7078304717416025,
+            0.7573230244579565
+          ],
+          "upper95": 0.7542138298625509,
+          "users": 40
+        }
+      },
+      "pooled": {
+        "decisions": 7200,
+        "scored": 7200,
+        "events": 4191,
+        "observed_feedback": 5446,
+        "brier": 0.17090133283189954,
+        "candidate_brier": 0.16520644582494495,
+        "bss_training_prevalence": 0.2974627831877166,
+        "auc": 0.8216401063254204,
+        "candidate_auc": 0.8344757344922205,
+        "threshold": 0.25612724119964575,
+        "true_positives": 4056,
+        "false_positives": 2265,
+        "recall": 0.9677881173944166,
+        "precision": 0.6416706217370669,
+        "false_positive_rate": 0.752741774675972,
+        "false_alarms_per_caught": 0.5584319526627219,
+        "mean_gamma": 0.06590276516855606,
+        "users_with_open_gate": 20,
+        "youden_j": 0.21504634271844458,
+        "false_negatives": 135,
+        "true_negatives": 744
+      },
+      "notifications": {
+        "2": {
+          "rolling_seven_day_limit": 2,
+          "threshold": 0.25612724119964575,
+          "notifications": 2012,
+          "caught_events": 1283,
+          "false_notifications": 729,
+          "events_missed_by_classifier": 135,
+          "detected_events_blocked_by_limit": 2773,
+          "recall": 0.3061321880219518,
+          "precision": 0.6376739562624254,
+          "false_alarms_per_caught": 0.5681995323460639
+        },
+        "3": {
+          "rolling_seven_day_limit": 3,
+          "threshold": 0.25612724119964575,
+          "notifications": 2978,
+          "caught_events": 1893,
+          "false_notifications": 1085,
+          "events_missed_by_classifier": 135,
+          "detected_events_blocked_by_limit": 2163,
+          "recall": 0.4516821760916249,
+          "precision": 0.6356615177971793,
+          "false_alarms_per_caught": 0.5731642894875858
+        },
+        "7": {
+          "rolling_seven_day_limit": 7,
+          "threshold": 0.25612724119964575,
+          "notifications": 6321,
+          "caught_events": 4056,
+          "false_notifications": 2265,
+          "events_missed_by_classifier": 135,
+          "detected_events_blocked_by_limit": 0,
+          "recall": 0.9677881173944166,
+          "precision": 0.6416706217370669,
+          "false_alarms_per_caught": 0.5584319526627219
+        }
+      }
+    },
+    "rewired_population": {
+      "threshold": 0.2973963298764212,
+      "macro": {
+        "recall": {
+          "mean": 0.9346609360017121,
+          "ci95": [
+            0.9015157761546359,
+            0.9619574619907238
+          ],
+          "upper95": 0.959138388924343,
+          "users": 40
+        },
+        "false_positive_rate": {
+          "mean": 0.839077706323436,
+          "ci95": [
+            0.7813692289196895,
+            0.8901450392174951
+          ],
+          "upper95": 0.8819323389842204,
+          "users": 40
+        },
+        "youden_j": {
+          "mean": 0.09558322967827612,
+          "ci95": [
+            0.0672393514753615,
+            0.1253518522109486
+          ],
+          "upper95": 0.12097140809959323,
+          "users": 40
+        },
+        "brier": {
+          "mean": 0.17756170874076896,
+          "ci95": [
+            0.15997530405663227,
+            0.19501715561691374
+          ],
+          "upper95": 0.1916360100532278,
+          "users": 40
+        },
+        "auc": {
+          "mean": 0.7330016855556796,
+          "ci95": [
+            0.7092865352429919,
+            0.7557941884539582
+          ],
+          "upper95": 0.7526061507745998,
+          "users": 40
+        },
+        "candidate_brier": {
+          "mean": 0.17756170874076896,
+          "ci95": [
+            0.15997530405663227,
+            0.19501715561691374
+          ],
+          "upper95": 0.1916360100532278,
+          "users": 40
+        },
+        "candidate_auc": {
+          "mean": 0.7330016855556796,
+          "ci95": [
+            0.7092865352429919,
+            0.7557941884539582
+          ],
+          "upper95": 0.7526061507745998,
+          "users": 40
+        }
+      },
+      "pooled": {
+        "decisions": 7200,
+        "scored": 7200,
+        "events": 4191,
+        "observed_feedback": 5446,
+        "brier": 0.177561708740769,
+        "candidate_brier": 0.177561708740769,
+        "bss_training_prevalence": 0.27008346509577874,
+        "auc": 0.8102889296002869,
+        "candidate_auc": 0.8102889296002869,
+        "threshold": 0.2973963298764212,
+        "true_positives": 4026,
+        "false_positives": 2330,
+        "recall": 0.9606299212598425,
+        "precision": 0.6334172435494021,
+        "false_positive_rate": 0.7743436357593885,
+        "false_alarms_per_caught": 0.5787382016890213,
+        "mean_gamma": 0.0,
+        "users_with_open_gate": 0,
+        "youden_j": 0.186286285500454,
+        "false_negatives": 165,
+        "true_negatives": 679
+      },
+      "notifications": {
+        "2": {
+          "rolling_seven_day_limit": 2,
+          "threshold": 0.2973963298764212,
+          "notifications": 2029,
+          "caught_events": 1276,
+          "false_notifications": 753,
+          "events_missed_by_classifier": 165,
+          "detected_events_blocked_by_limit": 2750,
+          "recall": 0.30446194225721784,
+          "precision": 0.6288812222769837,
+          "false_alarms_per_caught": 0.5901253918495298
+        },
+        "3": {
+          "rolling_seven_day_limit": 3,
+          "threshold": 0.2973963298764212,
+          "notifications": 3007,
+          "caught_events": 1909,
+          "false_notifications": 1098,
+          "events_missed_by_classifier": 165,
+          "detected_events_blocked_by_limit": 2117,
+          "recall": 0.4554998806967311,
+          "precision": 0.6348520119720652,
+          "false_alarms_per_caught": 0.5751702462022001
+        },
+        "7": {
+          "rolling_seven_day_limit": 7,
+          "threshold": 0.2973963298764212,
+          "notifications": 6356,
+          "caught_events": 4026,
+          "false_notifications": 2330,
+          "events_missed_by_classifier": 165,
+          "detected_events_blocked_by_limit": 0,
+          "recall": 0.9606299212598425,
+          "precision": 0.6334172435494021,
+          "false_alarms_per_caught": 0.5787382016890213
+        }
+      }
+    },
+    "rewired_personal": {
+      "threshold": 0.29438844872559056,
+      "macro": {
+        "recall": {
+          "mean": 0.9241797585115907,
+          "ci95": [
+            0.8852248790828529,
+            0.9570621735604637
+          ],
+          "upper95": 0.9524708601800047,
+          "users": 40
+        },
+        "false_positive_rate": {
+          "mean": 0.8297725741455151,
+          "ci95": [
+            0.7706573799920179,
+            0.8811615642414918
+          ],
+          "upper95": 0.874135182355344,
+          "users": 40
+        },
+        "youden_j": {
+          "mean": 0.09440718436607583,
+          "ci95": [
+            0.062128274890657614,
+            0.12813334048646738
+          ],
+          "upper95": 0.12339021258589385,
+          "users": 40
+        },
+        "brier": {
+          "mean": 0.17505991768626,
+          "ci95": [
+            0.1580999940977795,
+            0.19249906405429912
+          ],
+          "upper95": 0.18872936378603883,
+          "users": 40
+        },
+        "auc": {
+          "mean": 0.7306123216501893,
+          "ci95": [
+            0.7053540360698575,
+            0.7543297614890985
+          ],
+          "upper95": 0.7510648120669975,
+          "users": 40
+        },
+        "candidate_brier": {
+          "mean": 0.1703994444546889,
+          "ci95": [
+            0.15384759887570723,
+            0.1868132321737112
+          ],
+          "upper95": 0.18364316031409697,
+          "users": 40
+        },
+        "candidate_auc": {
+          "mean": 0.7303392136021044,
+          "ci95": [
+            0.7056763617650555,
+            0.7535919983049845
+          ],
+          "upper95": 0.7500311247339796,
+          "users": 40
+        }
+      },
+      "pooled": {
+        "decisions": 7200,
+        "scored": 7200,
+        "events": 4191,
+        "observed_feedback": 5446,
+        "brier": 0.17505991768625997,
+        "candidate_brier": 0.1703994444546889,
+        "bss_training_prevalence": 0.2803677694681116,
+        "auc": 0.8146709160675136,
+        "candidate_auc": 0.8257134268077816,
+        "threshold": 0.29438844872559056,
+        "true_positives": 4022,
+        "false_positives": 2264,
+        "recall": 0.959675495108566,
+        "precision": 0.6398345529748648,
+        "false_positive_rate": 0.7524094383516118,
+        "false_alarms_per_caught": 0.5629040278468423,
+        "mean_gamma": 0.06530758242221715,
+        "users_with_open_gate": 21,
+        "youden_j": 0.2072660567569542,
+        "false_negatives": 169,
+        "true_negatives": 745
+      },
+      "notifications": {
+        "2": {
+          "rolling_seven_day_limit": 2,
+          "threshold": 0.29438844872559056,
+          "notifications": 2022,
+          "caught_events": 1275,
+          "false_notifications": 747,
+          "events_missed_by_classifier": 169,
+          "detected_events_blocked_by_limit": 2747,
+          "recall": 0.3042233357193987,
+          "precision": 0.6305637982195845,
+          "false_alarms_per_caught": 0.5858823529411765
+        },
+        "3": {
+          "rolling_seven_day_limit": 3,
+          "threshold": 0.29438844872559056,
+          "notifications": 2996,
+          "caught_events": 1908,
+          "false_notifications": 1088,
+          "events_missed_by_classifier": 169,
+          "detected_events_blocked_by_limit": 2114,
+          "recall": 0.45526127415891193,
+          "precision": 0.636849132176235,
+          "false_alarms_per_caught": 0.570230607966457
+        },
+        "7": {
+          "rolling_seven_day_limit": 7,
+          "threshold": 0.29438844872559056,
+          "notifications": 6286,
+          "caught_events": 4022,
+          "false_notifications": 2264,
+          "events_missed_by_classifier": 169,
+          "detected_events_blocked_by_limit": 0,
+          "recall": 0.959675495108566,
+          "precision": 0.6398345529748648,
+          "false_alarms_per_caught": 0.5629040278468423
+        }
+      }
+    }
+  }
+}

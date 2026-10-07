@@ -1,0 +1,90 @@
+{
+  "source_project": "NutriFit",
+  "source_run": "run-v9-20260924T001842Z",
+  "original_manifest_sha256": "7405d213c86267deb1bb450bb156482b7712f75ae0fe31144877102632e8fd36",
+  "extraction_date": "2026-10-07",
+  "status": "source_publication_not_executed",
+  "origin": "Curated standalone research snapshot; original private archive is preserved.",
+  "source_files": {
+    "": [
+      "mushroom_body.py",
+      "hybrid_engine.py"
+    ],
+    "synthetic_benchmark": [
+      "metrics.py"
+    ],
+    "research_v6": [
+      "__init__.py",
+      "types.py",
+      "replay.py"
+    ],
+    "research_v7": [
+      "__init__.py",
+      "types.py",
+      "data_types.py",
+      "evaluation.py",
+      "connectome.py"
+    ],
+    "research_v8": [
+      "__init__.py",
+      "types.py",
+      "data_types.py",
+      "memory.py",
+      "evaluation.py",
+      "context_types.py",
+      "context_representation.py",
+      "archive.py",
+      "test_context_representation.py"
+    ],
+    "research_v9": [
+      "__init__.py",
+      "types.py",
+      "models.py",
+      "experiment_types.py",
+      "experiment.py",
+      "test_models.py",
+      "test_experiment.py",
+      "test_workers.py"
+    ]
+  },
+  "changes": [
+    "Portable input bundle replaces private parent archive.",
+    "Shared replay and worker utilities extracted without historical runners.",
+    "Public source snapshot excludes Git diff and private repository metadata; software versions and platform remain recorded.",
+    "Internal protocol URLs replaced with repository-local protocol references.",
+    "Unused historical predictor implementations omitted; only numeric helpers, dimensional constants and ROC-AUC/bootstrap helpers retained.",
+    "V7 package exports reduced to avoid importing unused historical memories.",
+    "Final English terms and active local rights configuration prepared; acceptance records include both agreement and grant-back license texts. Source publication authorized; remote workflow execution not performed.",
+    "English and Russian article fragments removed from the initial source publication at the owner's request."
+  ],
+  "new_files": [
+    "research_v9/bundle.py",
+    "pyproject.toml",
+    "package.json",
+    "README.md",
+    "README.ru.md",
+    "docs/",
+    "legal/",
+    ".github/"
+  ],
+  "documentation_update_date": "2026-10-07",
+  "historical_result_supplements": [
+    {
+      "path": "results/v9-2026-09-24/high-recall-excerpt.json",
+      "source": "report.json: splits.development.<model>.operating_points.calibration_macro_recall94",
+      "method": "Copied selected original fields without metric recomputation; not a new experiment."
+    }
+  ],
+  "publication_terms": {
+    "version": "1.0",
+    "local_electronic_acceptance_active": true,
+    "remote_workflow_executed": false,
+    "remote_required_merge_status_configured": false,
+    "agreement": "legal/CONTRIBUTOR-ASSIGNMENT.md",
+    "license": "legal/NUTRIFIT-NONCOMMERCIAL-RESEARCH-LICENSE.md"
+  },
+  "documentation_languages": [
+    "en",
+    "ru"
+  ]
+}

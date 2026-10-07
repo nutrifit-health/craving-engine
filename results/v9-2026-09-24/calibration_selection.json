@@ -1,0 +1,8 @@
+{
+  "candidate": "anatomical_personal",
+  "simple_baseline": "scalar",
+  "candidate_is_preregistered": true,
+  "selected_before_development": true,
+  "alternative_mb_selection_allowed": false,
+  "frozen_thresholds_sha256": "89abef17ee10881d62cbbc9edb996708878e1305d04ff0af336720f126587db2"
+}

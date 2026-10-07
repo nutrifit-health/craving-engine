@@ -1,0 +1,191 @@
+{
+  "candidate": "anatomical_personal",
+  "simple_baseline": "scalar",
+  "eligible": false,
+  "checks": {
+    "population": {
+      "recall_gain_5pp": false,
+      "recall_ci_positive": true,
+      "j_gain_002": false,
+      "j_ci_positive": false,
+      "fpr_at_most_020": true,
+      "fpr_increase_at_most_001": false,
+      "brier_not_worse": false,
+      "positive_bss": true,
+      "individual_degradation_at_most_005": false,
+      "notification_recall_improved": true,
+      "notification_burden_not_worse": false
+    },
+    "scalar": {
+      "recall_gain_5pp": false,
+      "recall_ci_positive": true,
+      "j_gain_002": false,
+      "j_ci_positive": false,
+      "fpr_at_most_020": true,
+      "fpr_increase_at_most_001": false,
+      "brier_not_worse": false,
+      "positive_bss": true,
+      "individual_degradation_at_most_005": false,
+      "notification_recall_improved": true,
+      "notification_burden_not_worse": false
+    }
+  },
+  "comparisons": {
+    "population": {
+      "recall_delta": {
+        "mean": 0.031225114272822964,
+        "ci95": [
+          0.008951165056809492,
+          0.056124654124763744
+        ],
+        "upper95": 0.05138900560838481,
+        "users": 40
+      },
+      "false_positive_rate_delta": {
+        "mean": 0.0419333259228426,
+        "ci95": [
+          0.004802691414574113,
+          0.08428727817861066
+        ],
+        "upper95": 0.07740788115454489,
+        "users": 40
+      },
+      "youden_j_delta": {
+        "mean": -0.010708211650019644,
+        "ci95": [
+          -0.04278003811178148,
+          0.01669821581085459
+        ],
+        "upper95": 0.012855945018083799,
+        "users": 40
+      },
+      "brier_delta": {
+        "mean": 0.0047551639828109175,
+        "ci95": [
+          0.00038283268233539006,
+          0.009589190329106727
+        ],
+        "upper95": 0.008727150944750819,
+        "users": 40
+      },
+      "auc_delta": {
+        "mean": -0.011136140754277,
+        "ci95": [
+          -0.020178225209808495,
+          -0.0021961629059939064
+        ],
+        "upper95": -0.003964215475540567,
+        "users": 40
+      },
+      "candidate_brier_delta": {
+        "mean": -0.00015873905681556313,
+        "ci95": [
+          -0.005538051413821523,
+          0.004955937585261415
+        ],
+        "upper95": 0.004253787342151965,
+        "users": 40
+      },
+      "candidate_auc_delta": {
+        "mean": -0.01154698433361633,
+        "ci95": [
+          -0.02107118332219101,
+          -0.0022032659841227085
+        ],
+        "upper95": -0.003763766213427854,
+        "users": 40
+      },
+      "individual_auc_degradation": {
+        "users": 40,
+        "count": 20,
+        "fraction": 0.5,
+        "upper95_exact_binomial": 0.6389083400016622,
+        "definition": "Наблюдаемая индивидуальная AUC-разность < −0.01; не оценка истинного вреда"
+      },
+      "bootstrap_unit": "user",
+      "bootstrap_draws": 2000,
+      "seed": 20260923,
+      "operating_point": "calibration_macro_fpr20",
+      "status": "exploratory_known_development_not_confirmatory"
+    },
+    "scalar": {
+      "recall_delta": {
+        "mean": 0.03255094164204277,
+        "ci95": [
+          0.011719051609439774,
+          0.054335024997257585
+        ],
+        "upper95": 0.050956848094882115,
+        "users": 40
+      },
+      "false_positive_rate_delta": {
+        "mean": 0.04476081795610459,
+        "ci95": [
+          0.007894400624778138,
+          0.08599274675300693
+        ],
+        "upper95": 0.08020799807952818,
+        "users": 40
+      },
+      "youden_j_delta": {
+        "mean": -0.012209876314061827,
+        "ci95": [
+          -0.04515259794494942,
+          0.016491798591761895
+        ],
+        "upper95": 0.011785463038653955,
+        "users": 40
+      },
+      "brier_delta": {
+        "mean": 0.007062122199098672,
+        "ci95": [
+          0.0031653564062016147,
+          0.011746067724495381
+        ],
+        "upper95": 0.010928074848091673,
+        "users": 40
+      },
+      "auc_delta": {
+        "mean": -0.008225629389050007,
+        "ci95": [
+          -0.01717346513966944,
+          0.0007419272517053743
+        ],
+        "upper95": -0.0011384272135577477,
+        "users": 40
+      },
+      "candidate_brier_delta": {
+        "mean": 0.0078431061664268,
+        "ci95": [
+          0.004074885596078033,
+          0.012575954808948164
+        ],
+        "upper95": 0.01166181119681598,
+        "users": 40
+      },
+      "candidate_auc_delta": {
+        "mean": -0.006017379495874595,
+        "ci95": [
+          -0.015246164147930327,
+          0.003449240659897123
+        ],
+        "upper95": 0.0014903300864881981,
+        "users": 40
+      },
+      "individual_auc_degradation": {
+        "users": 40,
+        "count": 17,
+        "fraction": 0.425,
+        "upper95_exact_binomial": 0.5668609107163234,
+        "definition": "Наблюдаемая индивидуальная AUC-разность < −0.01; не оценка истинного вреда"
+      },
+      "bootstrap_unit": "user",
+      "bootstrap_draws": 2000,
+      "seed": 20260923,
+      "operating_point": "calibration_macro_fpr20",
+      "status": "exploratory_known_development_not_confirmatory"
+    }
+  },
+  "blind_test_performed": false,
+  "interpretation": "development screening; no clinical or population safety claim"
+}
