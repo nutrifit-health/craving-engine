@@ -52,3 +52,7 @@ Switching only to float32 would still exceed 16 KiB before other state. A float1
 Define the target first: numeric parameters, compressed durable record, or complete resident state. A proposed experiment can then compare reduced dimension, quantized storage or arithmetic, and bounded event/history storage. Precision changes need evaluation of decay, updates, probabilities, thresholds and admission; smaller data types are not evidence of preserved quality. Do not silently change the preserved V9 implementation to satisfy the article's number.
 
 For the article, the supportable statement is: **the current MB variant has about 47.34 KiB of personal numerical buffers, plus variable auxiliary state; a 16 KiB personal-state budget is an open optimization target.** Million-user throughput and total storage remain unmeasured.
+
+## V10 measurement
+
+On October 7, 2026, LIF+rSTDP on the original V9 development histories measured 48,480 bytes for the three numeric buffers and 68,108–93,397 bytes for complete JSON checkpoints after 180 days. JSON includes pending eligibility, gate history, seen and metadata; it is neither process memory nor gzip. [Per-user measurements](../results/v10/run-20261007/development_costs.json) · [V10 report](results-v10.md). Complete 16 KiB state remains unestablished.

@@ -2,7 +2,7 @@
 
 [Русская версия](results-v9.ru.md)
 
-Source run: `run-v9-20260924T001842Z`. Original complete artifact manifest SHA256: `7405d213c86267deb1bb450bb156482b7712f75ae0fe31144877102632e8fd36`. Selected original files are preserved in `results/v9-2026-09-24/`. This snapshot has not been rerun.
+Source run: `run-v9-20260924T001842Z`. Original complete artifact manifest SHA256: `7405d213c86267deb1bb450bb156482b7712f75ae0fe31144877102632e8fd36`. Selected original files are preserved in `results/v9-2026-09-24/`. The standalone snapshot was reproduced on October 7, 2026; principal metrics of all six variants matched exactly. [Evidence](../results/v10/verification/v9-reproduction-comparison.json).
 
 Thresholds: chosen on 20 calibration users, frozen, then applied to 40 development users (7,200 decisions). The calibration constraint was macro FPR ≤ 20%; it is not a guarantee of the same bound on future data.
 
@@ -35,6 +35,6 @@ This does not prove that every sparse personal memory or biologically inspired r
 
 The anatomical and rewired classifiers operate at different frozen thresholds and false alarm rates. The scores do not by themselves establish a practical advantage caused by anatomy. That hypothesis needs matched-capacity controls, multiple prespecified seeds, comparable operating points and new data.
 
-The original source archive contains prior checks from the historical experiment. Those checks do not validate the modified standalone loader, dependency ranges or packaging in this repository. This extraction's validation status is **not run**.
+The original source archive contains prior checks from the historical experiment. Those checks do not validate the modified standalone loader, dependency ranges or packaging in this repository. As of October 7, 2026: installation, 38 tests with 31 subtests, build and standalone reproduction passed. [Log](../results/v10/verification/v9-tests.log).
 
 For the next proposed experiments see the [roadmap](research-roadmap.md). For publication and execution status see [release preparation](release-preparation.md).

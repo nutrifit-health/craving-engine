@@ -2,13 +2,15 @@
 
 [Русская версия](research-roadmap.ru.md)
 
+October 7 update: standalone V9 was reproduced; [V10](results-v10.md) tested LIF/STDP, limited reporting scenarios and JSON state size. Remaining items below are research directions; new parameters must not be selected using already examined evaluation outcomes.
+
 These are proposed next steps, not completed experiments or a preregistered successor to V9. The [recorded V9 candidate failed admission](results-v9.md). The immediate task is to understand that outcome before attempting independent confirmation. The included development cohort is already known.
 
 ## 0. Reproduce the standalone snapshot
 
 Start from the [README route](../README.md#reproduction), recording source revision, environment, input bundle and a fresh output directory. First resolve installation or execution failures; do not change model settings to make scores match. Compare the six primary rows, calibration-selected scalar baseline, frozen thresholds, admission decision and warning counts with the preserved files. Document numerical differences rather than assuming bitwise identity across library versions.
 
-Useful contribution: a complete reproduction report or a minimal, documented packaging fix. Historical checks belong to the original source run; the standalone loader and dependencies have not yet been exercised. No full generator or GBDT fit can be reproduced from this snapshot.
+Useful contribution: a complete reproduction report or a minimal, documented packaging fix. Standalone V9 was reproduced on October 7; principal metrics matched exactly. [Evidence](../results/v10/verification/v9-reproduction-comparison.json). No full generator or GBDT fit can be reproduced from this snapshot.
 
 ## 1. Separate the value of memory from the value of the shared model
 

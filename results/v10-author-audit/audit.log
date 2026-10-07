@@ -1,0 +1,3 @@
+Завершена диагностика cpu: seeds=[7, 17, 27]
+Завершена диагностика mps: seeds=[7, 17, 27]
+Отчёт: results/v10-author-audit/report.json; время 10.52 с

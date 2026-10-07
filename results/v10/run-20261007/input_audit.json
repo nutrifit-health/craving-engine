@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "d0e17dcb4d56cf8f4a93b42f9580bce93cc18c87529c1a5a77864605c0b2d1b5",
+  "users": {
+    "training": 60,
+    "calibration": 20,
+    "development": 40
+  },
+  "events": 21600,
+  "status": "passed",
+  "evaluation_metrics_not_read": true
+}

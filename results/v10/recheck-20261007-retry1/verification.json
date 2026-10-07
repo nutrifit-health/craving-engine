@@ -1,0 +1,161 @@
+{
+  "manifest_files_verified": 284,
+  "repeated": {
+    "population": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "scalar": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "direct": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "lif_direct": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "lif_stdp": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "lif_rstdp": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "lif_direct_matched": {
+      "exact_rows_match": true,
+      "rows": 7200
+    },
+    "lif_stdp_matched": {
+      "exact_rows_match": true,
+      "rows": 7200
+    }
+  },
+  "controls": {
+    "direct": {
+      "no_feedback_equals_population": true,
+      "no_feedback_ungated_max_delta": 1.1102230246251565e-16,
+      "ungated_round_trip_tolerance": 1e-14,
+      "shuffled_macro_brier": 0.1702197643998978
+    },
+    "lif_rstdp": {
+      "no_feedback_equals_population": true,
+      "no_feedback_ungated_max_delta": 1.1102230246251565e-16,
+      "ungated_round_trip_tolerance": 1e-14,
+      "shuffled_macro_brier": 0.1724984716784473
+    }
+  },
+  "admission": {
+    "recommendation_supported": false,
+    "comparisons": {
+      "lif_direct_matched": {
+        "passed": false,
+        "checks": {
+          "v9_development": {
+            "brier_gain_at_least_0002": false,
+            "brier_ci_below_zero": false,
+            "fpr_increase_at_most_001": true,
+            "j_not_lower": false
+          },
+          "new_abrupt": {
+            "brier_gain_at_least_0002": false,
+            "brier_ci_below_zero": false,
+            "fpr_increase_at_most_001": true,
+            "j_not_lower": true
+          },
+          "stable_brier_degradation_at_most_0002": true,
+          "improvement_on_at_least_two_seeds": true
+        },
+        "seed_wins": 2
+      },
+      "direct": {
+        "passed": false,
+        "checks": {
+          "v9_development": {
+            "brier_gain_at_least_0002": false,
+            "brier_ci_below_zero": false,
+            "fpr_increase_at_most_001": true,
+            "j_not_lower": true
+          },
+          "new_abrupt": {
+            "brier_gain_at_least_0002": false,
+            "brier_ci_below_zero": false,
+            "fpr_increase_at_most_001": true,
+            "j_not_lower": true
+          },
+          "stable_brier_degradation_at_most_0002": true,
+          "improvement_on_at_least_two_seeds": false
+        },
+        "seed_wins": 1
+      },
+      "scalar": {
+        "passed": false,
+        "checks": {
+          "v9_development": {
+            "brier_gain_at_least_0002": false,
+            "brier_ci_below_zero": false,
+            "fpr_increase_at_most_001": true,
+            "j_not_lower": false
+          },
+          "new_abrupt": {
+            "brier_gain_at_least_0002": false,
+            "brier_ci_below_zero": false,
+            "fpr_increase_at_most_001": true,
+            "j_not_lower": true
+          },
+          "stable_brier_degradation_at_most_0002": true,
+          "improvement_on_at_least_two_seeds": false
+        },
+        "seed_wins": 0
+      }
+    },
+    "scope": "finite original implementation; synthetic evidence only; no universal claim about SNNs"
+  },
+  "oracle_cap_diagnostics": {
+    "abrupt": {
+      "population_probability_mse": 0.06408847729824263,
+      "best_probability_mse_with_logit_cap_07": 0.021358022177236206,
+      "unreachable_fraction": 0.6129166666666667,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    },
+    "gradual": {
+      "population_probability_mse": 0.05146961059727472,
+      "best_probability_mse_with_logit_cap_07": 0.015076001185296227,
+      "unreachable_fraction": 0.5690972222222223,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    },
+    "transient": {
+      "population_probability_mse": 0.023889742446032418,
+      "best_probability_mse_with_logit_cap_07": 0.003962241819197253,
+      "unreachable_fraction": 0.35604166666666665,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    },
+    "noise15": {
+      "population_probability_mse": 0.06408847729824263,
+      "best_probability_mse_with_logit_cap_07": 0.021358022177236206,
+      "unreachable_fraction": 0.6129166666666667,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    },
+    "delay72": {
+      "population_probability_mse": 0.06408847729824263,
+      "best_probability_mse_with_logit_cap_07": 0.021358022177236206,
+      "unreachable_fraction": 0.6129166666666667,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    },
+    "report50": {
+      "population_probability_mse": 0.06408847729824263,
+      "best_probability_mse_with_logit_cap_07": 0.021358022177236206,
+      "unreachable_fraction": 0.6129166666666667,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    },
+    "report10": {
+      "population_probability_mse": 0.06408847729824263,
+      "best_probability_mse_with_logit_cap_07": 0.021358022177236206,
+      "unreachable_fraction": 0.6129166666666667,
+      "interpretation": "Evaluator-only bound; not a fitted model or clinical ceiling"
+    }
+  }
+}

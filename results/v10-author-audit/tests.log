@@ -1,0 +1,19 @@
+test_column_membrane_resets_on_each_forward (research_v10.test_author_audit.AuthorAuditTests.test_column_membrane_resets_on_each_forward)
+При одинаковом EMA eval повторяет локальные спайки после сброса состояний. ... ok
+test_effective_weight_sign_and_formation_bound (research_v10.test_author_audit.AuthorAuditTests.test_effective_weight_sign_and_formation_bound)
+Sigmoid убирает знак raw веса; стандартный potential не достигает 0.8. ... ok
+test_evaluation_mutates_average_and_logits (research_v10.test_author_audit.AuthorAuditTests.test_evaluation_mutates_average_and_logits)
+Повтор и порядок меняют logits; восстановление среднего убирает отличие. ... ok
+test_gradient_and_optimizer_routes (research_v10.test_author_audit.AuthorAuditTests.test_gradient_and_optimizer_routes)
+Readout и межколоночные веса обучаются; encoder и колонки без градиента. ... ok
+test_hard_encoder_has_no_autograd_path (research_v10.test_author_audit.AuthorAuditTests.test_hard_encoder_has_no_autograd_path)
+Оба режима encoder используют дискретное сравнение без surrogate. ... ok
+test_intercolumn_weights_do_not_feed_lif_state (research_v10.test_author_audit.AuthorAuditTests.test_intercolumn_weights_do_not_feed_lif_state)
+Межколоночное вмешательство меняет readout, но не входы/состояния LIF. ... ok
+test_stdp_and_trace_carry (research_v10.test_author_audit.AuthorAuditTests.test_stdp_and_trace_carry)
+STDP меняет параметры; trace сохраняется между независимыми batches. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.404s
+
+OK

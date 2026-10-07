@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/gurutom/Develop/NutriFit/apps/craving-engine/research_v10/verify.py", line 253, in <module>
+    main()
+  File "/Users/gurutom/Develop/NutriFit/apps/craving-engine/research_v10/verify.py", line 249, in main
+    verify(args.run, args.output_dir)
+  File "/Users/gurutom/Develop/NutriFit/apps/craving-engine/research_v10/verify.py", line 162, in verify
+    raise AssertionError("Память изменила прогноз без feedback")
+AssertionError: Память изменила прогноз без feedback

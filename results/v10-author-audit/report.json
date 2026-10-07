@@ -1,0 +1,3889 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-07T21:10:03.645534+00:00",
+  "source": {
+    "url": "https://habr.com/ru/articles/1045696/",
+    "html_sha256": "6f773cd6d3ced098db11eedf777598e2f106b09e010102304ca2caa0d1126f4b",
+    "listing_sha256": "00e0da6b8c25d4d6b58ad5fd73b3dd96f40486c4cf69b2a58718dac6e4bbce35",
+    "block_sha256": [
+      "5dcd65bd01da36c13d3b3684b473e5a5679bfe099683475551b7041dff0df7b2",
+      "f2f3ce83c6abeed614e6e379c132d76950f96567b00b1ca02d7b4152462004b5",
+      "ff1207f6878bf2f0ff47480ec658788246b78b5eee7a1dccae770dffe296d932",
+      "b895765c347c1dda890462534f1a50f8effb61b794259695d612d138c6bc8a54",
+      "62bd2cee9ebdeedf18dd83f51a9050019f578b4a57504934a354c6132da6c2c0",
+      "4dfe8dde24f39c12d310f051afca6f0783cc785cb961319d775ac3c295410c08",
+      "bb6b5705af87726578ab7e18829744600377473db3723891545ef25a714e9fee"
+    ],
+    "listing_blocks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "training_block": 6,
+    "extraction": "HTMLParser: pre text, blocks 0..5 joined by two LF; final LF",
+    "listing_bytes": 12276,
+    "execution": "Только прочитанный модуль модели; скрипт обучения не выполняется"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "torch": "2.14.0",
+    "networkx": "3.7",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "executable": "/Users/gurutom/Develop/NutriFit/apps/craving-engine/.venv/bin/python",
+    "cpu_threads": 1,
+    "mps_available": true,
+    "dependency_scope": "torch/networkx установлены только в локальный .venv; аудит не меняет pyproject"
+  },
+  "invocation": [
+    "research_v10/author_audit.py",
+    "--html",
+    "/tmp/nutrifit-v10-habr-1045696.html",
+    "--source",
+    "/tmp/nutrifit-v10-brain_spiking.py",
+    "--output",
+    "results/v10-author-audit/report.json",
+    "--devices",
+    "cpu",
+    "mps",
+    "--seeds",
+    "7",
+    "17",
+    "27",
+    "--execute-reviewed-snapshot"
+  ],
+  "results": [
+    {
+      "device": "cpu",
+      "small_runs": [
+        {
+          "seed": 7,
+          "config": {
+            "num_columns": 8,
+            "in_dim": 40,
+            "col_out": 20,
+            "top_out": 3,
+            "graph_k": 2,
+            "graph_p": 0.15,
+            "time_steps": 50
+          },
+          "encoding_requires_grad": false,
+          "training": {
+            "completed": true,
+            "logits_shape": [
+              4,
+              3
+            ],
+            "finite": true,
+            "loss": 1.1067253351211548,
+            "pre_clip_gradient_norm": 0.5220863223075867,
+            "rate_loss": 0.0027664152439683676,
+            "rate_loss_requires_grad": false,
+            "current_rates_requires_grad": false,
+            "parameters": {
+              "input_scale": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "topology": {
+                "requires_grad": false,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "inter_weights": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -8.26388168206904e-06,
+                  "max": 1.5283016182365827e-05,
+                  "l2": 2.7675092496792786e-05,
+                  "nonzero": 16
+                },
+                "forward_delta": 1.30385160446167e-08,
+                "optimizer_delta": 4.996359348297119e-05
+              },
+              "columns.0.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.0.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "readout.0.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.010294822044670582,
+                  "max": 0.011380945332348347,
+                  "l2": 0.2069503366947174,
+                  "nonzero": 24093
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.0.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.0222124345600605,
+                  "max": 0.02530439756810665,
+                  "l2": 0.11564377695322037,
+                  "nonzero": 282
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.3.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.08313385397195816,
+                  "max": 0.07248171418905258,
+                  "l2": 0.41233500838279724,
+                  "nonzero": 846
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              },
+              "readout.3.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.17552274465560913,
+                  "max": 0.09611964225769043,
+                  "l2": 0.21529529988765717,
+                  "nonzero": 3
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              }
+            }
+          },
+          "evaluation": {
+            "repeated_logits_max_delta": 0.001464981585741043,
+            "repeated_raw_rate_max_delta": 0.0,
+            "eval_avg_max_delta": 0.0022353827953338623,
+            "order_logits_max_delta": 0.0013785026967525482,
+            "restored_avg_logits_max_delta": 0.0,
+            "batch_partition_logits_max_delta": 0.0002989675849676132,
+            "repeated_prediction_changes": 0,
+            "order_prediction_changes": 0
+          },
+          "feedback": {
+            "column_input_spike_state_max_delta": 0.0,
+            "no_edges_column_input_spike_state_max_delta": 0.0,
+            "logits_extreme_weight_max_delta": 0.000562768429517746,
+            "logits_no_edges_max_delta": 8.815061300992966e-05,
+            "modulated_rates_max_delta": 0.0012309327721595764,
+            "interpretation": "Связи модулируют признаки readout; обратной подачи в LIF нет"
+          },
+          "stdp": {
+            "paired_batches": [
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 1.0244548320770264e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 5.21540641784668e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 4.1211023926734924e-08
+              }
+            ],
+            "total_stdp_weight_delta": 4.1211023926734924e-08,
+            "off_weight_delta": 0.0,
+            "trace_before_next_batch": {
+              "min": 0.2494204342365265,
+              "max": 0.920342206954956,
+              "l2": 1.7441885471343994,
+              "nonzero": 8
+            },
+            "trace_after_next_batch": {
+              "min": 0.30375662446022034,
+              "max": 1.1670538187026978,
+              "l2": 2.0415146350860596,
+              "nonzero": 8
+            },
+            "post_trace_before_next_batch": {
+              "min": 0.370063453912735,
+              "max": 0.9960291385650635,
+              "l2": 1.773136019706726,
+              "nonzero": 8
+            },
+            "post_trace_after_next_batch": {
+              "min": 0.40822097659111023,
+              "max": 1.040197730064392,
+              "l2": 1.809402346611023,
+              "nonzero": 8
+            },
+            "carried_vs_reset_trace_delta": 0.7167633771896362,
+            "carried_vs_reset_post_trace_delta": 0.7757083177566528,
+            "carried_vs_reset_weight_delta": 8.940696716308594e-08,
+            "next_batch_stdp_delta": 8.940696716308594e-08,
+            "training_step": 3,
+            "topology_changed": false
+          },
+          "effective_weights": {
+            "initial_effective_active_edges": {
+              "min": 0.4872299134731293,
+              "max": 0.5319404602050781,
+              "l2": 2.025102138519287,
+              "nonzero": 16
+            },
+            "initial_negative_effective_edges": 0,
+            "sigmoid_raw_minus2_zero_plus2": [
+              0.11920291930437088,
+              0.5,
+              0.8807970285415649
+            ],
+            "small_signed_activity_bounds": [
+              -0.2,
+              0.8
+            ],
+            "default_signed_activity_bounds": [
+              -0.203125,
+              0.796875
+            ],
+            "default_correlation_upper_bound": 0.635009765625,
+            "formation_threshold": 0.8,
+            "max_activity_potential_after_1000": 0.6349831819534302,
+            "formation_candidates_after_1000": 0,
+            "interpretation": "Положительный effective вес; signed активность допускает отрицательное влияние. Порог формирования 0.8 недостижим при стандартной доле 102/128 и нулевом начальном potential: корреляция не выше (102/128)^2"
+          }
+        },
+        {
+          "seed": 17,
+          "config": {
+            "num_columns": 8,
+            "in_dim": 40,
+            "col_out": 20,
+            "top_out": 3,
+            "graph_k": 2,
+            "graph_p": 0.15,
+            "time_steps": 50
+          },
+          "encoding_requires_grad": false,
+          "training": {
+            "completed": true,
+            "logits_shape": [
+              4,
+              3
+            ],
+            "finite": true,
+            "loss": 1.1020830869674683,
+            "pre_clip_gradient_norm": 0.5282319784164429,
+            "rate_loss": 0.003735063597559929,
+            "rate_loss_requires_grad": false,
+            "current_rates_requires_grad": false,
+            "parameters": {
+              "input_scale": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "topology": {
+                "requires_grad": false,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "inter_weights": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -1.0759268661786336e-05,
+                  "max": 1.1363006706233136e-05,
+                  "l2": 2.039454375335481e-05,
+                  "nonzero": 16
+                },
+                "forward_delta": 7.916241884231567e-09,
+                "optimizer_delta": 4.995428025722504e-05
+              },
+              "columns.0.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.0.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "readout.0.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.008917216211557388,
+                  "max": 0.012228910811245441,
+                  "l2": 0.23428179323673248,
+                  "nonzero": 31627
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.0.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.01962999999523163,
+                  "max": 0.03125869482755661,
+                  "l2": 0.13094750046730042,
+                  "nonzero": 306
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.3.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.0642811730504036,
+                  "max": 0.06410342454910278,
+                  "l2": 0.40843361616134644,
+                  "nonzero": 918
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              },
+              "readout.3.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.16349416971206665,
+                  "max": 0.08808346837759018,
+                  "l2": 0.20043905079364777,
+                  "nonzero": 3
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000010132789612
+              }
+            }
+          },
+          "evaluation": {
+            "repeated_logits_max_delta": 0.0018597133457660675,
+            "repeated_raw_rate_max_delta": 0.0,
+            "eval_avg_max_delta": 0.002762097865343094,
+            "order_logits_max_delta": 0.0018214210867881775,
+            "restored_avg_logits_max_delta": 0.0,
+            "batch_partition_logits_max_delta": 0.0006894078105688095,
+            "repeated_prediction_changes": 0,
+            "order_prediction_changes": 0
+          },
+          "feedback": {
+            "column_input_spike_state_max_delta": 0.0,
+            "no_edges_column_input_spike_state_max_delta": 0.0,
+            "logits_extreme_weight_max_delta": 0.0005764700472354889,
+            "logits_no_edges_max_delta": 9.029358625411987e-05,
+            "modulated_rates_max_delta": 0.0011071711778640747,
+            "interpretation": "Связи модулируют признаки readout; обратной подачи в LIF нет"
+          },
+          "stdp": {
+            "paired_batches": [
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 1.3504177331924438e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 4.516914486885071e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 5.3551048040390015e-08
+              }
+            ],
+            "total_stdp_weight_delta": 5.3551048040390015e-08,
+            "off_weight_delta": 0.0,
+            "trace_before_next_batch": {
+              "min": 0.010315063409507275,
+              "max": 0.9880717992782593,
+              "l2": 1.8008685111999512,
+              "nonzero": 8
+            },
+            "trace_after_next_batch": {
+              "min": 0.018470942974090576,
+              "max": 1.0014028549194336,
+              "l2": 1.8402795791625977,
+              "nonzero": 8
+            },
+            "post_trace_before_next_batch": {
+              "min": 0.03230586275458336,
+              "max": 0.8044754862785339,
+              "l2": 1.6743899583816528,
+              "nonzero": 8
+            },
+            "post_trace_after_next_batch": {
+              "min": 0.16893073916435242,
+              "max": 0.761311411857605,
+              "l2": 1.689026951789856,
+              "nonzero": 8
+            },
+            "carried_vs_reset_trace_delta": 0.769511342048645,
+            "carried_vs_reset_post_trace_delta": 0.6265262365341187,
+            "carried_vs_reset_weight_delta": 4.7497451305389404e-08,
+            "next_batch_stdp_delta": 4.842877388000488e-08,
+            "training_step": 3,
+            "topology_changed": false
+          },
+          "effective_weights": {
+            "initial_effective_active_edges": {
+              "min": 0.4721079170703888,
+              "max": 0.5277025103569031,
+              "l2": 2.01153826713562,
+              "nonzero": 16
+            },
+            "initial_negative_effective_edges": 0,
+            "sigmoid_raw_minus2_zero_plus2": [
+              0.11920291930437088,
+              0.5,
+              0.8807970285415649
+            ],
+            "small_signed_activity_bounds": [
+              -0.2,
+              0.8
+            ],
+            "default_signed_activity_bounds": [
+              -0.203125,
+              0.796875
+            ],
+            "default_correlation_upper_bound": 0.635009765625,
+            "formation_threshold": 0.8,
+            "max_activity_potential_after_1000": 0.6349831819534302,
+            "formation_candidates_after_1000": 0,
+            "interpretation": "Положительный effective вес; signed активность допускает отрицательное влияние. Порог формирования 0.8 недостижим при стандартной доле 102/128 и нулевом начальном potential: корреляция не выше (102/128)^2"
+          }
+        },
+        {
+          "seed": 27,
+          "config": {
+            "num_columns": 8,
+            "in_dim": 40,
+            "col_out": 20,
+            "top_out": 3,
+            "graph_k": 2,
+            "graph_p": 0.15,
+            "time_steps": 50
+          },
+          "encoding_requires_grad": false,
+          "training": {
+            "completed": true,
+            "logits_shape": [
+              4,
+              3
+            ],
+            "finite": true,
+            "loss": 1.1051026582717896,
+            "pre_clip_gradient_norm": 0.5957485437393188,
+            "rate_loss": 0.0011220069136470556,
+            "rate_loss_requires_grad": false,
+            "current_rates_requires_grad": false,
+            "parameters": {
+              "input_scale": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "topology": {
+                "requires_grad": false,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "inter_weights": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -8.334700396517292e-06,
+                  "max": 8.879208508005831e-06,
+                  "l2": 1.7366115571348928e-05,
+                  "nonzero": 16
+                },
+                "forward_delta": 3.958120942115784e-09,
+                "optimizer_delta": 4.9933791160583496e-05
+              },
+              "columns.0.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.0.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "readout.0.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.014070614241063595,
+                  "max": 0.013332492671906948,
+                  "l2": 0.24844859540462494,
+                  "nonzero": 28447
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.0.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.027222786098718643,
+                  "max": 0.02531428076326847,
+                  "l2": 0.13713228702545166,
+                  "nonzero": 314
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.3.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.07231681793928146,
+                  "max": 0.06628112494945526,
+                  "l2": 0.47651371359825134,
+                  "nonzero": 942
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              },
+              "readout.3.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.17736224830150604,
+                  "max": 0.09683561325073242,
+                  "l2": 0.21752941608428955,
+                  "nonzero": 3
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000019446015358
+              }
+            }
+          },
+          "evaluation": {
+            "repeated_logits_max_delta": 0.002759486436843872,
+            "repeated_raw_rate_max_delta": 0.0,
+            "eval_avg_max_delta": 0.0021803155541419983,
+            "order_logits_max_delta": 0.001744791865348816,
+            "restored_avg_logits_max_delta": 0.0,
+            "batch_partition_logits_max_delta": 0.0006850510835647583,
+            "repeated_prediction_changes": 0,
+            "order_prediction_changes": 0
+          },
+          "feedback": {
+            "column_input_spike_state_max_delta": 0.0,
+            "no_edges_column_input_spike_state_max_delta": 0.0,
+            "logits_extreme_weight_max_delta": 0.0006036683917045593,
+            "logits_no_edges_max_delta": 9.413063526153564e-05,
+            "modulated_rates_max_delta": 0.0009263008832931519,
+            "interpretation": "Связи модулируют признаки readout; обратной подачи в LIF нет"
+          },
+          "stdp": {
+            "paired_batches": [
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 7.450580596923828e-09
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 1.4901161193847656e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 4.284083843231201e-08
+              }
+            ],
+            "total_stdp_weight_delta": 4.284083843231201e-08,
+            "off_weight_delta": 0.0,
+            "trace_before_next_batch": {
+              "min": 0.12538647651672363,
+              "max": 0.590043842792511,
+              "l2": 1.1117196083068848,
+              "nonzero": 8
+            },
+            "trace_after_next_batch": {
+              "min": 0.06899159401655197,
+              "max": 0.5833418369293213,
+              "l2": 1.2436295747756958,
+              "nonzero": 8
+            },
+            "post_trace_before_next_batch": {
+              "min": -0.02842407301068306,
+              "max": 0.574531078338623,
+              "l2": 1.0682785511016846,
+              "nonzero": 8
+            },
+            "post_trace_after_next_batch": {
+              "min": -0.008604402653872967,
+              "max": 0.5454490184783936,
+              "l2": 1.1122299432754517,
+              "nonzero": 8
+            },
+            "carried_vs_reset_trace_delta": 0.4595266878604889,
+            "carried_vs_reset_post_trace_delta": 0.447445273399353,
+            "carried_vs_reset_weight_delta": 4.470348358154297e-08,
+            "next_batch_stdp_delta": 4.842877388000488e-08,
+            "training_step": 3,
+            "topology_changed": false
+          },
+          "effective_weights": {
+            "initial_effective_active_edges": {
+              "min": 0.47362858057022095,
+              "max": 0.5207335352897644,
+              "l2": 1.9983665943145752,
+              "nonzero": 16
+            },
+            "initial_negative_effective_edges": 0,
+            "sigmoid_raw_minus2_zero_plus2": [
+              0.11920291930437088,
+              0.5,
+              0.8807970285415649
+            ],
+            "small_signed_activity_bounds": [
+              -0.2,
+              0.8
+            ],
+            "default_signed_activity_bounds": [
+              -0.203125,
+              0.796875
+            ],
+            "default_correlation_upper_bound": 0.635009765625,
+            "formation_threshold": 0.8,
+            "max_activity_potential_after_1000": 0.6349831819534302,
+            "formation_candidates_after_1000": 0,
+            "interpretation": "Положительный effective вес; signed активность допускает отрицательное влияние. Порог формирования 0.8 недостижим при стандартной доле 102/128 и нулевом начальном potential: корреляция не выше (102/128)^2"
+          }
+        }
+      ],
+      "article_dimensions_batch2": {
+        "completed": true,
+        "logits_shape": [
+          2,
+          10
+        ],
+        "finite": true,
+        "loss": 2.2855007648468018,
+        "pre_clip_gradient_norm": 3.4258739948272705,
+        "rate_loss": 0.0003693395992740989,
+        "rate_loss_requires_grad": false,
+        "current_rates_requires_grad": false,
+        "parameters": {
+          "input_scale": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "topology": {
+            "requires_grad": false,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "inter_weights": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -1.1805348549387418e-05,
+              "max": 8.544627235096414e-06,
+              "l2": 5.728731775889173e-05,
+              "nonzero": 512
+            },
+            "forward_delta": 8.381903171539307e-09,
+            "optimizer_delta": 4.971027374267578e-05
+          },
+          "columns.0.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.0.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.1.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.1.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.2.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.2.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.3.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.3.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.4.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.4.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.5.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.5.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.6.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.6.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.7.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.7.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.8.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.8.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.9.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.9.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.10.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.10.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.11.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.11.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.12.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.12.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.13.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.13.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.14.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.14.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.15.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.15.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.16.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.16.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.17.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.17.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.18.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.18.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.19.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.19.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.20.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.20.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.21.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.21.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.22.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.22.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.23.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.23.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.24.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.24.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.25.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.25.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.26.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.26.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.27.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.27.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.28.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.28.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.29.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.29.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.30.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.30.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.31.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.31.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.32.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.32.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.33.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.33.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.34.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.34.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.35.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.35.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.36.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.36.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.37.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.37.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.38.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.38.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.39.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.39.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.40.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.40.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.41.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.41.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.42.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.42.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.43.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.43.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.44.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.44.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.45.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.45.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.46.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.46.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.47.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.47.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.48.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.48.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.49.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.49.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.50.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.50.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.51.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.51.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.52.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.52.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.53.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.53.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.54.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.54.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.55.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.55.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.56.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.56.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.57.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.57.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.58.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.58.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.59.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.59.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.60.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.60.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.61.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.61.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.62.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.62.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.63.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.63.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "readout.0.weight": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.026137113571166992,
+              "max": 0.026282666251063347,
+              "l2": 3.265416145324707,
+              "nonzero": 1165640
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0004999996162950993
+          },
+          "readout.0.bias": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.05039583146572113,
+              "max": 0.04989427328109741,
+              "l2": 0.30171000957489014,
+              "nonzero": 273
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000000819563866
+          },
+          "readout.3.weight": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.12887193262577057,
+              "max": 0.025114012882113457,
+              "l2": 0.7652497291564941,
+              "nonzero": 2730
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000047385692596
+          },
+          "readout.3.bias": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.4001162350177765,
+              "max": 0.10475331544876099,
+              "l2": 0.630105197429657,
+              "nonzero": 10
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000047385692596
+          }
+        }
+      }
+    },
+    {
+      "device": "mps",
+      "small_runs": [
+        {
+          "seed": 7,
+          "config": {
+            "num_columns": 8,
+            "in_dim": 40,
+            "col_out": 20,
+            "top_out": 3,
+            "graph_k": 2,
+            "graph_p": 0.15,
+            "time_steps": 50
+          },
+          "encoding_requires_grad": false,
+          "training": {
+            "completed": true,
+            "logits_shape": [
+              4,
+              3
+            ],
+            "finite": true,
+            "loss": 1.101723074913025,
+            "pre_clip_gradient_norm": 0.557238757610321,
+            "rate_loss": 0.0028857190627604723,
+            "rate_loss_requires_grad": false,
+            "current_rates_requires_grad": false,
+            "parameters": {
+              "input_scale": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "topology": {
+                "requires_grad": false,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "inter_weights": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -1.1836454177682754e-05,
+                  "max": 1.5036108379717916e-05,
+                  "l2": 2.345450411667116e-05,
+                  "nonzero": 16
+                },
+                "forward_delta": 7.450580596923828e-09,
+                "optimizer_delta": 4.996359348297119e-05
+              },
+              "columns.0.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.0.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "readout.0.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.011909588240087032,
+                  "max": 0.01177121140062809,
+                  "l2": 0.2201923429965973,
+                  "nonzero": 26151
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.0.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.026935622096061707,
+                  "max": 0.02509484440088272,
+                  "l2": 0.12375956028699875,
+                  "nonzero": 285
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.3.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.07818156480789185,
+                  "max": 0.061978530138731,
+                  "l2": 0.44632333517074585,
+                  "nonzero": 855
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              },
+              "readout.3.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.17766119539737701,
+                  "max": 0.09788787364959717,
+                  "l2": 0.21796631813049316,
+                  "nonzero": 3
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              }
+            }
+          },
+          "evaluation": {
+            "repeated_logits_max_delta": 0.002065137028694153,
+            "repeated_raw_rate_max_delta": 0.0,
+            "eval_avg_max_delta": 0.002842634916305542,
+            "order_logits_max_delta": 0.0005590766668319702,
+            "restored_avg_logits_max_delta": 0.0,
+            "batch_partition_logits_max_delta": 0.0010225474834442139,
+            "repeated_prediction_changes": 0,
+            "order_prediction_changes": 0
+          },
+          "feedback": {
+            "column_input_spike_state_max_delta": 0.0,
+            "no_edges_column_input_spike_state_max_delta": 0.0,
+            "logits_extreme_weight_max_delta": 0.0009186267852783203,
+            "logits_no_edges_max_delta": 0.0001446455717086792,
+            "modulated_rates_max_delta": 0.001645997166633606,
+            "interpretation": "Связи модулируют признаки readout; обратной подачи в LIF нет"
+          },
+          "stdp": {
+            "paired_batches": [
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 7.450580596923828e-09
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 2.9802322387695312e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 4.470348358154297e-08
+              }
+            ],
+            "total_stdp_weight_delta": 4.470348358154297e-08,
+            "off_weight_delta": 0.0,
+            "trace_before_next_batch": {
+              "min": 0.33626487851142883,
+              "max": 0.9258989095687866,
+              "l2": 1.7958860397338867,
+              "nonzero": 8
+            },
+            "trace_after_next_batch": {
+              "min": 0.421430766582489,
+              "max": 0.8957566022872925,
+              "l2": 1.8398712873458862,
+              "nonzero": 8
+            },
+            "post_trace_before_next_batch": {
+              "min": 0.36243003606796265,
+              "max": 0.8986945152282715,
+              "l2": 1.6911736726760864,
+              "nonzero": 8
+            },
+            "post_trace_after_next_batch": {
+              "min": 0.37661251425743103,
+              "max": 0.9333836436271667,
+              "l2": 1.8471429347991943,
+              "nonzero": 8
+            },
+            "carried_vs_reset_trace_delta": 0.7210909128189087,
+            "carried_vs_reset_post_trace_delta": 0.6999040842056274,
+            "carried_vs_reset_weight_delta": 3.91155481338501e-08,
+            "next_batch_stdp_delta": 3.3527612686157227e-08,
+            "training_step": 3,
+            "topology_changed": false
+          },
+          "effective_weights": {
+            "initial_effective_active_edges": {
+              "min": 0.4872299134731293,
+              "max": 0.5319404602050781,
+              "l2": 2.025102138519287,
+              "nonzero": 16
+            },
+            "initial_negative_effective_edges": 0,
+            "sigmoid_raw_minus2_zero_plus2": [
+              0.11920291930437088,
+              0.5,
+              0.8807970285415649
+            ],
+            "small_signed_activity_bounds": [
+              -0.2,
+              0.8
+            ],
+            "default_signed_activity_bounds": [
+              -0.203125,
+              0.796875
+            ],
+            "default_correlation_upper_bound": 0.635009765625,
+            "formation_threshold": 0.8,
+            "max_activity_potential_after_1000": 0.6349831819534302,
+            "formation_candidates_after_1000": 0,
+            "interpretation": "Положительный effective вес; signed активность допускает отрицательное влияние. Порог формирования 0.8 недостижим при стандартной доле 102/128 и нулевом начальном potential: корреляция не выше (102/128)^2"
+          }
+        },
+        {
+          "seed": 17,
+          "config": {
+            "num_columns": 8,
+            "in_dim": 40,
+            "col_out": 20,
+            "top_out": 3,
+            "graph_k": 2,
+            "graph_p": 0.15,
+            "time_steps": 50
+          },
+          "encoding_requires_grad": false,
+          "training": {
+            "completed": true,
+            "logits_shape": [
+              4,
+              3
+            ],
+            "finite": true,
+            "loss": 1.0852829217910767,
+            "pre_clip_gradient_norm": 0.5121525526046753,
+            "rate_loss": 0.004065500106662512,
+            "rate_loss_requires_grad": false,
+            "current_rates_requires_grad": false,
+            "parameters": {
+              "input_scale": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "topology": {
+                "requires_grad": false,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "inter_weights": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -7.697718501731288e-06,
+                  "max": 1.1179657121829223e-05,
+                  "l2": 2.1625795852742158e-05,
+                  "nonzero": 16
+                },
+                "forward_delta": 8.381903171539307e-09,
+                "optimizer_delta": 4.995428025722504e-05
+              },
+              "columns.0.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.0.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "readout.0.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.010869489051401615,
+                  "max": 0.008140768855810165,
+                  "l2": 0.2116347849369049,
+                  "nonzero": 29970
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.0.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.02558797411620617,
+                  "max": 0.01883690059185028,
+                  "l2": 0.11905504018068314,
+                  "nonzero": 296
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.3.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.05836392566561699,
+                  "max": 0.06642451882362366,
+                  "l2": 0.4042696952819824,
+                  "nonzero": 888
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              },
+              "readout.3.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.16299447417259216,
+                  "max": 0.08659569919109344,
+                  "l2": 0.19975678622722626,
+                  "nonzero": 3
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000010132789612
+              }
+            }
+          },
+          "evaluation": {
+            "repeated_logits_max_delta": 0.002358831465244293,
+            "repeated_raw_rate_max_delta": 0.0,
+            "eval_avg_max_delta": 0.0028452910482883453,
+            "order_logits_max_delta": 0.002597600221633911,
+            "restored_avg_logits_max_delta": 0.0,
+            "batch_partition_logits_max_delta": 0.00032328441739082336,
+            "repeated_prediction_changes": 0,
+            "order_prediction_changes": 0
+          },
+          "feedback": {
+            "column_input_spike_state_max_delta": 0.0,
+            "no_edges_column_input_spike_state_max_delta": 0.0,
+            "logits_extreme_weight_max_delta": 0.0007072612643241882,
+            "logits_no_edges_max_delta": 0.00010993331670761108,
+            "modulated_rates_max_delta": 0.0014013350009918213,
+            "interpretation": "Связи модулируют признаки readout; обратной подачи в LIF нет"
+          },
+          "stdp": {
+            "paired_batches": [
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 4.889443516731262e-09
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 1.6298145055770874e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 2.9802322387695312e-08
+              }
+            ],
+            "total_stdp_weight_delta": 2.9802322387695312e-08,
+            "off_weight_delta": 0.0,
+            "trace_before_next_batch": {
+              "min": 0.19957509636878967,
+              "max": 0.8398670554161072,
+              "l2": 1.6613445281982422,
+              "nonzero": 8
+            },
+            "trace_after_next_batch": {
+              "min": 0.15937454998493195,
+              "max": 0.948739767074585,
+              "l2": 1.9660708904266357,
+              "nonzero": 8
+            },
+            "post_trace_before_next_batch": {
+              "min": 0.19138294458389282,
+              "max": 0.7416143417358398,
+              "l2": 1.5628564357757568,
+              "nonzero": 8
+            },
+            "post_trace_after_next_batch": {
+              "min": 0.3045720160007477,
+              "max": 0.9365279674530029,
+              "l2": 1.8567005395889282,
+              "nonzero": 8
+            },
+            "carried_vs_reset_trace_delta": 0.654089093208313,
+            "carried_vs_reset_post_trace_delta": 0.5775699019432068,
+            "carried_vs_reset_weight_delta": 5.960464477539063e-08,
+            "next_batch_stdp_delta": 5.21540641784668e-08,
+            "training_step": 3,
+            "topology_changed": false
+          },
+          "effective_weights": {
+            "initial_effective_active_edges": {
+              "min": 0.4721079170703888,
+              "max": 0.5277025103569031,
+              "l2": 2.01153826713562,
+              "nonzero": 16
+            },
+            "initial_negative_effective_edges": 0,
+            "sigmoid_raw_minus2_zero_plus2": [
+              0.11920291930437088,
+              0.5,
+              0.8807970285415649
+            ],
+            "small_signed_activity_bounds": [
+              -0.2,
+              0.8
+            ],
+            "default_signed_activity_bounds": [
+              -0.203125,
+              0.796875
+            ],
+            "default_correlation_upper_bound": 0.635009765625,
+            "formation_threshold": 0.8,
+            "max_activity_potential_after_1000": 0.6349831819534302,
+            "formation_candidates_after_1000": 0,
+            "interpretation": "Положительный effective вес; signed активность допускает отрицательное влияние. Порог формирования 0.8 недостижим при стандартной доле 102/128 и нулевом начальном potential: корреляция не выше (102/128)^2"
+          }
+        },
+        {
+          "seed": 27,
+          "config": {
+            "num_columns": 8,
+            "in_dim": 40,
+            "col_out": 20,
+            "top_out": 3,
+            "graph_k": 2,
+            "graph_p": 0.15,
+            "time_steps": 50
+          },
+          "encoding_requires_grad": false,
+          "training": {
+            "completed": true,
+            "logits_shape": [
+              4,
+              3
+            ],
+            "finite": true,
+            "loss": 1.1106873750686646,
+            "pre_clip_gradient_norm": 0.5764691233634949,
+            "rate_loss": 0.0012845046585425735,
+            "rate_loss_requires_grad": false,
+            "current_rates_requires_grad": false,
+            "parameters": {
+              "input_scale": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "topology": {
+                "requires_grad": false,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "inter_weights": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -1.022198011924047e-05,
+                  "max": 2.286144626850728e-05,
+                  "l2": 2.7785272322944365e-05,
+                  "nonzero": 16
+                },
+                "forward_delta": 3.725290298461914e-09,
+                "optimizer_delta": 4.997476935386658e-05
+              },
+              "columns.0.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.0.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.1.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.2.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.3.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.4.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.5.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.6.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_exc.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "columns.7.fc_inh.weight": {
+                "requires_grad": true,
+                "in_optimizer": false,
+                "gradient": null,
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0
+              },
+              "readout.0.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.014725449495017529,
+                  "max": 0.01694881170988083,
+                  "l2": 0.2367449253797531,
+                  "nonzero": 29226
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.0.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.02358184941112995,
+                  "max": 0.03255219757556915,
+                  "l2": 0.12989497184753418,
+                  "nonzero": 317
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000084638595581
+              },
+              "readout.3.weight": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.08036138862371445,
+                  "max": 0.08158677816390991,
+                  "l2": 0.46341708302497864,
+                  "nonzero": 951
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000047385692596
+              },
+              "readout.3.bias": {
+                "requires_grad": true,
+                "in_optimizer": true,
+                "gradient": {
+                  "min": -0.1720474660396576,
+                  "max": 0.09697616845369339,
+                  "l2": 0.21128275990486145,
+                  "nonzero": 3
+                },
+                "forward_delta": 0.0,
+                "optimizer_delta": 0.0005000019446015358
+              }
+            }
+          },
+          "evaluation": {
+            "repeated_logits_max_delta": 0.0021178200840950012,
+            "repeated_raw_rate_max_delta": 0.0,
+            "eval_avg_max_delta": 0.0028283223509788513,
+            "order_logits_max_delta": 0.001659788191318512,
+            "restored_avg_logits_max_delta": 0.0,
+            "batch_partition_logits_max_delta": 0.000415140762925148,
+            "repeated_prediction_changes": 0,
+            "order_prediction_changes": 0
+          },
+          "feedback": {
+            "column_input_spike_state_max_delta": 0.0,
+            "no_edges_column_input_spike_state_max_delta": 0.0,
+            "logits_extreme_weight_max_delta": 0.0002786964178085327,
+            "logits_no_edges_max_delta": 4.27737832069397e-05,
+            "modulated_rates_max_delta": 0.0008758381009101868,
+            "interpretation": "Связи модулируют признаки readout; обратной подачи в LIF нет"
+          },
+          "stdp": {
+            "paired_batches": [
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 1.3969838619232178e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 3.3527612686157227e-08
+              },
+              {
+                "logits_max_delta": 0.0,
+                "weights_max_delta": 4.563480615615845e-08
+              }
+            ],
+            "total_stdp_weight_delta": 4.563480615615845e-08,
+            "off_weight_delta": 0.0,
+            "trace_before_next_batch": {
+              "min": 0.15248186886310577,
+              "max": 0.644335150718689,
+              "l2": 1.1678643226623535,
+              "nonzero": 8
+            },
+            "trace_after_next_batch": {
+              "min": 0.1505003124475479,
+              "max": 0.6709809899330139,
+              "l2": 1.2371023893356323,
+              "nonzero": 8
+            },
+            "post_trace_before_next_batch": {
+              "min": 0.08511847257614136,
+              "max": 0.6210358142852783,
+              "l2": 1.148916482925415,
+              "nonzero": 8
+            },
+            "post_trace_after_next_batch": {
+              "min": 0.1758376955986023,
+              "max": 0.6903803944587708,
+              "l2": 1.2261462211608887,
+              "nonzero": 8
+            },
+            "carried_vs_reset_trace_delta": 0.5018088817596436,
+            "carried_vs_reset_post_trace_delta": 0.4836632013320923,
+            "carried_vs_reset_weight_delta": 5.3085386753082275e-08,
+            "next_batch_stdp_delta": 5.4016709327697754e-08,
+            "training_step": 3,
+            "topology_changed": false
+          },
+          "effective_weights": {
+            "initial_effective_active_edges": {
+              "min": 0.47362861037254333,
+              "max": 0.5207335352897644,
+              "l2": 1.9983665943145752,
+              "nonzero": 16
+            },
+            "initial_negative_effective_edges": 0,
+            "sigmoid_raw_minus2_zero_plus2": [
+              0.11920291930437088,
+              0.5,
+              0.8807970285415649
+            ],
+            "small_signed_activity_bounds": [
+              -0.2,
+              0.8
+            ],
+            "default_signed_activity_bounds": [
+              -0.203125,
+              0.796875
+            ],
+            "default_correlation_upper_bound": 0.635009765625,
+            "formation_threshold": 0.8,
+            "max_activity_potential_after_1000": 0.6349831819534302,
+            "formation_candidates_after_1000": 0,
+            "interpretation": "Положительный effective вес; signed активность допускает отрицательное влияние. Порог формирования 0.8 недостижим при стандартной доле 102/128 и нулевом начальном potential: корреляция не выше (102/128)^2"
+          }
+        }
+      ],
+      "article_dimensions_batch2": {
+        "completed": true,
+        "logits_shape": [
+          2,
+          10
+        ],
+        "finite": true,
+        "loss": 2.2824196815490723,
+        "pre_clip_gradient_norm": 3.4580605030059814,
+        "rate_loss": 0.0004203733114991337,
+        "rate_loss_requires_grad": false,
+        "current_rates_requires_grad": false,
+        "parameters": {
+          "input_scale": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "topology": {
+            "requires_grad": false,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "inter_weights": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -6.493477485491894e-06,
+              "max": 1.1231266398681328e-05,
+              "l2": 6.912990647833794e-05,
+              "nonzero": 512
+            },
+            "forward_delta": 7.450580596923828e-09,
+            "optimizer_delta": 4.96935099363327e-05
+          },
+          "columns.0.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.0.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.1.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.1.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.2.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.2.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.3.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.3.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.4.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.4.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.5.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.5.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.6.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.6.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.7.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.7.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.8.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.8.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.9.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.9.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.10.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.10.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.11.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.11.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.12.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.12.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.13.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.13.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.14.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.14.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.15.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.15.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.16.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.16.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.17.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.17.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.18.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.18.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.19.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.19.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.20.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.20.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.21.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.21.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.22.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.22.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.23.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.23.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.24.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.24.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.25.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.25.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.26.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.26.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.27.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.27.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.28.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.28.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.29.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.29.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.30.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.30.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.31.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.31.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.32.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.32.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.33.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.33.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.34.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.34.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.35.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.35.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.36.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.36.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.37.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.37.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.38.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.38.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.39.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.39.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.40.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.40.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.41.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.41.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.42.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.42.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.43.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.43.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.44.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.44.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.45.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.45.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.46.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.46.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.47.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.47.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.48.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.48.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.49.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.49.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.50.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.50.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.51.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.51.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.52.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.52.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.53.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.53.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.54.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.54.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.55.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.55.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.56.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.56.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.57.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.57.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.58.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.58.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.59.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.59.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.60.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.60.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.61.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.61.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.62.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.62.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.63.fc_exc.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "columns.63.fc_inh.weight": {
+            "requires_grad": true,
+            "in_optimizer": false,
+            "gradient": null,
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0
+          },
+          "readout.0.weight": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.0324409194290638,
+              "max": 0.028957925736904144,
+              "l2": 3.292027473449707,
+              "nonzero": 1170574
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000000819563866
+          },
+          "readout.0.bias": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.05755762755870819,
+              "max": 0.049896564334630966,
+              "l2": 0.30052101612091064,
+              "nonzero": 270
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000000819563866
+          },
+          "readout.3.weight": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.10709522664546967,
+              "max": 0.026741724461317062,
+              "l2": 0.7945583462715149,
+              "nonzero": 2700
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000047385692596
+          },
+          "readout.3.bias": {
+            "requires_grad": true,
+            "in_optimizer": true,
+            "gradient": {
+              "min": -0.3995177745819092,
+              "max": 0.10429701954126358,
+              "l2": 0.6298883557319641,
+              "nonzero": 10
+            },
+            "forward_delta": 0.0,
+            "optimizer_delta": 0.0005000047385692596
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Синтетические диагностические batches; точность MNIST не измерялась",
+    "40 эпох, benchmark NutriFit и основной протокол V10 не выполнялись",
+    "Повторяемость CPU задаётся seed; MPS не обещает побитовую идентичность",
+    "Жёсткие пороги блокируют gradient flow, но это совместимо с reservoir design",
+    "Численные ablations отражают конкретные batches, не качество обученной модели"
+  ],
+  "elapsed_seconds": 10.524103084113449
+}

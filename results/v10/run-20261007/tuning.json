@@ -1,0 +1,3981 @@
+[
+  {
+    "variant": {
+      "name": "population",
+      "family": "population",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.005911833606660366,
+      "microseconds_per_decision": 3.2843520037002034,
+      "states": []
+    }
+  },
+  {
+    "variant": {
+      "name": "scalar_r0.2",
+      "family": "scalar",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    "macro_brier": 0.16270322623133301,
+    "costs": {
+      "seconds": 0.17411374999210238,
+      "microseconds_per_decision": 96.72986110672355,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 14934,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 15729,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 15845,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16027,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16945,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 15840,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 15484,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16031,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16943,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16210,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ]
+    }
+  },
+  {
+    "variant": {
+      "name": "direct_r0.2",
+      "family": "direct",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    "macro_brier": 0.1633298362308166,
+    "costs": {
+      "seconds": 0.24934979202225804,
+      "microseconds_per_decision": 138.5276622345878,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83911,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94478,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102916,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106011,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98208,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98091,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 88155,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102215,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103265,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96729,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ]
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t5.0_g0.1_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16455119319158829,
+    "costs": {
+      "seconds": 0.2600122499279678,
+      "microseconds_per_decision": 144.4512499599821,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 81090,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 91510,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98596,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103013,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97981,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96341,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 84154,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96697,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101556,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96067,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6806365419179201,
+      "spike_fraction": 0.0034892823730119423,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t5.0_g0.1_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.1629098215840305,
+    "costs": {
+      "seconds": 0.25418912479653955,
+      "microseconds_per_decision": 141.216180442522,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 81111,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 91259,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98376,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103209,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97773,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96469,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83795,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96298,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101626,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95864,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6611882080323994,
+      "spike_fraction": 0.0034892823730119423,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t5.0_g0.1_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.2297299997881055,
+      "microseconds_per_decision": 127.62777766005861,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 81495,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90947,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98585,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103812,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98021,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97463,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83013,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96304,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102522,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96856,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6478437497280538,
+      "spike_fraction": 0.0034892823730119423,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t20.0_g0.03_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16430678459751105,
+    "costs": {
+      "seconds": 0.2141045406460762,
+      "microseconds_per_decision": 118.94696702559789,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 70908,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82649,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82231,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90374,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 87720,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83928,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 73128,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83429,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 89261,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84727,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5708748330362141,
+      "spike_fraction": 0.000740577362280557,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t20.0_g0.03_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.16589601870836138,
+    "costs": {
+      "seconds": 0.20515745924785733,
+      "microseconds_per_decision": 113.97636624880964,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 71001,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82449,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82261,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90750,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 87514,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84129,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 72890,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83228,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 89730,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84775,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5634475001133978,
+      "spike_fraction": 0.000740577362280557,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t20.0_g0.03_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16484043979044696,
+    "costs": {
+      "seconds": 0.19864104175940156,
+      "microseconds_per_decision": 110.35613431077864,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 71222,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82285,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82252,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 91054,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 87590,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84718,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 72415,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83169,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90218,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 85492,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5693950830027461,
+      "spike_fraction": 0.000740577362280557,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t20.0_g0.1_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16461816105515398,
+    "costs": {
+      "seconds": 0.23152787517756224,
+      "microseconds_per_decision": 128.62659732086792,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83807,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94359,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102748,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105915,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98239,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98033,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87916,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102227,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103177,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96729,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5734420004300773,
+      "spike_fraction": 0.007102319630179957,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t20.0_g0.1_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.16120018785967632,
+    "costs": {
+      "seconds": 0.23825900023803115,
+      "microseconds_per_decision": 132.36611124335064,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83839,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94157,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102556,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106085,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97967,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98183,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87467,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101735,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103459,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96458,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6285577919334173,
+      "spike_fraction": 0.007102319630179957,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t20.0_g0.1_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.24725704174488783,
+      "microseconds_per_decision": 137.36502319160434,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 84290,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93796,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102849,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106862,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98218,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 99200,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 86559,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102001,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 104321,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97464,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5986916669644415,
+      "spike_fraction": 0.007102319630179957,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t20.0_g0.3_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16468005090116505,
+    "costs": {
+      "seconds": 0.34119829069823027,
+      "microseconds_per_decision": 189.55460594346127,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83818,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94414,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102786,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105900,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98258,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98042,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87890,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102142,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103065,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96658,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6810939172282815,
+      "spike_fraction": 0.021588485774035552,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t20.0_g0.3_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.16084381328782865,
+    "costs": {
+      "seconds": 0.23308458318933845,
+      "microseconds_per_decision": 129.491435105188,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83774,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94074,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102512,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105873,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97941,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98117,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87303,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101552,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103291,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96424,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6700068754144013,
+      "spike_fraction": 0.021588485774035552,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t20.0_g0.3_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.25342579232528806,
+      "microseconds_per_decision": 140.79210684738226,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 84288,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93734,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102800,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106779,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98223,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 99188,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 86496,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101850,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 104127,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97480,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6468115830793977,
+      "spike_fraction": 0.021588485774035552,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t80.0_g0.1_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16463038581316722,
+    "costs": {
+      "seconds": 0.4211107911542058,
+      "microseconds_per_decision": 233.95043953011435,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83812,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94469,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102758,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106066,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98219,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97918,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87923,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102164,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103309,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96614,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6308214999735355,
+      "spike_fraction": 0.00763649840405041,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t80.0_g0.1_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.16125191487675603,
+    "costs": {
+      "seconds": 0.241070790681988,
+      "microseconds_per_decision": 133.92821704554888,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83901,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 94163,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102570,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106001,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97976,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98122,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87480,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101700,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103409,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96500,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.7674733330495656,
+      "spike_fraction": 0.00763649840405041,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t80.0_g0.1_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.23930337466299534,
+      "microseconds_per_decision": 132.94631925721964,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 84343,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93836,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102811,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106886,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98238,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 99190,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 86613,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101951,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 104339,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97451,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6025839578360319,
+      "spike_fraction": 0.00763649840405041,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "scalar_r0.8",
+      "family": "scalar",
+      "rate": 0.8,
+      "lif": null,
+      "rule": "direct"
+    },
+    "macro_brier": 0.16198327575983845,
+    "costs": {
+      "seconds": 0.1503970422782004,
+      "microseconds_per_decision": 83.55391237677799,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 14934,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 15733,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 15847,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16017,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16943,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 15792,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 15479,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16032,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16939,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 24,
+          "pending_trace_bytes": 8,
+          "checkpoint_json_bytes": 16213,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ]
+    }
+  },
+  {
+    "variant": {
+      "name": "direct_r0.8",
+      "family": "direct",
+      "rate": 0.8,
+      "lif": null,
+      "rule": "direct"
+    },
+    "macro_brier": 0.1622095314445392,
+    "costs": {
+      "seconds": 0.23149095801636577,
+      "microseconds_per_decision": 128.60608778686986,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83382,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93945,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102240,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105380,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97530,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97614,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87459,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101378,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102822,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96149,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ]
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t5.0_g0.1_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16228618006812928,
+    "costs": {
+      "seconds": 0.23732641711831093,
+      "microseconds_per_decision": 131.84800951017274,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 80584,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 91040,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98068,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102440,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97301,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95863,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83604,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96086,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 100946,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95429,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6047025001607835,
+      "spike_fraction": 0.0034892823730119423,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t5.0_g0.1_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.16270089082521058,
+    "costs": {
+      "seconds": 0.23880374990403652,
+      "microseconds_per_decision": 132.66874994668694,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 80449,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90659,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97712,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102473,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97021,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95884,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83040,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95621,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101008,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95144,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6034137080423534,
+      "spike_fraction": 0.0034892823730119423,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t5.0_g0.1_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.2366362907923758,
+      "microseconds_per_decision": 131.46460599576434,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 80917,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90318,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98139,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103109,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97177,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96701,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 82298,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95657,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101677,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96187,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.589524291921407,
+      "spike_fraction": 0.0034892823730119423,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t20.0_g0.03_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16205044793141427,
+    "costs": {
+      "seconds": 0.21910808281973004,
+      "microseconds_per_decision": 121.7267126776278,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 70508,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82223,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 81962,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 89886,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 87211,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83518,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 72737,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83037,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 89023,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84306,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5777872079052031,
+      "spike_fraction": 0.000740577362280557,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t20.0_g0.03_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.16590942776581857,
+    "costs": {
+      "seconds": 0.21000754088163376,
+      "microseconds_per_decision": 116.67085604535208,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 70556,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 81992,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 81866,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90208,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 87009,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 83606,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 72431,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82715,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 89161,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84181,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5842237081378698,
+      "spike_fraction": 0.000740577362280557,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t20.0_g0.03_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16271533908827385,
+    "costs": {
+      "seconds": 0.19983908394351602,
+      "microseconds_per_decision": 111.02171330195334,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 70850,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82018,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 81903,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 90635,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 87118,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 84312,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 72023,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 82781,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 89784,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 85003,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5702589158900082,
+      "spike_fraction": 0.000740577362280557,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t20.0_g0.1_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.1623533513883219,
+    "costs": {
+      "seconds": 0.25440770806744695,
+      "microseconds_per_decision": 141.33761559302607,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83163,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93807,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102191,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105289,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97536,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97464,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87224,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101357,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102691,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96080,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.589866082649678,
+      "spike_fraction": 0.007102319630179957,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t20.0_g0.1_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.1613814585362894,
+    "costs": {
+      "seconds": 0.2471624156460166,
+      "microseconds_per_decision": 137.31245313667588,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83195,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93490,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101794,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105229,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97261,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97448,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 86629,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 100916,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102739,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95746,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5875962497666478,
+      "spike_fraction": 0.007102319630179957,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t20.0_g0.1_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.2517647920176387,
+      "microseconds_per_decision": 139.86932889868817,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83637,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93073,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102238,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105974,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97391,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98424,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 85740,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101092,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103418,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96827,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6052400832995772,
+      "spike_fraction": 0.007102319630179957,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t20.0_g0.3_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16240861500304418,
+    "costs": {
+      "seconds": 0.2656452087685466,
+      "microseconds_per_decision": 147.58067153808142,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83155,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93907,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102186,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105258,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97536,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97419,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87202,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101282,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102521,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96071,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6184214171953499,
+      "spike_fraction": 0.021588485774035552,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t20.0_g0.3_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.1614822804845585,
+    "costs": {
+      "seconds": 0.2474240828305483,
+      "microseconds_per_decision": 137.45782379474906,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83026,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93429,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101732,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105095,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97263,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97427,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 86518,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 100720,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102561,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95721,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6083980412222445,
+      "spike_fraction": 0.021588485774035552,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t20.0_g0.3_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.24159566592425108,
+      "microseconds_per_decision": 134.21981440236172,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83533,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 92876,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102278,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105815,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97376,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98313,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 85688,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 100911,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103210,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96825,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6292999577708542,
+      "spike_fraction": 0.021588485774035552,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_direct_t80.0_g0.1_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "macro_brier": 0.16237128873782775,
+    "costs": {
+      "seconds": 0.23102766694501042,
+      "microseconds_per_decision": 128.34870385833912,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83169,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93863,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102137,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105259,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97562,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97397,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 87211,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101322,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102649,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96055,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.59394491603598,
+      "spike_fraction": 0.00763649840405041,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_stdp_t80.0_g0.1_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "macro_brier": 0.1612880860571852,
+    "costs": {
+      "seconds": 0.2305374159477651,
+      "microseconds_per_decision": 128.07634219320283,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83122,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93485,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101793,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 105235,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97345,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97376,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 86693,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 100840,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102787,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 95734,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.5827925419434905,
+      "spike_fraction": 0.00763649840405041,
+      "silent_fraction": 0.0
+    }
+  },
+  {
+    "variant": {
+      "name": "lif_rstdp_t80.0_g0.1_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "macro_brier": 0.16589036984488634,
+    "costs": {
+      "seconds": 0.2356492499820888,
+      "microseconds_per_decision": 130.91624999004932,
+      "states": [
+        {
+          "user_id": "V7-CAL-001",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 83665,
+          "pending": 0,
+          "seen": 180,
+          "observations": 44
+        },
+        {
+          "user_id": "V7-CAL-002",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 93173,
+          "pending": 1,
+          "seen": 180,
+          "observations": 45
+        },
+        {
+          "user_id": "V7-CAL-003",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 102313,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-004",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 106046,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-005",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 97427,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-006",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 98315,
+          "pending": 1,
+          "seen": 180,
+          "observations": 46
+        },
+        {
+          "user_id": "V7-CAL-007",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 0,
+          "checkpoint_json_bytes": 85759,
+          "pending": 0,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-008",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 101063,
+          "pending": 1,
+          "seen": 180,
+          "observations": 47
+        },
+        {
+          "user_id": "V7-CAL-009",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 103470,
+          "pending": 1,
+          "seen": 180,
+          "observations": 52
+        },
+        {
+          "user_id": "V7-CAL-010",
+          "numeric_bytes": 48480,
+          "pending_trace_bytes": 16160,
+          "checkpoint_json_bytes": 96790,
+          "pending": 1,
+          "seen": 180,
+          "observations": 48
+        }
+      ],
+      "encoding_seconds": 0.6171423750929534,
+      "spike_fraction": 0.00763649840405041,
+      "silent_fraction": 0.0
+    }
+  }
+]

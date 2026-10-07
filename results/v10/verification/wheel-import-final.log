@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "wheel": "nutrifit_craving_engine-0.1.0-py3-none-any.whl",
+  "modules": {
+    "research_v10.report": "/tmp/craving-v10-final/nutrifit_craving_engine-0.1.0-py3-none-any.whl/research_v10/report.py",
+    "research_v10.followup": "/tmp/craving-v10-final/nutrifit_craving_engine-0.1.0-py3-none-any.whl/research_v10/followup.py",
+    "research_v10.experiment": "/tmp/craving-v10-final/nutrifit_craving_engine-0.1.0-py3-none-any.whl/research_v10/experiment.py",
+    "research_v10.verify": "/tmp/craving-v10-final/nutrifit_craving_engine-0.1.0-py3-none-any.whl/research_v10/verify.py",
+    "research_v9.experiment": "/tmp/craving-v10-final/nutrifit_craving_engine-0.1.0-py3-none-any.whl/research_v9/experiment.py"
+  }
+}

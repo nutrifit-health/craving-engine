@@ -4,6 +4,8 @@
 
 | Document | What it answers |
 | --- | --- |
+| [V10 protocol](protocol-v10.md) | LIF, local plasticity, matched controls and adaptation speed |
+| [V10 results](results-v10.md) | Author-example audit, method comparisons and reproducibility |
 | [V9 protocol](protocol-v9.md) | Hypothesis, inputs, fitting, causality, frozen thresholds and admission |
 | [Recorded results](results-v9.md) | Established findings, failed admission and interpretation limits |
 | [Research roadmap](research-roadmap.md) | A concrete sequence of proposed next experiments |

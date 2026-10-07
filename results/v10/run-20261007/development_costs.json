@@ -1,0 +1,2584 @@
+{
+  "population": {
+    "seconds": 0.012112291995435953,
+    "microseconds_per_decision": 1.6822627771438825,
+    "states": []
+  },
+  "scalar": {
+    "seconds": 0.5560748749412596,
+    "microseconds_per_decision": 77.23262151961939,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15273,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15268,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15463,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15162,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16028,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16031,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 17125,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15448,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 15103,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16048,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 15464,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 14952,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15603,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16207,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15964,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15825,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15286,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16220,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 14388,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16250,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15841,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 14742,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 14554,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16153,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15102,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16734,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15055,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16547,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 14601,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15095,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15122,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15985,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 16200,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15083,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 15726,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15258,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15797,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15832,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15834,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 24,
+        "pending_trace_bytes": 8,
+        "checkpoint_json_bytes": 15479,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ]
+  },
+  "direct": {
+    "seconds": 0.9729256662540138,
+    "microseconds_per_decision": 135.12856475750192,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95753,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 102000,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95593,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93370,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100638,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99095,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 97936,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99417,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 83178,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 96886,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 80086,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 84167,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99278,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99929,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99581,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 101013,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98771,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98602,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 76949,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95169,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95394,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 103489,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 87199,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98057,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98501,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100661,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98117,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99182,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 75365,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100999,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 103740,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99639,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 96468,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95176,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73271,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 101871,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98118,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 92988,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 97878,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99754,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ]
+  },
+  "lif_direct": {
+    "seconds": 0.867909874767065,
+    "microseconds_per_decision": 120.54303816209237,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88029,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 83129,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88896,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 77929,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84929,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88214,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87490,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84295,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73195,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86984,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74174,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74159,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84231,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87233,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85654,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86946,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90042,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89437,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 67758,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 81084,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84135,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93452,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74022,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82910,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88941,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87262,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90396,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85013,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 70538,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82106,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87140,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87014,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85905,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 79031,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 68583,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90022,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82655,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 80251,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85683,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86322,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ],
+    "encoding_seconds": 2.5556891662999988,
+    "spike_fraction": 0.0008384303113477519,
+    "silent_fraction": 0.0
+  },
+  "lif_stdp": {
+    "seconds": 0.9807323329150677,
+    "microseconds_per_decision": 136.21282401598162,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95942,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 101895,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 96068,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93333,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 101218,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99532,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98223,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99549,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 83334,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 97288,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 80494,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 84252,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99849,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100418,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100243,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 101347,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99361,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98934,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 77422,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95742,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 95757,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 103699,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 87680,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98555,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98894,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100657,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98834,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 99802,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 75222,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100922,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 104396,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100394,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 96831,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 96033,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73262,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 102380,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98780,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93018,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 98046,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 100086,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ],
+    "encoding_seconds": 2.706847833003849,
+    "spike_fraction": 0.021823546533625008,
+    "silent_fraction": 0.0
+  },
+  "lif_rstdp": {
+    "seconds": 0.8724338752217591,
+    "microseconds_per_decision": 121.17137155857766,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88300,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82616,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89408,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 77642,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85498,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88541,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88195,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84324,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73268,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87094,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74917,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73732,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84965,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87977,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86676,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86744,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90897,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89927,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 68111,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 81544,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84680,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93397,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74634,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 83493,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89445,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86791,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 91180,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85948,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 69850,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82008,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87787,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87692,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86420,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 79587,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 68108,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90382,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 83133,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 80160,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86127,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86462,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ],
+    "encoding_seconds": 2.31132666580379,
+    "spike_fraction": 0.0008384303113477519,
+    "silent_fraction": 0.0
+  },
+  "lif_direct_matched": {
+    "seconds": 0.8286322080530226,
+    "microseconds_per_decision": 115.08780667403093,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88020,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 83120,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88887,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 77920,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84920,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88205,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87481,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84286,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73186,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86975,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74165,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74150,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84222,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87224,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85645,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86937,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90033,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89428,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 67749,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 81075,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84126,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93443,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74013,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82901,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88932,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87253,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90387,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85004,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 70529,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82097,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87131,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87005,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85896,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 79022,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 68574,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90013,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82646,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 80242,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85674,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86313,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ],
+    "encoding_seconds": 2.3342348751612008,
+    "spike_fraction": 0.0008384303113477519,
+    "silent_fraction": 0.0
+  },
+  "lif_stdp_matched": {
+    "seconds": 0.8638430000282824,
+    "microseconds_per_decision": 119.97819444837256,
+    "states": [
+      {
+        "user_id": "V7-EVAL-001",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88026,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-002",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82776,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-003",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88773,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-004",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 77762,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-005",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84948,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-006",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 88196,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-007",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87360,
+        "pending": 1,
+        "seen": 180,
+        "observations": 53
+      },
+      {
+        "user_id": "V7-EVAL-008",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84132,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-009",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73187,
+        "pending": 0,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-010",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86875,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-011",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74155,
+        "pending": 0,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-012",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 73972,
+        "pending": 0,
+        "seen": 180,
+        "observations": 44
+      },
+      {
+        "user_id": "V7-EVAL-013",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84241,
+        "pending": 1,
+        "seen": 180,
+        "observations": 45
+      },
+      {
+        "user_id": "V7-EVAL-014",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87103,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-015",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85990,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-016",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86777,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-017",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90236,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-018",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89409,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-019",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 67852,
+        "pending": 0,
+        "seen": 180,
+        "observations": 41
+      },
+      {
+        "user_id": "V7-EVAL-020",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 81300,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-021",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 84155,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-022",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 93274,
+        "pending": 1,
+        "seen": 180,
+        "observations": 40
+      },
+      {
+        "user_id": "V7-EVAL-023",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 74134,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-024",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82865,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-025",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 89030,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-026",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87042,
+        "pending": 1,
+        "seen": 180,
+        "observations": 51
+      },
+      {
+        "user_id": "V7-EVAL-027",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90517,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-028",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85247,
+        "pending": 1,
+        "seen": 180,
+        "observations": 50
+      },
+      {
+        "user_id": "V7-EVAL-029",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 70154,
+        "pending": 0,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-030",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 81963,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-031",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87394,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-032",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 87147,
+        "pending": 1,
+        "seen": 180,
+        "observations": 47
+      },
+      {
+        "user_id": "V7-EVAL-033",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85902,
+        "pending": 1,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-034",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 79338,
+        "pending": 1,
+        "seen": 180,
+        "observations": 42
+      },
+      {
+        "user_id": "V7-EVAL-035",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 0,
+        "checkpoint_json_bytes": 68310,
+        "pending": 0,
+        "seen": 180,
+        "observations": 48
+      },
+      {
+        "user_id": "V7-EVAL-036",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 90262,
+        "pending": 1,
+        "seen": 180,
+        "observations": 43
+      },
+      {
+        "user_id": "V7-EVAL-037",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 82803,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-038",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 80046,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-039",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 85623,
+        "pending": 1,
+        "seen": 180,
+        "observations": 46
+      },
+      {
+        "user_id": "V7-EVAL-040",
+        "numeric_bytes": 48480,
+        "pending_trace_bytes": 16160,
+        "checkpoint_json_bytes": 86220,
+        "pending": 1,
+        "seen": 180,
+        "observations": 44
+      }
+    ],
+    "encoding_seconds": 2.313081417232752,
+    "spike_fraction": 0.0008384303113477519,
+    "silent_fraction": 0.0
+  }
+}

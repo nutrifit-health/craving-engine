@@ -1,0 +1,539 @@
+{
+  "iteration": "V10",
+  "variants": [
+    {
+      "name": "population",
+      "family": "population",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    {
+      "name": "scalar_r0.2",
+      "family": "scalar",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    {
+      "name": "direct_r0.2",
+      "family": "direct",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    {
+      "name": "lif_direct_t5.0_g0.1_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t5.0_g0.1_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t5.0_g0.1_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t20.0_g0.03_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t20.0_g0.03_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t20.0_g0.03_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t20.0_g0.1_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t20.0_g0.1_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t20.0_g0.1_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t20.0_g0.3_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t20.0_g0.3_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t20.0_g0.3_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t80.0_g0.1_r0.2",
+      "family": "lif_direct",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t80.0_g0.1_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t80.0_g0.1_r0.2",
+      "family": "lif_rstdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "scalar_r0.8",
+      "family": "scalar",
+      "rate": 0.8,
+      "lif": null,
+      "rule": "direct"
+    },
+    {
+      "name": "direct_r0.8",
+      "family": "direct",
+      "rate": 0.8,
+      "lif": null,
+      "rule": "direct"
+    },
+    {
+      "name": "lif_direct_t5.0_g0.1_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t5.0_g0.1_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t5.0_g0.1_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 5.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t20.0_g0.03_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t20.0_g0.03_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t20.0_g0.03_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t20.0_g0.1_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t20.0_g0.1_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t20.0_g0.1_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t20.0_g0.3_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t20.0_g0.3_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t20.0_g0.3_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    {
+      "name": "lif_direct_t80.0_g0.1_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    {
+      "name": "lif_stdp_t80.0_g0.1_r0.8",
+      "family": "lif_stdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    {
+      "name": "lif_rstdp_t80.0_g0.1_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 80.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.1,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    }
+  ],
+  "protocol": "https://gov.nutrifit.health/documents/6ac6b48e56965bd66f608816",
+  "protocol_sha256": "b590d6816c281971d9b5bcbf934b4ec23584846c1b8c78371950ae6e70ea8b77",
+  "evaluation_seeds": [
+    7101,
+    7102,
+    7103
+  ],
+  "scenarios": [
+    "stable",
+    "abrupt",
+    "gradual",
+    "transient",
+    "noise15",
+    "delay72",
+    "report50",
+    "report10"
+  ],
+  "calibration_seed": 6101,
+  "synthetic_only": true
+}

@@ -1,0 +1,337 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+* Getting build dependencies for sdist...
+running egg_info
+writing nutrifit_craving_engine.egg-info/PKG-INFO
+writing dependency_links to nutrifit_craving_engine.egg-info/dependency_links.txt
+writing requirements to nutrifit_craving_engine.egg-info/requires.txt
+writing top-level names to nutrifit_craving_engine.egg-info/top_level.txt
+reading manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+WARNING `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+* Installed build dependency versions:
+  - setuptools==84.0.0
+* Building sdist...
+running sdist
+running egg_info
+writing nutrifit_craving_engine.egg-info/PKG-INFO
+writing dependency_links to nutrifit_craving_engine.egg-info/dependency_links.txt
+writing requirements to nutrifit_craving_engine.egg-info/requires.txt
+writing top-level names to nutrifit_craving_engine.egg-info/top_level.txt
+reading manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+running check
+creating nutrifit_craving_engine-0.1.0
+creating nutrifit_craving_engine-0.1.0/nutrifit_craving_engine.egg-info
+creating nutrifit_craving_engine-0.1.0/research_v10
+creating nutrifit_craving_engine-0.1.0/research_v6
+creating nutrifit_craving_engine-0.1.0/research_v7
+creating nutrifit_craving_engine-0.1.0/research_v8
+creating nutrifit_craving_engine-0.1.0/research_v9
+creating nutrifit_craving_engine-0.1.0/synthetic_benchmark
+copying files to nutrifit_craving_engine-0.1.0...
+copying LICENSE -> nutrifit_craving_engine-0.1.0
+copying README.md -> nutrifit_craving_engine-0.1.0
+copying hybrid_engine.py -> nutrifit_craving_engine-0.1.0
+copying mushroom_body.py -> nutrifit_craving_engine-0.1.0
+copying pyproject.toml -> nutrifit_craving_engine-0.1.0
+copying nutrifit_craving_engine.egg-info/PKG-INFO -> nutrifit_craving_engine-0.1.0/nutrifit_craving_engine.egg-info
+copying nutrifit_craving_engine.egg-info/SOURCES.txt -> nutrifit_craving_engine-0.1.0/nutrifit_craving_engine.egg-info
+copying nutrifit_craving_engine.egg-info/dependency_links.txt -> nutrifit_craving_engine-0.1.0/nutrifit_craving_engine.egg-info
+copying nutrifit_craving_engine.egg-info/requires.txt -> nutrifit_craving_engine-0.1.0/nutrifit_craving_engine.egg-info
+copying nutrifit_craving_engine.egg-info/top_level.txt -> nutrifit_craving_engine-0.1.0/nutrifit_craving_engine.egg-info
+copying research_v10/__init__.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/analysis.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/author_audit.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/experiment.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/memory.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/replay.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/scenarios.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/spiking.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/test_author_audit.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/test_mechanisms.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/types.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v10/verify.py -> nutrifit_craving_engine-0.1.0/research_v10
+copying research_v6/__init__.py -> nutrifit_craving_engine-0.1.0/research_v6
+copying research_v6/replay.py -> nutrifit_craving_engine-0.1.0/research_v6
+copying research_v6/types.py -> nutrifit_craving_engine-0.1.0/research_v6
+copying research_v7/__init__.py -> nutrifit_craving_engine-0.1.0/research_v7
+copying research_v7/connectome.py -> nutrifit_craving_engine-0.1.0/research_v7
+copying research_v7/data_types.py -> nutrifit_craving_engine-0.1.0/research_v7
+copying research_v7/evaluation.py -> nutrifit_craving_engine-0.1.0/research_v7
+copying research_v7/types.py -> nutrifit_craving_engine-0.1.0/research_v7
+copying research_v8/__init__.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/archive.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/context_representation.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/context_types.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/data_types.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/evaluation.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/information_audit.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/memory.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/parallel.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/replay.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/reuse.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/test_context_representation.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v8/types.py -> nutrifit_craving_engine-0.1.0/research_v8
+copying research_v9/__init__.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/bundle.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/experiment.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/experiment_types.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/models.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/test_experiment.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/test_models.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/test_workers.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying research_v9/types.py -> nutrifit_craving_engine-0.1.0/research_v9
+copying synthetic_benchmark/__init__.py -> nutrifit_craving_engine-0.1.0/synthetic_benchmark
+copying synthetic_benchmark/metrics.py -> nutrifit_craving_engine-0.1.0/synthetic_benchmark
+Writing nutrifit_craving_engine-0.1.0/setup.cfg
+Creating tar archive
+removing 'nutrifit_craving_engine-0.1.0' (and everything under it)
+WARNING `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+* Getting build dependencies for wheel...
+running egg_info
+writing nutrifit_craving_engine.egg-info/PKG-INFO
+writing dependency_links to nutrifit_craving_engine.egg-info/dependency_links.txt
+writing requirements to nutrifit_craving_engine.egg-info/requires.txt
+writing top-level names to nutrifit_craving_engine.egg-info/top_level.txt
+reading manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+WARNING `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+* Installed build dependency versions:
+  - setuptools==84.0.0
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib
+copying mushroom_body.py -> build/lib
+copying hybrid_engine.py -> build/lib
+creating build/lib/synthetic_benchmark
+copying synthetic_benchmark/metrics.py -> build/lib/synthetic_benchmark
+copying synthetic_benchmark/__init__.py -> build/lib/synthetic_benchmark
+creating build/lib/research_v10
+copying research_v10/test_mechanisms.py -> build/lib/research_v10
+copying research_v10/scenarios.py -> build/lib/research_v10
+copying research_v10/analysis.py -> build/lib/research_v10
+copying research_v10/memory.py -> build/lib/research_v10
+copying research_v10/__init__.py -> build/lib/research_v10
+copying research_v10/test_author_audit.py -> build/lib/research_v10
+copying research_v10/types.py -> build/lib/research_v10
+copying research_v10/experiment.py -> build/lib/research_v10
+copying research_v10/replay.py -> build/lib/research_v10
+copying research_v10/author_audit.py -> build/lib/research_v10
+copying research_v10/spiking.py -> build/lib/research_v10
+copying research_v10/verify.py -> build/lib/research_v10
+creating build/lib/research_v7
+copying research_v7/evaluation.py -> build/lib/research_v7
+copying research_v7/__init__.py -> build/lib/research_v7
+copying research_v7/types.py -> build/lib/research_v7
+copying research_v7/data_types.py -> build/lib/research_v7
+copying research_v7/connectome.py -> build/lib/research_v7
+creating build/lib/research_v9
+copying research_v9/bundle.py -> build/lib/research_v9
+copying research_v9/models.py -> build/lib/research_v9
+copying research_v9/test_experiment.py -> build/lib/research_v9
+copying research_v9/__init__.py -> build/lib/research_v9
+copying research_v9/types.py -> build/lib/research_v9
+copying research_v9/experiment.py -> build/lib/research_v9
+copying research_v9/test_models.py -> build/lib/research_v9
+copying research_v9/experiment_types.py -> build/lib/research_v9
+copying research_v9/test_workers.py -> build/lib/research_v9
+creating build/lib/research_v8
+copying research_v8/context_representation.py -> build/lib/research_v8
+copying research_v8/memory.py -> build/lib/research_v8
+copying research_v8/evaluation.py -> build/lib/research_v8
+copying research_v8/__init__.py -> build/lib/research_v8
+copying research_v8/types.py -> build/lib/research_v8
+copying research_v8/data_types.py -> build/lib/research_v8
+copying research_v8/information_audit.py -> build/lib/research_v8
+copying research_v8/replay.py -> build/lib/research_v8
+copying research_v8/context_types.py -> build/lib/research_v8
+copying research_v8/test_context_representation.py -> build/lib/research_v8
+copying research_v8/reuse.py -> build/lib/research_v8
+copying research_v8/archive.py -> build/lib/research_v8
+copying research_v8/parallel.py -> build/lib/research_v8
+creating build/lib/research_v6
+copying research_v6/__init__.py -> build/lib/research_v6
+copying research_v6/types.py -> build/lib/research_v6
+copying research_v6/replay.py -> build/lib/research_v6
+running egg_info
+writing nutrifit_craving_engine.egg-info/PKG-INFO
+writing dependency_links to nutrifit_craving_engine.egg-info/dependency_links.txt
+writing requirements to nutrifit_craving_engine.egg-info/requires.txt
+writing top-level names to nutrifit_craving_engine.egg-info/top_level.txt
+reading manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'nutrifit_craving_engine.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+copying build/lib/hybrid_engine.py -> build/bdist.macosx-11.0-arm64/wheel/.
+creating build/bdist.macosx-11.0-arm64/wheel/synthetic_benchmark
+copying build/lib/synthetic_benchmark/metrics.py -> build/bdist.macosx-11.0-arm64/wheel/./synthetic_benchmark
+copying build/lib/synthetic_benchmark/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./synthetic_benchmark
+creating build/bdist.macosx-11.0-arm64/wheel/research_v10
+copying build/lib/research_v10/test_mechanisms.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/scenarios.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/analysis.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/memory.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/test_author_audit.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/experiment.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/replay.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/author_audit.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/spiking.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+copying build/lib/research_v10/verify.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v10
+creating build/bdist.macosx-11.0-arm64/wheel/research_v7
+copying build/lib/research_v7/evaluation.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v7
+copying build/lib/research_v7/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v7
+copying build/lib/research_v7/types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v7
+copying build/lib/research_v7/data_types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v7
+copying build/lib/research_v7/connectome.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v7
+creating build/bdist.macosx-11.0-arm64/wheel/research_v9
+copying build/lib/research_v9/bundle.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/models.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/test_experiment.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/experiment.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/test_models.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/experiment_types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+copying build/lib/research_v9/test_workers.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v9
+creating build/bdist.macosx-11.0-arm64/wheel/research_v8
+copying build/lib/research_v8/context_representation.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/memory.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/evaluation.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/data_types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/information_audit.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/replay.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/context_types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/test_context_representation.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/reuse.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/archive.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+copying build/lib/research_v8/parallel.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v8
+creating build/bdist.macosx-11.0-arm64/wheel/research_v6
+copying build/lib/research_v6/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v6
+copying build/lib/research_v6/types.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v6
+copying build/lib/research_v6/replay.py -> build/bdist.macosx-11.0-arm64/wheel/./research_v6
+copying build/lib/mushroom_body.py -> build/bdist.macosx-11.0-arm64/wheel/.
+running install_egg_info
+Copying nutrifit_craving_engine.egg-info to build/bdist.macosx-11.0-arm64/wheel/./nutrifit_craving_engine-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/nutrifit_craving_engine-0.1.0.dist-info/WHEEL
+creating '/tmp/craving-v10-dist-final/.tmp-vb9wn5i2/nutrifit_craving_engine-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'hybrid_engine.py'
+adding 'mushroom_body.py'
+adding 'nutrifit_craving_engine-0.1.0.dist-info/licenses/LICENSE'
+adding 'research_v10/__init__.py'
+adding 'research_v10/analysis.py'
+adding 'research_v10/author_audit.py'
+adding 'research_v10/experiment.py'
+adding 'research_v10/memory.py'
+adding 'research_v10/replay.py'
+adding 'research_v10/scenarios.py'
+adding 'research_v10/spiking.py'
+adding 'research_v10/test_author_audit.py'
+adding 'research_v10/test_mechanisms.py'
+adding 'research_v10/types.py'
+adding 'research_v10/verify.py'
+adding 'research_v6/__init__.py'
+adding 'research_v6/replay.py'
+adding 'research_v6/types.py'
+adding 'research_v7/__init__.py'
+adding 'research_v7/connectome.py'
+adding 'research_v7/data_types.py'
+adding 'research_v7/evaluation.py'
+adding 'research_v7/types.py'
+adding 'research_v8/__init__.py'
+adding 'research_v8/archive.py'
+adding 'research_v8/context_representation.py'
+adding 'research_v8/context_types.py'
+adding 'research_v8/data_types.py'
+adding 'research_v8/evaluation.py'
+adding 'research_v8/information_audit.py'
+adding 'research_v8/memory.py'
+adding 'research_v8/parallel.py'
+adding 'research_v8/replay.py'
+adding 'research_v8/reuse.py'
+adding 'research_v8/test_context_representation.py'
+adding 'research_v8/types.py'
+adding 'research_v9/__init__.py'
+adding 'research_v9/bundle.py'
+adding 'research_v9/experiment.py'
+adding 'research_v9/experiment_types.py'
+adding 'research_v9/models.py'
+adding 'research_v9/test_experiment.py'
+adding 'research_v9/test_models.py'
+adding 'research_v9/test_workers.py'
+adding 'research_v9/types.py'
+adding 'synthetic_benchmark/__init__.py'
+adding 'synthetic_benchmark/metrics.py'
+adding 'nutrifit_craving_engine-0.1.0.dist-info/METADATA'
+adding 'nutrifit_craving_engine-0.1.0.dist-info/WHEEL'
+adding 'nutrifit_craving_engine-0.1.0.dist-info/top_level.txt'
+adding 'nutrifit_craving_engine-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+WARNING `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+Successfully built nutrifit_craving_engine-0.1.0.tar.gz and nutrifit_craving_engine-0.1.0-py3-none-any.whl

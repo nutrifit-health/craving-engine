@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nutrifit-craving-engine"
+version = "0.1.0"
+description = "Research snapshot of shared models and causal personal memory for synthetic craving prediction"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{name = "NUTRIFIT LLC"}]
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy>=2.0,<3",
+  "scipy>=1.14,<2",
+  "pydantic>=2.9,<3",
+  "scikit-learn>=1.6,<2",
+  "joblib>=1.4,<2",
+  "threadpoolctl>=3.5,<4",
+]
+
+[project.optional-dependencies]
+connectome = ["pyarrow>=18"]
+
+[project.urls]
+Repository = "https://github.com/nutrifit-health/craving-engine"
+
+[tool.setuptools]
+py-modules = ["mushroom_body", "hybrid_engine"]
+
+[tool.setuptools.packages.find]
+include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "research_v10*", "synthetic_benchmark*"]

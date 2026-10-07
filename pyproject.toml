@@ -21,6 +21,14 @@ dependencies = [
 
 [project.optional-dependencies]
 connectome = ["pyarrow>=18"]
+research-v10 = [
+  "pytest>=8,<10",
+  "ruff>=0.16,<0.17",
+  "build>=1.2,<2",
+  "torch>=2.5,<3",
+  "networkx>=3.4,<4",
+  "matplotlib>=3.9,<4",
+]
 
 [project.urls]
 Repository = "https://github.com/nutrifit-health/craving-engine"
@@ -29,4 +37,4 @@ Repository = "https://github.com/nutrifit-health/craving-engine"
 py-modules = ["mushroom_body", "hybrid_engine"]
 
 [tool.setuptools.packages.find]
-include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "synthetic_benchmark*"]
+include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "research_v10*", "synthetic_benchmark*"]

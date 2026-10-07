@@ -1,0 +1,164 @@
+{
+  "selected": {
+    "population": {
+      "name": "population",
+      "family": "population",
+      "rate": 0.2,
+      "lif": null,
+      "rule": "direct"
+    },
+    "scalar": {
+      "name": "scalar_r0.8",
+      "family": "scalar",
+      "rate": 0.8,
+      "lif": null,
+      "rule": "direct"
+    },
+    "direct": {
+      "name": "direct_r0.8",
+      "family": "direct",
+      "rate": 0.8,
+      "lif": null,
+      "rule": "direct"
+    },
+    "lif_direct": {
+      "name": "lif_direct_t20.0_g0.03_r0.8",
+      "family": "lif_direct",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "lif_stdp": {
+      "name": "lif_stdp_t20.0_g0.3_r0.2",
+      "family": "lif_stdp",
+      "rate": 0.2,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.3,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    },
+    "lif_rstdp": {
+      "name": "lif_rstdp_t20.0_g0.03_r0.8",
+      "family": "lif_rstdp",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "rstdp"
+    },
+    "lif_direct_matched": {
+      "name": "lif_direct_matched",
+      "family": "lif_direct_matched",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "direct"
+    },
+    "lif_stdp_matched": {
+      "name": "lif_stdp_matched",
+      "family": "lif_stdp_matched",
+      "rate": 0.8,
+      "lif": {
+        "tau_mem": 20.0,
+        "tau_syn": 5.0,
+        "threshold": 2.5,
+        "gain": 0.03,
+        "steps": 32,
+        "tau_trace": 20.0,
+        "a_plus": 1.0,
+        "a_minus": 1.2
+      },
+      "rule": "stdp"
+    }
+  },
+  "thresholds": {
+    "population": {
+      "gated": 0.7580141002714912,
+      "ungated": 0.7580141002714912
+    },
+    "scalar": {
+      "gated": 0.7433923130892984,
+      "ungated": 0.7571937780449326
+    },
+    "direct": {
+      "gated": 0.7433923130892984,
+      "ungated": 0.7496050793779155
+    },
+    "lif_direct": {
+      "gated": 0.7433923130892984,
+      "ungated": 0.7603840080887131
+    },
+    "lif_stdp": {
+      "gated": 0.7413485048394701,
+      "ungated": 0.632914579456126
+    },
+    "lif_rstdp": {
+      "gated": 0.7526747961526284,
+      "ungated": 0.7426412074230667
+    },
+    "lif_direct_matched": {
+      "gated": 0.7433923130892984,
+      "ungated": 0.7603840080887131
+    },
+    "lif_stdp_matched": {
+      "gated": 0.7580141002714912,
+      "ungated": 0.8069313637714035
+    }
+  },
+  "training_scale": 0.06722783945846494,
+  "tuning_users": [
+    "V7-CAL-001",
+    "V7-CAL-002",
+    "V7-CAL-003",
+    "V7-CAL-004",
+    "V7-CAL-005",
+    "V7-CAL-006",
+    "V7-CAL-007",
+    "V7-CAL-008",
+    "V7-CAL-009",
+    "V7-CAL-010"
+  ],
+  "threshold_users": [
+    "V7-CAL-011",
+    "V7-CAL-012",
+    "V7-CAL-013",
+    "V7-CAL-014",
+    "V7-CAL-015",
+    "V7-CAL-016",
+    "V7-CAL-017",
+    "V7-CAL-018",
+    "V7-CAL-019",
+    "V7-CAL-020"
+  ]
+}

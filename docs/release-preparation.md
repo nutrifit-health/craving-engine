@@ -2,7 +2,7 @@
 
 [Русская версия](release-preparation.ru.md)
 
-This initial source publication dated October 7, 2026 contains the standalone research snapshot, final English terms and enabled electronic-acceptance configuration. Installation, standalone reproduction and workflow execution have not been performed. Publishing the source does not establish runtime readiness.
+This initial source publication dated October 7, 2026 contains the standalone research snapshot, final English terms and enabled electronic-acceptance configuration. The initial publication was unverified. During V10 on October 7, installation, tests, build and standalone V9 reproduction passed; contributor-rights workflow execution remains unverified. Publishing the source does not establish runtime readiness.
 
 ## Prepared locally
 
@@ -17,7 +17,7 @@ This initial source publication dated October 7, 2026 contains the standalone re
 
 1. The initial source publication was authorized by the owner. Its revision is recorded in the repository Git history.
 2. After publishing to main, GitHub Actions must be available. Configure NutriFit / contributor rights as a required merge status and restrict bypass/direct pushes. The local YAML does not set those repository rules; they have not been configured remotely.
-3. Installation, relevant copied tests, standalone reproduction and actual workflow execution have not been run. They require explicit verification authorization under the parent policy. Keep new run directories and complete outcomes; do not transfer historical verification to the extraction.
-4. Record the released revision and actual execution evidence when available. Resolve observed portability or numerical differences without overwriting historical results. The generator, original encoder and GBDT training remain outside this snapshot.
+3. Installation, applicable tests, build and standalone reproduction were explicitly requested and completed. [Principal V9 metrics matched the archive exactly](../results/v10/verification/v9-reproduction-comparison.json). Actual contributor-rights workflow verification remains separate.
+4. Record the released revision and actual execution evidence when available. Resolve observed portability or numerical differences without overwriting historical results. The original V9 generator, backend encoder and GBDT training remain outside this snapshot; V10 includes its own controlled adaptation-scenario generator.
 
 The original V9 run has historical checks and a negative result. Publishing that research does not require a successful candidate. Calling the extraction or electronic process verified requires evidence for those specific components.

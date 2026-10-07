@@ -1,0 +1,16 @@
+{
+  "status": "post_evaluation_diagnostic_no_retuning",
+  "mean_eligibility_rate_cosine": -0.20990986589376728,
+  "negative_alignment_fraction": 0.7558333333333334,
+  "cosine_quantiles": [
+    -0.7002256606589523,
+    -0.43787921032418614,
+    -0.2665119462475269,
+    -0.005927103814577603,
+    0.7339148389307146
+  ],
+  "active_units_mean": 53.514583333333334,
+  "original_active_units_mean": 101.0,
+  "mean_anchor_share_squared": 0.18183281821488861,
+  "numeric_dimension": 2020
+}

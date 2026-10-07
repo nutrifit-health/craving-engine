@@ -1,0 +1,74 @@
+{
+  "comparisons": [
+    {
+      "model": "population",
+      "deltas": {
+        "recall": 0.0,
+        "false_positive_rate": 0.0,
+        "youden_j": 0.0,
+        "auc": 0.0,
+        "brier": 0.0
+      },
+      "max_absolute_delta": 0.0
+    },
+    {
+      "model": "scalar",
+      "deltas": {
+        "recall": 0.0,
+        "false_positive_rate": 0.0,
+        "youden_j": 0.0,
+        "auc": 0.0,
+        "brier": 0.0
+      },
+      "max_absolute_delta": 0.0
+    },
+    {
+      "model": "anatomical_population",
+      "deltas": {
+        "recall": 0.0,
+        "false_positive_rate": 0.0,
+        "youden_j": 0.0,
+        "auc": 0.0,
+        "brier": 0.0
+      },
+      "max_absolute_delta": 0.0
+    },
+    {
+      "model": "anatomical_personal",
+      "deltas": {
+        "recall": 0.0,
+        "false_positive_rate": 0.0,
+        "youden_j": 0.0,
+        "auc": 0.0,
+        "brier": 0.0
+      },
+      "max_absolute_delta": 0.0
+    },
+    {
+      "model": "rewired_population",
+      "deltas": {
+        "recall": 0.0,
+        "false_positive_rate": 0.0,
+        "youden_j": 0.0,
+        "auc": 0.0,
+        "brier": 0.0
+      },
+      "max_absolute_delta": 0.0
+    },
+    {
+      "model": "rewired_personal",
+      "deltas": {
+        "recall": 0.0,
+        "false_positive_rate": 0.0,
+        "youden_j": 0.0,
+        "auc": 0.0,
+        "brier": 0.0
+      },
+      "max_absolute_delta": 0.0
+    }
+  ],
+  "max_absolute_delta": 0.0,
+  "old_admission": false,
+  "new_admission": false,
+  "environment_changed": true
+}

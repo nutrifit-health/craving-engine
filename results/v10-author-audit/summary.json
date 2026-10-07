@@ -1,0 +1,116 @@
+{
+  "source": {
+    "url": "https://habr.com/ru/articles/1045696/",
+    "html_sha256": "6f773cd6d3ced098db11eedf777598e2f106b09e010102304ca2caa0d1126f4b",
+    "listing_sha256": "00e0da6b8c25d4d6b58ad5fd73b3dd96f40486c4cf69b2a58718dac6e4bbce35",
+    "block_sha256": [
+      "5dcd65bd01da36c13d3b3684b473e5a5679bfe099683475551b7041dff0df7b2",
+      "f2f3ce83c6abeed614e6e379c132d76950f96567b00b1ca02d7b4152462004b5",
+      "ff1207f6878bf2f0ff47480ec658788246b78b5eee7a1dccae770dffe296d932",
+      "b895765c347c1dda890462534f1a50f8effb61b794259695d612d138c6bc8a54",
+      "62bd2cee9ebdeedf18dd83f51a9050019f578b4a57504934a354c6132da6c2c0",
+      "4dfe8dde24f39c12d310f051afca6f0783cc785cb961319d775ac3c295410c08",
+      "bb6b5705af87726578ab7e18829744600377473db3723891545ef25a714e9fee"
+    ],
+    "listing_blocks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "training_block": 6,
+    "extraction": "HTMLParser: pre text, blocks 0..5 joined by two LF; final LF",
+    "listing_bytes": 12276,
+    "execution": "Только прочитанный модуль модели; скрипт обучения не выполняется"
+  },
+  "scope": "Точный листинг автора, не NutriFit модель/протокол/основные эксперименты",
+  "cpu_reproducibility": {
+    "exact_results_match": true,
+    "seeds": [
+      7,
+      17,
+      27
+    ]
+  },
+  "validation": {
+    "unittest": "7 passed",
+    "ruff": "passed",
+    "devices": [
+      "cpu",
+      "mps"
+    ],
+    "article_default_dimensions": "forward/backward/optimizer completed, batch=2"
+  },
+  "findings": [
+    {
+      "classification": "verified_execution",
+      "finding": "input_scale: gradient=None, optimizer_delta=0. Колонки: gradient=None, optimizer_delta=0, отсутствуют в группах AdamW. Readout и inter_weights имеют ненулевые gradients и optimizer_delta.",
+      "interpretation": "Обучение readout и модуляции работает. Reservoir допустим; обучение encoder/колонок этим градиентом невозможно."
+    },
+    {
+      "classification": "verified_execution",
+      "finding": "rate_loss/current_rates требуют requires_grad=False; дополнительный rate_loss не даёт регуляризирующий градиент."
+    },
+    {
+      "classification": "verified_execution",
+      "finding": "Eval меняет spike_rate_avg. CPU повтор logits max_delta=0.001465..0.002759; порядок=0.001379..0.001821; разбиение batches=0.000299..0.000689. Восстановление EMA даёт max_delta=0. Изменений argmax в этих batches не было."
+    },
+    {
+      "classification": "verified_execution",
+      "finding": "STDP за три paired batches даёт CPU weight_delta=4.12e-8..5.36e-8; без STDP=0. Logits max_delta=0 на этих коротких float32 проходах.",
+      "limitation": "Нулевое наблюдаемое отличие logits не доказывает отсутствие STDP или его бесполезность при длительном обучении."
+    },
+    {
+      "classification": "verified_execution",
+      "finding": "Pre/post traces переносятся между batches. CPU carried_vs_reset_pre_delta=0.4595..0.7695; соответствующий weight_delta=4.47e-8..8.94e-8. Размер batches 4/3/4 не сбрасывает traces."
+    },
+    {
+      "classification": "verified_intervention",
+      "finding": "Raw interweights=-2 против +2, либо topology=0: все входы, спайки, mem/syn колонок совпадают точно. Logits меняются.",
+      "interpretation": "Реализована модуляция выходных признаков. Обратная связь в LIF-динамику не реализована."
+    },
+    {
+      "classification": "verified_execution",
+      "finding": "Effective weights=sigmoid(raw)*topology; отрицательных весов нет. Raw -2/0/+2 соответствует 0.1192029/0.5/0.8807970 на активных рёбрах.",
+      "limitation": "Это диапазон при raw clamp STDP, не глобальная гарантия после шага optimizer. Signed активность колонок может давать отрицательное влияние."
+    },
+    {
+      "classification": "derived_bound_supported_by_execution",
+      "finding": "При стандартном 102/128 возбуждающих нейронов signed activity ограничена [-0.203125,0.796875]. Корреляция не выше 0.635009765625, threshold formation=0.8. EMA potential с нулевого старта этот порог не достигает. 1000 предельно сильных обновлений: 0.63498318, кандидатов=0.",
+      "scope": "Стандартная доля возбуждающих/тормозящих, стандартный нулевой potential; альтернативные e_i_ratio/checkpoint не проверены."
+    }
+  ],
+  "limitations": [
+    "Синтетические диагностические batches; точность MNIST не измерялась",
+    "40 эпох, benchmark NutriFit и основной протокол V10 не выполнялись",
+    "Повторяемость CPU задаётся seed; MPS не обещает побитовую идентичность",
+    "Жёсткие пороги блокируют gradient flow, но это совместимо с reservoir design",
+    "Численные ablations отражают конкретные batches, не качество обученной модели"
+  ],
+  "files_owned": [
+    "research_v10/author_audit.py",
+    "research_v10/test_author_audit.py",
+    "results/v10-author-audit/"
+  ],
+  "commands": [
+    "git branch --show-current",
+    "git status --short",
+    "curl -L --fail --silent --show-error https://habr.com/ru/articles/1045696/ -o /tmp/nutrifit-v10-habr-1045696.html",
+    "uv pip install --python .venv/bin/python --offline torch networkx (failed resolution; no changes)",
+    "uv pip install --python .venv/bin/python torch==2.14.0 networkx==3.7",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_v10/author_audit.py --html /tmp/nutrifit-v10-habr-1045696.html --source /tmp/nutrifit-v10-brain_spiking.py --output results/v10-author-audit/report.json --devices cpu mps --seeds 7 17 27 --execute-reviewed-snapshot > results/v10-author-audit/audit.log 2>&1",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest research_v10.test_author_audit -v > results/v10-author-audit/tests.log 2>&1",
+    ".venv/bin/ruff check --fix --unsafe-fixes research_v10/author_audit.py research_v10/test_author_audit.py",
+    ".venv/bin/ruff format research_v10/author_audit.py research_v10/test_author_audit.py",
+    ".venv/bin/ruff check research_v10/author_audit.py research_v10/test_author_audit.py > results/v10-author-audit/lint.log 2>&1",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_v10/author_audit.py --html /tmp/nutrifit-v10-habr-1045696.html --source /tmp/nutrifit-v10-brain_spiking.py --output results/v10-author-audit/cpu-repeat.json --devices cpu --seeds 7 17 27 --execute-reviewed-snapshot > results/v10-author-audit/cpu-repeat.log 2>&1",
+    "CPU report.results[0] == cpu-repeat.results[0]: exact equality confirmed"
+  ],
+  "temporary_source_files": [
+    "/tmp/nutrifit-v10-habr-1045696.html",
+    "/tmp/nutrifit-v10-brain_spiking.py"
+  ],
+  "git": "main; no branch/worktree/commit/push; CONTRIBUTING.ru.md and parent changes untouched"
+}
