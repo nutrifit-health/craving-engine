@@ -3,8 +3,8 @@
   "source_run": "run-v9-20260924T001842Z",
   "original_manifest_sha256": "7405d213c86267deb1bb450bb156482b7712f75ae0fe31144877102632e8fd36",
   "extraction_date": "2026-10-07",
-  "status": "source_publication_not_executed",
-  "origin": "Curated standalone research snapshot; original private archive is preserved.",
+  "status": "v10_with_verified_research_tools",
+  "origin": "Curated standalone research snapshot; original private archive is preserved in NutriFit Git history.",
   "source_files": {
     "": [
       "mushroom_body.py",
@@ -67,7 +67,7 @@
     "legal/",
     ".github/"
   ],
-  "documentation_update_date": "2026-10-07",
+  "documentation_update_date": "2026-10-16",
   "historical_result_supplements": [
     {
       "path": "results/v9-2026-09-24/high-recall-excerpt.json",
@@ -86,5 +86,8 @@
   "documentation_languages": [
     "en",
     "ru"
-  ]
+  ],
+  "active_research_path": "apps/craving-engine",
+  "working_tree_archive_removed_on": "2026-10-16",
+  "research_tools_migration": "research-migration.json"
 }

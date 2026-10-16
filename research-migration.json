@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-16",
+  "source_revision": "27d3124cb403765ae50c75d43ad1c7b5fd9b2170",
+  "source_path": "apps/backend/research/craving-engine-archive",
+  "source_files": {
+    "models.py": "dab86e7831a79dacb43fc7b86e788ed25bc0263dd531323d972ca982a9676fa7",
+    "synthetic_benchmark/population_generator.py": "9160e860723f75ff321f3e1ae21df7025ca0dabccf6f0a72b0f3e2d58cf048af",
+    "synthetic_benchmark/ground_truth_generator.py": "4398e6a6034b700512cc6f4bbb45fe0b01d22c498059e87902a079657c81070f",
+    "synthetic_benchmark/data_quality.py": "71149e33a6af20fef5e35806962ec302e39281cf823fbd99523ef6c0b9a0a709",
+    "research_v6/production_encoder.py": "9f607f3f07e6c166c55c7742173a91df107b8be5ed135b1fa0154ef21ea2068c",
+    "research_v6/production_encoder.ts": "fcff48f24e0a48dbedca3859dc8e0cce61b0dae2f573455ae74217210eba721b",
+    "research_v6/types.ts": "07e6b307cd77d1f1509f6ab5491f3fbc6a9401dec9e2beaaf436a4f52f095b1a",
+    "research_v8/information_features.py": "f29b78cfbac58b131a836a35b2d85a395d84f17d580bed1661ec57411969f47d",
+    "research_v8/information_types.py": "52682fba4796d266cb7cb7294798ef9f74208e84942d1918ff3688209720f92a",
+    "synthetic_benchmark/personas_catalog.py": "15869ef8c2344b1ab71c14be57b3a32f87f49ffa7ff750cd4eeb81588c7b9ff4"
+  },
+  "retained": "Grid population, longitudinal simulator, observable contexts, causal history features, data quality, explicit optional local encoder client.",
+  "excluded": "Historical model implementations, runners, known persona catalog, results, logs, checkpoints and private metadata. Recover from the private source revision.",
+  "historical_reproduction": false,
+  "validation": {
+    "date": "2026-10-16",
+    "archive_present": false,
+    "python_tests": {
+      "passed": 65,
+      "skipped": 7,
+      "subtests_passed": 31,
+      "new_migration_tests": 13,
+      "skip_reason": "Separate author-listing audit requires an external reviewed source snapshot; unrelated to migrated tools."
+    },
+    "backend_encoder_tests": {
+      "passed": 29
+    },
+    "packaging": "sdist and wheel built; installed wheel generated 540 rows outside the checkout.",
+    "scenarios": [
+      "Standalone and real local TS adapter generation",
+      "Deterministic artifacts and distinct seeds",
+      "Future feedback and unavailable observations excluded",
+      "Hidden evaluator outcomes excluded from observed contexts",
+      "Cross-user history isolation",
+      "Protected output paths and incomplete-run marker",
+      "Runtime source checksums and PN readiness"
+    ],
+    "qualification": "Engineering migration checks only; no new model training or clinical validation.",
+    "quality_checks": {
+      "python_lint_and_format": "passed",
+      "backend_typecheck": "passed",
+      "adapter_typecheck_and_lint": "passed",
+      "full_backend_lint": "1117 pre-existing errors in 133 unchanged files; no migrated or modified file among failures."
+    }
+  },
+  "selection": {
+    "synthetic_data/types.py": "Observation contracts, SyntheticUser, TrueDailyState and feature/feedback contracts only.",
+    "synthetic_data/population.py": "Grid generator and its numeric helpers only; no named persona catalog.",
+    "synthetic_data/simulator.py": "Independent outcome engine and 180-day observed trajectory simulator.",
+    "synthetic_data/contexts.py": "Causal local history mapping without backend execution.",
+    "synthetic_data/features.py": "Observed schema, summaries and causal history only; no historical reconstruction runner.",
+    "synthetic_data/quality.py": "Observation consistency diagnostics.",
+    "synthetic_data/nutrifit_encoder.py": "Explicit optional backend path replaces inferred private layout.",
+    "synthetic_data/generate.py": "New separate dataset writer; does not refit GBDT or replace frozen V9 inputs.",
+    "private:apps/backend/scripts/craving-research": "TypeScript adapter beside private backend contracts, with scoped typecheck and lint configurations."
+  }
+}

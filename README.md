@@ -2,6 +2,8 @@
 
 [English](README.md) · [Русский](README.ru.md)
 
+**Active workspace:** continue research in this repository. Selected tools for new synthetic datasets now live in `synthetic_data/`; the previous private archive remains in NutriFit Git history. Standalone generation, the optional local encoder and archive independence were verified on October 16, 2026. [New datasets and optional backend integration](docs/synthetic-data.md).
+
 Can one shared model learn from each person's experience without retraining a full model per user? Craving Engine investigates this architecture for predicting diet lapse events from nutrition, sleep, activity and behavioral context. A fixed shared representation produces a population forecast; separate personal memory updates when that user's feedback arrives.
 
 **Current stage: V10 completed; LIF and STDP did not establish an advantage over simple personal memory.** We tested 35 configurations, 8 frozen variants and 8 controlled scenarios across three new seeds. Ordinary memory also showed initial improvements after one or two responses following a regime change; a unique spike-based advantage was not established. [Full V10 report](docs/results-v10.md) · [Protocol](docs/protocol-v10.md).
@@ -112,7 +114,7 @@ Browse the [documentation index](docs/README.md) for all research and author mat
 | `docs/` | Protocol, interpretation, roadmap, release status and author notes |
 | `extraction.json` | Source-run provenance and standalone changes |
 
-There is no NutriFit service integration or real patient dataset. The original V9 generator, backend encoder, GBDT training pipeline and full original archive are outside this snapshot. V10 includes a separate controlled adaptation generator. Editing raw JSONL does not regenerate frozen V9 feature matrices. Some helpers retain their original V6–V8 directory names; public entrypoints are V9 and V10.
+There is no live NutriFit service integration or real patient dataset. Selected grid generation, longitudinal simulation and observed-feature tools now live in `synthetic_data/`, with an optional explicit local encoder client. The encoder itself, historical GBDT training pipeline and full original archive remain outside this repository. V10 keeps its controlled adaptation generator. New datasets use a separate format; editing JSONL does not regenerate frozen V9 feature matrices. Some helpers retain their original V6–V8 directory names; experiment entrypoints remain V9 and V10.
 
 ---
 
