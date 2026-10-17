@@ -37,4 +37,4 @@ Repository = "https://github.com/nutrifit-health/craving-engine"
 py-modules = ["mushroom_body", "hybrid_engine"]
 
 [tool.setuptools.packages.find]
-include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "research_v10*", "synthetic_benchmark*", "synthetic_data*"]
+include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "research_v10*", "research_v11*", "synthetic_benchmark*", "synthetic_data*"]

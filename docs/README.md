@@ -4,6 +4,8 @@
 
 | Document | What it answers |
 | --- | --- |
+| [V11 protocol](protocol-v11.md) | Compact contextual personalization vs. scalar and anatomical control |
+| [V11 results](results-v11.md) | Technical reproduction on the previously evaluated holdout (40 users), bootstrap and hypothesis tests |
 | [V10 protocol](protocol-v10.md) | LIF, local plasticity, matched controls and adaptation speed |
 | [V10 results](results-v10.md) | Author-example audit, method comparisons and reproducibility |
 | [V9 protocol](protocol-v9.md) | Hypothesis, inputs, fitting, causality, frozen thresholds and admission |

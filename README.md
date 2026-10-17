@@ -6,9 +6,7 @@
 
 Can one shared model learn from each person's experience without retraining a full model per user? Craving Engine investigates this architecture for predicting diet lapse events from nutrition, sleep, activity and behavioral context. A fixed shared representation produces a population forecast; separate personal memory updates when that user's feedback arrives.
 
-**Current stage: V10 completed; LIF and STDP did not establish an advantage over simple personal memory.** We tested 35 configurations, 8 frozen variants and 8 controlled scenarios across three new seeds. Ordinary memory also showed initial improvements after one or two responses following a regime change; a unique spike-based advantage was not established. [Full V10 report](docs/results-v10.md) · [Protocol](docs/protocol-v10.md).
-
-Standalone V9 was also reproduced on October 7, 2026: principal metrics for all six variants matched the archive exactly. Its anatomical candidate still failed admission. All findings concern synthetic data.
+**Current stage: V11 completed; neither compact contextual personalization over scalar nor anatomical MaleCNS over random control established an advantage.** On the previously evaluated synthetic holdout cohort (40 users, 7,200 decisions), scalar intercept adaptation ($b_u$) had a lower observed Brier than population GBDT ($\Delta \text{Brier} \approx -0.0039$), but adding 8 contextual weights $w_u$ yielded negligible gain ($-0.00012$, $p=0.33$), and the anatomical connectome showed no confirmed advantage over a matched random graph ($-0.00003$, $p=0.48$). [Full V11 report](docs/results-v11.md) · [Protocol V11](docs/protocol-v11.md). Previous iterations: [V10](docs/results-v10.md), [V9](docs/results-v9.md).
 
 ## Goal and success criteria
 
