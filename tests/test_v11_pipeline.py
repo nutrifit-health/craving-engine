@@ -15,7 +15,13 @@ from research_v11.encoders import CompactKCEncoder, CompactLinearEncoder
 from research_v11.gbdt import PopulationGBDTTrainer
 from research_v11.runner import run_v11_replay
 
-FAMILIES = ("population", "scalar", "compact_linear", "compact_kc_anatomical", "compact_kc_rewired")
+FAMILIES = (
+    "population",
+    "scalar",
+    "compact_linear",
+    "compact_kc_anatomical",
+    "compact_kc_rewired",
+)
 
 
 def records(split, count=32):
@@ -25,10 +31,21 @@ def records(split, count=32):
     for i in range(count):
         at = start + timedelta(days=i)
         event = f"{split}-{i}"
-        rows.append({"user_id": split, "event_id": event, "decision_at": at.isoformat(),
-                     "outcome": i % 2 if i % 5 else None, "confidence": 1.0,
-                     "feedback_at": (at + timedelta(hours=20 if i % 3 else 48)).isoformat() if i % 5 else None})
-        outcomes.append({"user_id": split, "event_id": event, "evaluation_outcome": i % 2})
+        rows.append(
+            {
+                "user_id": split,
+                "event_id": event,
+                "decision_at": at.isoformat(),
+                "outcome": i % 2 if i % 5 else None,
+                "confidence": 1.0,
+                "feedback_at": (at + timedelta(hours=20 if i % 3 else 48)).isoformat()
+                if i % 5
+                else None,
+            }
+        )
+        outcomes.append(
+            {"user_id": split, "event_id": event, "evaluation_outcome": i % 2}
+        )
     return rows, outcomes
 
 
@@ -38,7 +55,15 @@ def corpus(tmp_path):
     data = tmp_path / "data"
     data.mkdir()
     rng = np.random.default_rng(731)
-    schema = [{"name": f"x{i}", "unit": "1", "semantics": "Тестовый признак", "available_if": None} for i in range(10)]
+    schema = [
+        {
+            "name": f"x{i}",
+            "unit": "1",
+            "semantics": "Тестовый признак",
+            "available_if": None,
+        }
+        for i in range(10)
+    ]
     (data / "schema.json").write_text(json.dumps(schema))
     for index, split in enumerate(("training", "tuning", "calibration", "holdout")):
         np.save(data / f"{split}.X.npy", rng.normal(loc=index, size=(96, 10)))
@@ -48,15 +73,27 @@ def corpus(tmp_path):
             rows.extend(user_rows)
             outcomes.extend(user_outcomes)
         for suffix, values in (("records", rows), ("evaluation", outcomes)):
-            (data / f"{split}.{suffix}.jsonl").write_text("\n".join(json.dumps(r) for r in values))
+            (data / f"{split}.{suffix}.jsonl").write_text(
+                "\n".join(json.dumps(r) for r in values)
+            )
     graph = tmp_path / "graph.npz"
     rows = np.repeat(np.arange(128), 4)
     cols = np.concatenate([rng.choice(16, 4, replace=False) for _ in range(128)])
-    np.savez(graph, rows=rows, columns=cols, weights=np.ones(len(rows)), kc_ids=np.arange(128), pn_ids=np.arange(16), metadata=json.dumps({"purpose": "test"}))
+    np.savez(
+        graph,
+        rows=rows,
+        columns=cols,
+        weights=np.ones(len(rows)),
+        kc_ids=np.arange(128),
+        pn_ids=np.arange(16),
+        metadata=json.dumps({"purpose": "test"}),
+    )
     return data, graph
 
 
-def test_real_pipeline_training_isolation_and_immutability(corpus, tmp_path, monkeypatch):
+def test_real_pipeline_training_isolation_and_immutability(
+    corpus, tmp_path, monkeypatch
+):
     """Реальные fit вызываются только на training; оценка не переобучает и не меняет объекты."""
     data, graph = corpus
     X_train = np.load(data / "training.X.npy")
@@ -85,7 +122,12 @@ def test_real_pipeline_training_isolation_and_immutability(corpus, tmp_path, mon
     monkeypatch.setattr(experiment, "_read_jsonl", no_holdout_read)
     artifacts = tmp_path / "frozen"
     experiment.fit_and_freeze_v11(data, graph, artifacts)
-    assert sorted(calls) == ["CompactKCEncoder", "CompactKCEncoder", "CompactLinearEncoder", "PopulationGBDTTrainer"]
+    assert sorted(calls) == [
+        "CompactKCEncoder",
+        "CompactKCEncoder",
+        "CompactLinearEncoder",
+        "PopulationGBDTTrainer",
+    ]
     monkeypatch.setattr(np, "load", original_load)
     monkeypatch.setattr(experiment, "_read_jsonl", original_read)
 
@@ -132,14 +174,16 @@ def test_runner_future_outcomes_and_equal_time_boundary(family):
         row["evaluation_outcome"] = 1 - row["evaluation_outcome"]
     dim = 0 if family in ("population", "scalar") else 2
     z = np.ones((len(rows), dim)) if dim else None
-    before, _ = run_v11_replay(rows, outcomes, np.full(len(rows), .3), z, family, dim)
-    after, _ = run_v11_replay(altered, truth, np.full(len(rows), .3), z, family, dim)
+    before, _ = run_v11_replay(rows, outcomes, np.full(len(rows), 0.3), z, family, dim)
+    after, _ = run_v11_replay(altered, truth, np.full(len(rows), 0.3), z, family, dim)
     for first, second in zip(before[:3], after[:3], strict=True):
-        assert {k:v for k,v in first.items() if k != "evaluation_outcome"} == {k:v for k,v in second.items() if k != "evaluation_outcome"}
+        assert {k: v for k, v in first.items() if k != "evaluation_outcome"} == {
+            k: v for k, v in second.items() if k != "evaluation_outcome"
+        }
     if family != "population":
         assert before[3]["p_learning"] != after[3]["p_learning"]
     else:
-        assert all(r["p_final"] == .3 for r in after)
+        assert all(r["p_final"] == 0.3 for r in after)
     assert before[2]["feedbacks_processed"] == 1
     assert before[3]["feedbacks_processed"] == 3
 
@@ -157,13 +201,22 @@ def sealed(corpus, tmp_path):
     return artifacts, data
 
 
-@pytest.mark.parametrize("target", ["model", "config", "data", "snapshot", "source", "environment", "manifest"])
-def test_integrity_rejected_before_deserialization(sealed, tmp_path, monkeypatch, target):
+@pytest.mark.parametrize(
+    "target",
+    ["model", "config", "data", "snapshot", "source", "environment", "manifest"],
+)
+def test_integrity_rejected_before_deserialization(
+    sealed, tmp_path, monkeypatch, target
+):
     """Изменённые входы, окружение и исходники блокируются до загрузки моделей."""
     artifacts, data = sealed
     if target in ("model", "config", "data", "snapshot"):
-        paths = {"model":artifacts / "models/gbdt.pickle", "config":artifacts / "frozen_config.json",
-                 "data":data / "training.X.npy", "snapshot":artifacts / "source_snapshot/research_v11/memory.py"}
+        paths = {
+            "model": artifacts / "models/gbdt.pickle",
+            "config": artifacts / "frozen_config.json",
+            "data": data / "training.X.npy",
+            "snapshot": artifacts / "source_snapshot/research_v11/memory.py",
+        }
         paths[target].write_bytes(b"changed")
     elif target == "source":
         monkeypatch.setattr(provenance, "source_hashes", dict)
@@ -171,7 +224,11 @@ def test_integrity_rejected_before_deserialization(sealed, tmp_path, monkeypatch
         monkeypatch.setattr(provenance, "environment", dict)
     else:
         (artifacts / "freeze_manifest.json").write_text('{"format_version":1}')
-    monkeypatch.setattr(pickle, "load", lambda _: pytest.fail("Повреждённый комплект дошёл до десериализации"))
+    monkeypatch.setattr(
+        pickle,
+        "load",
+        lambda _: pytest.fail("Повреждённый комплект дошёл до десериализации"),
+    )
     with pytest.raises(ValueError):
         experiment.evaluate_frozen_v11(data, artifacts, tmp_path / "out")
 

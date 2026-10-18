@@ -15,7 +15,7 @@ from research_v11.types import MemoryConfigV11
 @pytest.mark.parametrize("config_type", ["default", "frozen"])
 def test_compact_memory_d0_exact_scalar_equivalence(config_type: str):
     """Проверяет численное совпадение прогнозов и состояния при d=0 со scalar из V8 на 60 шагах.
-    
+
     Включает пропуски ответов (30%) и нерегулярные задержки (от 2 до 48 часов),
     в том числе превышающие суточный шаг между решениями.
     """
@@ -75,9 +75,15 @@ def test_compact_memory_d0_exact_scalar_equivalence(config_type: str):
             mem_v11.observe(fb_id, fb_time, fb_outcome, fb_conf)
 
             # Проверка компонентов сразу после обновления
-            assert math.isclose(mem_v8.fast[0], mem_v11.b_fast, rel_tol=1e-12, abs_tol=1e-12)
-            assert math.isclose(mem_v8.slow[0], mem_v11.b_slow, rel_tol=1e-12, abs_tol=1e-12)
-            assert math.isclose(mem_v8.exposure[0], mem_v11.exposure, rel_tol=1e-12, abs_tol=1e-12)
+            assert math.isclose(
+                mem_v8.fast[0], mem_v11.b_fast, rel_tol=1e-12, abs_tol=1e-12
+            )
+            assert math.isclose(
+                mem_v8.slow[0], mem_v11.b_slow, rel_tol=1e-12, abs_tol=1e-12
+            )
+            assert math.isclose(
+                mem_v8.exposure[0], mem_v11.exposure, rel_tol=1e-12, abs_tol=1e-12
+            )
 
         p0 = float(rng.uniform(0.1, 0.6))
         event_id = f"ev_{step}"
@@ -87,17 +93,33 @@ def test_compact_memory_d0_exact_scalar_equivalence(config_type: str):
         snap_v11 = mem_v11.predict(event_id, t_decision, None, p0)
 
         # Проверка прогнозов с машинной точностью 1e-12
-        assert math.isclose(snap_v8.p_learning, snap_v11.p_learning, rel_tol=1e-12, abs_tol=1e-12)
-        assert math.isclose(snap_v8.p_candidate, snap_v11.p_candidate, rel_tol=1e-12, abs_tol=1e-12)
-        assert math.isclose(snap_v8.p_final, snap_v11.p_final, rel_tol=1e-12, abs_tol=1e-12)
+        assert math.isclose(
+            snap_v8.p_learning, snap_v11.p_learning, rel_tol=1e-12, abs_tol=1e-12
+        )
+        assert math.isclose(
+            snap_v8.p_candidate, snap_v11.p_candidate, rel_tol=1e-12, abs_tol=1e-12
+        )
+        assert math.isclose(
+            snap_v8.p_final, snap_v11.p_final, rel_tol=1e-12, abs_tol=1e-12
+        )
         assert math.isclose(snap_v8.gamma, snap_v11.gamma, rel_tol=1e-12, abs_tol=1e-12)
-        assert math.isclose(snap_v8.familiarity, snap_v11.familiarity, rel_tol=1e-12, abs_tol=1e-12)
-        assert math.isclose(snap_v8.residual, snap_v11.residual, rel_tol=1e-12, abs_tol=1e-12)
+        assert math.isclose(
+            snap_v8.familiarity, snap_v11.familiarity, rel_tol=1e-12, abs_tol=1e-12
+        )
+        assert math.isclose(
+            snap_v8.residual, snap_v11.residual, rel_tol=1e-12, abs_tol=1e-12
+        )
 
         # Проверка компонентов состояния
-        assert math.isclose(mem_v8.fast[0], mem_v11.b_fast, rel_tol=1e-12, abs_tol=1e-12)
-        assert math.isclose(mem_v8.slow[0], mem_v11.b_slow, rel_tol=1e-12, abs_tol=1e-12)
-        assert math.isclose(mem_v8.exposure[0], mem_v11.exposure, rel_tol=1e-12, abs_tol=1e-12)
+        assert math.isclose(
+            mem_v8.fast[0], mem_v11.b_fast, rel_tol=1e-12, abs_tol=1e-12
+        )
+        assert math.isclose(
+            mem_v8.slow[0], mem_v11.b_slow, rel_tol=1e-12, abs_tol=1e-12
+        )
+        assert math.isclose(
+            mem_v8.exposure[0], mem_v11.exposure, rel_tol=1e-12, abs_tol=1e-12
+        )
 
         # Задержка ответа: от 2 до 48 часов (в 70% случаев)
         if rng.random() < 0.70:
@@ -227,7 +249,9 @@ def test_compact_memory_gating_threshold_strict():
 
     # Теперь N_eff >= 12, кандидат демонстрирует выигрыш над p_pop
     snap_mature = mem.predict("obs_mature", base_t + timedelta(days=26), None, 0.20)
-    assert snap_mature.gamma > 0.0, "Гейт должен открыться при N_eff >= 12 и подтверждённом выигрыше"
+    assert snap_mature.gamma > 0.0, (
+        "Гейт должен открыться при N_eff >= 12 и подтверждённом выигрыше"
+    )
     assert snap_mature.p_final > snap_mature.p_population
 
 
@@ -249,14 +273,17 @@ def test_compact_memory_signed_coordinates_and_amplitudes():
 
     # При построчной нормализации z/||z|| веса обновились бы одинаково.
     # В линейной модели градиент пропорционален амплитуде z (10x больше).
-    assert math.isclose(mem_large.w_fast[0], 10.0 * mem_unit.w_fast[0], rel_tol=1e-5), \
+    assert math.isclose(mem_large.w_fast[0], 10.0 * mem_unit.w_fast[0], rel_tol=1e-5), (
         "Амплитуда координат должна влиять на величину градиентного обновления линейно"
+    )
 
     # Проверка знаков: отрицательная координата обновляет вес в противоположную сторону
     mem_neg = CompactMemoryV11(dimension=1, config=cfg)
     mem_neg.predict("e1", t0, np.array([-2.5]), 0.30)
     mem_neg.observe("e1", t0 + timedelta(hours=5), outcome=1, confidence=1.0)
-    assert mem_neg.w_fast[0] < 0.0, "Отрицательный z при положительной ошибке должен давать отрицательный w"
+    assert mem_neg.w_fast[0] < 0.0, (
+        "Отрицательный z при положительной ошибке должен давать отрицательный w"
+    )
 
 
 def test_no_future_feedback_leakage():

@@ -2,15 +2,19 @@
 
 [English](README.md) · [Русский](README.ru.md)
 
+**V13 completed:** 65 fewer false alerts and 8 additional true alerts across 14,400 synthetic decisions; precision rose from 74.90% to 76.48%. User-weighted recall did not consistently improve and macro FPR exceeded the 15% cap. No confirmation admission. [V13 results](docs/results-v13.md) · [Protocol (Russian)](docs/protocol-v13.ru.md) · [Reproduction (Russian)](docs/v13-execution.ru.md).
+
 **Active workspace:** continue research in this repository. Selected tools for new synthetic datasets now live in `synthetic_data/`; the previous private archive remains in NutriFit Git history. Standalone generation, the optional local encoder and archive independence were verified on October 16, 2026. [New datasets and optional backend integration](docs/synthetic-data.md).
 
 Can one shared model learn from each person's experience without retraining a full model per user? Craving Engine investigates this architecture for predicting diet lapse events from nutrition, sleep, activity and behavioral context. A fixed shared representation produces a population forecast; separate personal memory updates when that user's feedback arrives.
 
-**Current stage: V11 completed; neither compact contextual personalization over scalar nor anatomical MaleCNS over random control established an advantage.** On the previously evaluated synthetic holdout cohort (40 users, 7,200 decisions), scalar intercept adaptation ($b_u$) had a lower observed Brier than population GBDT ($\Delta \text{Brier} \approx -0.0039$), but adding 8 contextual weights $w_u$ yielded negligible gain ($-0.00012$, $p=0.33$), and the anatomical connectome showed no confirmed advantage over a matched random graph ($-0.00003$, $p=0.48$). [Full V11 report](docs/results-v11.md) · [Protocol V11](docs/protocol-v11.md). Previous iterations: [V10](docs/results-v10.md), [V9](docs/results-v9.md).
+**V12 repaired and reproduced:** exploratory search closed without established contextual benefit. The corrected tuned-scalar gain over frozen V11 is −0.000709 Brier; complete scalar state peaked at 10,304 bytes in the tested year-long stream. Full suite with both integrations: 112 passed, 7 skipped (external V10 author listing). Confirmation remains closed; no production deployment. [V12 results](docs/results-v12.md) · [Replay instructions](docs/v12-repair-replay.md).
 
 ## Goal and success criteria
 
 The long-term goal is useful advance warning of diet lapses with manageable false warnings and modest per-user state. The desired recall is about **94% of lapse events**, not 94% accuracy. This target has not been achieved together with an acceptable false warning burden. It is a research aspiration, not a validated product specification.
+
+For V13 alerts under the two-per-seven-days cap and current synthetic event frequency, even the arithmetic pooled-recall upper bound is 49.1%. The 94% aspiration cannot apply to this policy without changing the horizon, event definition or budget; see the [calculation and limitations](docs/results-v13.md).
 
 V9 asked a narrower question: can a population-trained mushroom body (MB) representation plus online personal memory outperform GBDT and a simple scalar personal correction enough to justify a fresh blind test? Admission required improvements in recall and Youden J, controlled FPR, no worse Brier, limited individual AUC degradation and better warning coverage at two warnings per rolling seven days. The [protocol](docs/protocol-v9.md) gives the fixed criteria.
 
@@ -101,6 +105,10 @@ Browse the [documentation index](docs/README.md) for all research and author mat
 
 | Path | Purpose |
 | --- | --- |
+| `research_v12/` | V11 diagnostics, run registry, 3 compact families (Hierarchical Ridge, Supervised Bottleneck, MoE), robustness stress tests, V12 packager |
+| `runs/v12-closure-20261017/` | Historical V12 bundle with known audit defects; not evidence of repaired replay |
+| `research_v11/` | V11 experiment, linear/KC encoders, GBDT and dual-channel memory |
+| `runs/v11-closure-20261016/` | Verified V11 closure bundle with models, forecasts and verification |
 | `research_v10/` | LIF, local plasticity, regime-change scenarios, author audit and reproducibility checks |
 | `results/v10/`, `results/v10-author-audit/` | Complete V10 results, predictions, hashes, checks and figures |
 | `research_v9/models.py`, `research_v9/types.py` | MB population fitting and fixed parameters |

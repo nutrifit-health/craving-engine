@@ -55,8 +55,12 @@ def test_holm_bonferroni_step_down():
     assert res_first_only["hypo_b"]["significant"] is False
 
     # 4. Независимость сопоставления от исходного порядка в списке
-    order_1 = holm_bonferroni_correction([("alpha", 0.015), ("beta", 0.060)], alpha=0.05)
-    order_2 = holm_bonferroni_correction([("beta", 0.060), ("alpha", 0.015)], alpha=0.05)
+    order_1 = holm_bonferroni_correction(
+        [("alpha", 0.015), ("beta", 0.060)], alpha=0.05
+    )
+    order_2 = holm_bonferroni_correction(
+        [("beta", 0.060), ("alpha", 0.015)], alpha=0.05
+    )
     assert order_1["alpha"] == order_2["alpha"]
     assert order_1["beta"] == order_2["beta"]
 
