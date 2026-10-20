@@ -1,0 +1,39 @@
+{
+  "schema": "craving-harness-run/v2",
+  "subscription_authorized": true,
+  "cli_bin": "agy",
+  "default_model": "gemini-3.8-flash-high",
+  "image": "REPLACE_WITH_LOCALLY_BUILT_RESEARCH_WORKER_SHA256",
+  "staging_root": ".research/staging",
+  "wall_seconds": 3600,
+  "call_timeout": 600,
+  "max_calls": 20,
+  "max_role_attempts": 4,
+  "max_solver_executions": 4,
+  "parallelism": 1,
+  "transport_attempts": 1,
+  "memory_mb": 2048,
+  "pids": 128,
+  "cpus": 2,
+  "tmpfs_mb": 512,
+  "roles": {
+    "solver": {
+      "model": "gemini-3.8-flash-high",
+      "steps": 50
+    },
+    "proposer": {
+      "model": "gemini-3.8-flash-high",
+      "steps": 50
+    },
+    "selector": {
+      "model": "gemini-3.8-flash-high",
+      "steps": 50
+    }
+  },
+  "quota": {
+    "max_retries": 0,
+    "initial_backoff_seconds": 15,
+    "max_backoff_seconds": 180
+  },
+  "transport": "official_agy_1.4.2_tools_sandbox"
+}
