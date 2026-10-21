@@ -37,7 +37,7 @@ Repository = "https://github.com/nutrifit-health/craving-engine"
 py-modules = ["mushroom_body", "hybrid_engine"]
 
 [tool.setuptools.packages.find]
-include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "research_v10*", "research_v11*", "research_v12*", "research_v13*", "synthetic_benchmark*", "synthetic_data*"]
+include = ["research_v6*", "research_v7*", "research_v8*", "research_v9*", "research_v10*", "research_v11*", "research_v12*", "research_v13*", "research_harness*", "synthetic_benchmark*", "synthetic_data*"]
 
 [tool.pytest.ini_options]
 norecursedirs = ["runs", "results", ".*", "dist", "build"]
@@ -50,3 +50,6 @@ exclude = [
     "dist",
     "build",
 ]
+
+[tool.setuptools.package-data]
+research_harness = ["operator-prompt.txt", "base_harness/*.md", "research_base_harness/*.md", "research-queue.example.json", "candidate/*.py", "run-profile.example.json", "worker.Dockerfile"]

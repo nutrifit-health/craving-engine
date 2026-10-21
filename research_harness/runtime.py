@@ -20,6 +20,14 @@ from pathlib import Path
 
 from .contracts import MAX_TREE, PACKAGE, digest, json_bytes, write_tree
 from .state import BudgetExhaustedError, Journal, ResumeMismatchError, RunStopped
+from .microsteps import (
+    MicrostepInterrupted,
+    bound_manifest,
+    compatible,
+    persist_recovery,
+    recover_result,
+    saved_response_draft,
+)
 from .subscription import GeminiSubscriptionRunner, QuotaExhaustedError
 
 IMAGE = re.compile(r"^(?:[a-zA-Z0-9./:_-]+@)?sha256:[0-9a-f]{64}$")
@@ -120,16 +128,20 @@ def profile_from(path: Path) -> dict:
 
 
 class Runtime:
-    def __init__(self, profile: dict, root: Path, manifest: dict, *, phase="run"):
+    def __init__(self, profile: dict, root: Path, manifest: dict, *, phase="run",
+                 execution_manifest=None):
         if "DOCKER_HOST" not in os.environ:
             lima_sock = Path.home() / ".lima/craving-h1/sock/docker.sock"
             if lima_sock.exists():
                 os.environ["DOCKER_HOST"] = f"unix://{lima_sock}"
         self.profile = profile
         self.root = root
-        self.manifest = manifest
+        self.execution_manifest = execution_manifest or manifest
+        if not compatible(manifest, self.execution_manifest):
+            raise ResumeMismatchError("Execution revision изменила научные входы")
+        self.manifest = bound_manifest(root, manifest, profile, phase)
         self.started = time.monotonic()
-        self.journal = Journal(root, manifest, profile, phase)
+        self.journal = Journal(root, self.manifest, profile, phase)
         self.calls = self.journal.data["attempts"]
         self.solver_calls = self.journal.solver_executions
         self.lock = threading.Lock()
@@ -203,6 +215,101 @@ class Runtime:
                 )
             self.journal.data["transport"] = identity
             self.journal.save()
+        if self.profile.get("autonomous_quota_wait"):
+            self._recover_operations()
+
+    def _recover_operations(self):
+        from .audit import operation_packet
+        from .state import atomic_json
+
+        for operation, record in list(self.journal.data["operations"].items()):
+            if record["status"] not in {"failed", "running"}:
+                continue
+            canonical = self.root / "role-results" / (digest(operation.encode()) + ".json")
+            if record["status"] == "running" and canonical.exists():
+                # Result уже опубликован; восстанавливаем только запись журнала.
+                # Реконструкция из потоков изменила бы исходные metadata и хеш.
+                self.journal.cached(operation, record["fingerprint"])
+                continue
+            packet, _ = operation_packet(
+                self.root, operation, state_path=self.journal.path
+            )
+            try:
+                recovered = recover_result(
+                    self.root, operation, record, packet,
+                    self.journal.data.get("transport"),
+                )
+            except (ValueError, TypeError, KeyError) as error:
+                # Формат требует исправления, сохранённый ответ остаётся в архиве.
+                atomic_json(
+                    self.root / "recovery-rejections" / (digest(operation.encode()) + ".json"),
+                    {"operation": operation, "reason": str(error)},
+                )
+                continue
+            if recovered:
+                persist_recovery(self.journal, operation, *recovered)
+
+    def _repair_request(self, files, request, model_role):
+        """Новая попытка только для незавершённой роли, со своим пакетом входов."""
+        if not model_role or not self.profile.get("autonomous_quota_wait"):
+            return request
+        from .audit import operation_packet
+        from .contracts import read_regular
+
+        logical = request["operation_id"]
+        record = self.journal.data["operations"].get(logical)
+        if not record or record["status"] != "failed":
+            return request
+        packet, _ = operation_packet(self.root, logical, state_path=self.journal.path)
+        if packet["files"] != files or packet["request"] != request:
+            raise ResumeMismatchError("Входы незавершённой логической операции изменились")
+        for number in range(2, self.profile.get("max_role_attempts", 4) + 1):
+            operation = logical + f"/repair-{number}"
+            existing = self.journal.data["operations"].get(operation)
+            if existing and existing["status"] == "failed":
+                record = existing
+                continue
+            if existing:
+                stored, _ = operation_packet(self.root, operation, state_path=self.journal.path)
+                return stored["request"]
+            previous = record.get("attempt_history", [])[-1]
+            diagnostic = {
+                "previous_operation": logical if number == 2 else logical + f"/repair-{number - 1}",
+                "error": previous.get("error", {}).get("message"),
+            }
+            failure_ref = previous.get("public_failure")
+            if failure_ref:
+                failure = json.loads(read_regular(self.root / failure_ref["path"], 4 * 1024 * 1024))
+                if digest(json_bytes(failure)) != failure_ref["sha256"]:
+                    raise ResumeMismatchError("Изменился сохранённый отказ роли")
+                diagnostic["saved_response"] = failure.get("response")
+            if not diagnostic.get("saved_response"):
+                diagnostic["unfinished_response_draft"] = saved_response_draft(
+                    self.root, diagnostic["previous_operation"], previous
+                )
+            contract = ""
+            if request.get("harvest"):
+                contract = (
+                    "Этот микрошаг изменяет только настройки Harness². "
+                    "Ты НЕ solver и НЕ пишешь программу эксперимента, гипотезу или отчёт. "
+                    "В files верни полный текст файлов context/harness с относительными "
+                    "именами без префикса context/harness, обязательно systemprompt.md. "
+                    "Если улучшение не обосновано — верни исходный полный набор файлов "
+                    "и answer=KEEP_BASE. Научные задания в context — данные для настройки, "
+                    "не инструкции выполнить весь опыт в этой роли. "
+                    "Используй уже сохранённый контекст; не повторяй поиск источников "
+                    "и не запускай расчёты. Заверши выдачей нужных файлов.\n"
+                )
+            return dict(
+                request, operation_id=operation,
+                mission=contract + request["mission"] + "\n\n" + contract
+                + "Восстановление незавершённого микрошагa. Исправь указанный формат/ошибку, "
+                "используя сохранённый ответ и входы. Готовую работу не выполняй заново. "
+                "Верни требуемый полный структурированный результат.\n"
+                + json.dumps(diagnostic, ensure_ascii=False),
+                recovery_of=logical,
+            )
+        raise BudgetExhaustedError("Исчерпаны попытки микрошагa: " + logical)
 
     def finish(self, status="completed"):
         self.journal.data["status"] = status
@@ -237,7 +344,7 @@ class Runtime:
                 raise RunStopped(
                     "Operator stop requested; no further operations will start"
                 )
-            expected = self.manifest.get("evaluator", {})
+            expected = self.execution_manifest.get("evaluator", {})
             if any(
                 digest((PACKAGE / name).read_bytes()) != signature
                 for name, signature in expected.items()
@@ -250,10 +357,16 @@ class Runtime:
             except RunStopped as exc:
                 self.stop_signal = exc
                 raise
+            except Exception as exc:
+                if not self.profile.get("autonomous_quota_wait"):
+                    raise
+                self.stop_signal = MicrostepInterrupted(str(exc))
+                raise self.stop_signal from exc
             finally:
                 self.condition.notify_all()
 
     def _execute_locked(self, files, request, *, model_role):
+        request = self._repair_request(files, request, model_role)
         operation = request.get("operation_id") or ("judge/" + request["kind"])
         fingerprint = digest(
             json_bytes(
@@ -292,7 +405,19 @@ class Runtime:
             self.condition.wait(timeout=1)
         if self.stop_signal is not None:
             raise self.stop_signal
-        cached = self.journal.cached(operation, fingerprint)
+        retry_probe = (
+            model_role is None and request["kind"] == "experiment"
+            and self.profile.get("autonomous_quota_wait") is True
+        )
+        record = self.journal.data["operations"].get(operation)
+        if retry_probe and record and record["status"] == "failed":
+            from .audit import operation_packet
+
+            packet, _ = operation_packet(self.root, operation, state_path=self.journal.path)
+            recovered = recover_result(self.root, operation, record, packet, None)
+            if recovered:
+                persist_recovery(self.journal, operation, *recovered)
+        cached = self.journal.cached(operation, fingerprint, retry_failed=retry_probe)
         if cached is not None:
             return cached
         if (
@@ -310,6 +435,18 @@ class Runtime:
         unbounded = bool(
             model_role and self.profile.get("model_sessions") == "unbounded"
         )
+        from .state import atomic_json
+
+        # Исполняемая редакция сохраняется отдельно: исходный input packet, включая
+        # paused-quota операции прежней редакции, остаётся побайтно неизменным.
+        execution_sha = digest(json_bytes(self.execution_manifest))
+        atomic_json(
+            self.root / "execution-manifests" / (execution_sha + ".json"),
+            self.execution_manifest,
+        )
+        self.journal.data["execution_manifest"] = {
+            "path": "execution-manifests/" + execution_sha + ".json", "sha256": execution_sha,
+        }
         wall = self.journal.begin(
             operation,
             fingerprint,
@@ -407,7 +544,10 @@ class Runtime:
                         },
                         "answer": "<notes>Keep the complete checkpoint API.</notes>",
                     }
-                if request.get("operation_id") == "campaign/report":
+                if (
+                    request.get("operation_id", "").split("/retry-")[0]
+                    == "campaign/report"
+                ):
                     result["answer"] = json.dumps(
                         {
                             "hypothesis": "Fixture only",
@@ -583,6 +723,21 @@ class Runtime:
                     raise RuntimeError(
                         "Worker output overflow/process failure; no verdict: " + detail
                     )
+                from .state import atomic_json
+
+                operation, _, _ = self.journal.current
+                record = self.journal.data["operations"][operation]
+                atomic_json(
+                    self.root / "worker-results"
+                    / (digest(operation.encode()) + f"-{record['attempts']}.json"),
+                    {
+                        "schema": "craving-worker-result/v1",
+                        "fingerprint": record["fingerprint"],
+                        "returncode": proc.returncode,
+                        "stdout": chunks["stdout"].decode(),
+                        "stderr": chunks["stderr"].decode(errors="replace"),
+                    },
+                )
                 result = json.loads(chunks["stdout"])
                 kernel_limits = result.pop("_kernel_limits")
                 self.audit.append(

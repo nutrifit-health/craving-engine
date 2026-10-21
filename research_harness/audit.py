@@ -50,10 +50,41 @@ def operation_packet(round_root, operation, *, state_path=None):
     return packet, record
 
 
-def index(campaign):
+def index(campaign, *, strict=True, states=None):
     rows = []
-    states = set(campaign.glob("tasks/H*/round-*/run-state.json"))
-    states.update((campaign / "autonomous").rglob("*-state.json"))
+    if states is None:
+        states = set(campaign.glob("tasks/H*/round-*/run-state.json"))
+        states.update((campaign / "autonomous").rglob("*-state.json"))
+    if not strict:
+        incidents = []
+        for state in sorted(states):
+            try:
+                rows.extend(index(campaign, states=[state])["rounds"])
+            except (
+                ResumeMismatchError,
+                OSError,
+                ValueError,
+                KeyError,
+                TypeError,
+            ) as error:
+                incidents.append(
+                    {
+                        "journal": str(state.relative_to(campaign)),
+                        "error": str(error),
+                        "type": type(error).__name__,
+                    }
+                )
+        return {
+            "schema": "craving-research-audit/v2",
+            "campaign": str(campaign),
+            "rounds": rows,
+            "incidents": incidents,
+            "journal_count": len(states),
+            "evidence_complete": bool(rows)
+            and not incidents
+            and all(r["evidence_complete"] for r in rows),
+            "policy": "История не изменяется; повреждённые записи не годятся для допуска",
+        }
     for state_path in sorted(states):
         round_root = state_path.parent
         state = read_journal(state_path)
@@ -103,7 +134,8 @@ def index(campaign):
                                 workspace / name
                             ) != entry["sha256"]:
                                 raise ResumeMismatchError(
-                                    "Intermediate workspace evidence changed"
+                                    "Intermediate workspace evidence changed: "
+                                    + str(workspace / name)
                                 )
                         workspace_evidence_complete = (
                             workspace_evidence_complete
@@ -209,12 +241,18 @@ def index(campaign):
     }
 
 
-def replay(round_root, operation, output):
+def replay(round_root, operation, output, *, execution_manifest=None):
     packet, record = operation_packet(round_root, operation)
     if packet["model_role"] is not None or packet["request"]["kind"] != "experiment":
         raise ValueError(
             "Replay supports only saved experiment probes, never LLM/model calls"
         )
+    if execution_manifest is not None:
+        from .microsteps import bound_manifest
+
+        original = bound_manifest(round_root, execution_manifest, packet["profile"], "run")
+        if original != packet["manifest"]:
+            raise ValueError("Replay revision не разрешена для исходного пакета")
     repo = PACKAGE.parent.resolve()
     output = output_directory(output, repo, repo / ".research/vendor/harness2")
     if (
@@ -223,9 +261,14 @@ def replay(round_root, operation, output):
         or output in round_root.parents
     ):
         raise ValueError("Replay output must not overlap its original round")
-    output.mkdir(parents=True, exist_ok=False)
+    if output.exists() and any(output.iterdir()) and not (output / "replay-state.json").exists():
+        raise ValueError("Replay output содержит несвязанные данные")
+    output.mkdir(parents=True, exist_ok=True)
     profile = dict(packet["profile"], stop_file=str(output / "STOP"))
-    runtime = Runtime(profile, output, packet["manifest"], phase="replay")
+    runtime = Runtime(
+        profile, output, packet["manifest"], phase="replay",
+        execution_manifest=execution_manifest,
+    )
     result = None
     failure = None
     try:
@@ -236,6 +279,15 @@ def replay(round_root, operation, output):
         raise
     finally:
         runtime.finish("inconclusive" if failure else "completed")
+        previous_report = output / "replay-report.json"
+        if previous_report.exists():
+            previous = previous_report.read_bytes()
+            from .state import archive_original_journal
+
+            snapshot = output / "report-history" / (digest(previous) + ".json")
+            snapshot.parent.mkdir(exist_ok=True)
+            if not snapshot.exists():
+                archive_original_journal(snapshot, previous)
         atomic_json(
             output / "replay-report.json",
             {
@@ -261,13 +313,20 @@ def main():
     subs = parser.add_subparsers(dest="command", required=True)
     inspect = subs.add_parser("index")
     inspect.add_argument("--campaign", type=Path, required=True)
+    inspect.add_argument("--collect-errors", action="store_true")
     repeat = subs.add_parser("replay")
     repeat.add_argument("--round", type=Path, required=True)
     repeat.add_argument("--operation", required=True)
     repeat.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "index":
-        print(json.dumps(index(args.campaign.resolve()), ensure_ascii=False, indent=2))
+        print(
+            json.dumps(
+                index(args.campaign.resolve(), strict=not args.collect_errors),
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
     else:
         replay(args.round.resolve(), args.operation, args.output)
 

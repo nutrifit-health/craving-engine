@@ -1,0 +1,96 @@
+#!/bin/bash
+# Project-owned operator entrypoint. No services or background jobs are installed.
+set -euo pipefail
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+upstream_dir="$repo_dir/.research/vendor/harness2"
+campaign_name="${CRAVING_CAMPAIGN:-campaign}"
+case "$campaign_name" in
+  ''|*[!a-zA-Z0-9_-]*) echo 'CRAVING_CAMPAIGN must be a simple name (letters, digits, _ or -).' >&2; exit 2 ;;
+esac
+campaign_dir="$repo_dir/.research/runs/$campaign_name"
+python_bin="$repo_dir/.venv/bin/python"
+command_name="${1:-help}"
+if [ "$#" -gt 0 ]; then shift; fi
+cd "$repo_dir"
+export PYTHONPATH="$repo_dir:$upstream_dir"
+export HARNESS2_SOURCE="$upstream_dir"
+export PATH="$repo_dir/.venv/bin:$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin:$PATH"
+export PYTHONDONTWRITEBYTECODE=1
+export DOCKER_HOST="${DOCKER_HOST:-unix://$HOME/.lima/craving-h1/sock/docker.sock}"
+case "$command_name" in
+  help|-h|--help)
+    cat <<'HELP'
+Craving Engine: один вход для Gemini и исследовательского цикла.
+  scripts/craving-research start               автономное исследование в фоне
+  scripts/craving-research start --foreground  автономное исследование в терминале
+  scripts/craving-research web                 запустить удобный веб-интерфейс (http://localhost:5400)
+  scripts/craving-research agent               legacy: открыть agy с операторским заданием
+  scripts/craving-research init                создать новую кампанию
+  scripts/craving-research status              показать сохранённый статус
+  scripts/craving-research run --task H2       запустить разрешённый этап
+  scripts/craving-research resume --task H2    продолжить сохранённый этап
+  scripts/craving-research stop                прервать активную модельную сессию с сохранением попытки
+  scripts/craving-research accept --task H1 --artifact-sha256 HASH --operator NAME --evidence TEXT
+  scripts/craving-research audit               проверить связи сохранённых артефактов
+  scripts/craving-research replay --round PATH --operation probe/ID --output .research/runs/replay-N
+  scripts/craving-research h1 plan|run|judge    инженерный H1 (run принимает --method plain|harness и --resume)
+CRAVING_CAMPAIGN=name выбирает .research/runs/name (по умолчанию campaign).
+start ждёт квоту бессрочно; STOP действует и во время ожидания. run/resume — legacy ручной маршрут.
+accept — только явный операторский допуск; он не заменяет человеческое решение Governance.
+Источники решений: Governance, ссылки в research_harness/operator-prompt.txt.
+HELP
+    exit 0 ;;
+esac
+if [ "$command_name" = web ]; then
+  echo "Запуск автономного веб-интерфейса Craving Engine..."
+  echo "Интерфейс доступен: http://localhost:5400"
+  repo_root="$(cd "$repo_dir/../.." && pwd -P)"
+  exec pnpm --filter @nutrifit/craving-web dev
+fi
+if [ ! -x "$python_bin" ]; then
+  echo 'Нет project-local .venv/bin/python; завершите настройку окружения проекта.' >&2
+  exit 2
+fi
+if [ ! -d "$upstream_dir/harness2" ]; then
+  echo 'Нет закреплённого .research/vendor/harness2; завершите перенос зависимостей.' >&2
+  exit 2
+fi
+case "$command_name" in
+  agent)
+    if [ "$#" -ne 0 ]; then echo 'agent не принимает дополнительные флаги.' >&2; exit 2; fi
+    exec "$python_bin" -m research_harness.operator ;;
+  start|status|stop)
+    exec "$python_bin" -m research_harness.autonomy "$command_name" "$@" \
+      --repo "$repo_dir" --upstream "$upstream_dir" \
+      --profile "$repo_dir/research_harness/run-profile.json" \
+      --queue "$repo_dir/research_harness/research-queue.example.json" --output "$campaign_dir" ;;
+  init|run|resume|accept)
+    if [ "$command_name" = run ] || [ "$command_name" = resume ]; then
+      mkdir -p "$repo_dir/.research/staging"
+    fi
+    exec "$python_bin" -m research_harness.queue "$command_name" "$@" \
+      --repo "$repo_dir" --upstream "$upstream_dir" \
+      --profile "$repo_dir/research_harness/run-profile.json" \
+      --queue "$repo_dir/research_harness/research-queue.example.json" --output "$campaign_dir" ;;
+  audit)
+    exec "$python_bin" -m research_harness.audit index "$@" --campaign "$campaign_dir" ;;
+  replay)
+    mkdir -p "$repo_dir/.research/staging"
+    exec "$python_bin" -m research_harness.audit replay "$@" ;;
+  h1)
+    h1_command="${1:-plan}"
+    if [ "$#" -gt 0 ]; then shift; fi
+    case "$h1_command" in
+      plan) exec "$python_bin" -m research_harness.cli plan "$@" ;;
+      run|judge)
+        mkdir -p "$repo_dir/.research/staging"
+        h1_path_arg=--output
+        if [ "$h1_command" = judge ]; then h1_path_arg=--run; fi
+        exec "$python_bin" -m research_harness.cli "$h1_command" "$@" \
+          --repo "$repo_dir" --upstream "$upstream_dir" \
+          --profile "$repo_dir/research_harness/run-profile.json" \
+          "$h1_path_arg" "$repo_dir/.research/runs/$campaign_name-h1" ;;
+      *) echo 'h1: ожидается plan, run или judge.' >&2; exit 2 ;;
+    esac ;;
+  *) echo 'Неизвестная команда. Используйте scripts/craving-research help.' >&2; exit 2 ;;
+esac

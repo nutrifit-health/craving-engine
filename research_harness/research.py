@@ -16,8 +16,17 @@ load_core_config()
 from harness2.core.spec import BenchPrompts
 
 from .adapter import CravingAdapter, safe_id
-from .contracts import PACKAGE, digest, json_bytes, read_regular, read_tree, write_tree
+from .contracts import (
+    PACKAGE,
+    digest,
+    json_bytes,
+    read_regular,
+    read_tree,
+    relative,
+    write_tree,
+)
 from .state import ResumeMismatchError, atomic_json
+from .microsteps import MicrostepInterrupted, repair_hypothesis
 from .subscription import redact
 
 EDITABLE = {"experiment/experiment.py", "report.md", "hypothesis.json"}
@@ -97,7 +106,38 @@ class ResearchAdapter(CravingAdapter):
     def base_harness(self):
         return self.research_base
 
+    def validate_tree(self, tree):
+        """Поверхность харнесса совпадает с закреплённым upstream-контрактом."""
+        from harness2.core.tree import is_allowed
+
+        if not isinstance(tree, dict) or len(json_bytes(tree)) > 512 * 1024:
+            raise ValueError("Harness превышает лимит")
+        for name, body in tree.items():
+            relative(name)
+            if not isinstance(body, str) or len(body.encode()) > 256 * 1024:
+                raise ValueError("Недопустимый harness file")
+            if not is_allowed(self.substrate.surface(), name) and name not in {
+                p for p, _ in self.substrate.surface().stubs
+            }:
+                raise ValueError("Research harness path вне поверхности: " + name)
+        if "systemprompt.md" not in tree:
+            raise ValueError("Harness должен сохранять systemprompt.md")
+
     def _launch(self, request, install):
+        try:
+            return self._launch_once(request, install)
+        except Exception as error:
+            if not self.runtime.profile.get("autonomous_quota_wait"):
+                raise
+            # Ошибка локального разбора/сохранения также не должна превращаться
+            # в dead rollout и запуск зависимой ветви upstream.
+            atomic_json(
+                self.root / "local-failures" / (digest(request.run_ids[0].encode()) + ".json"),
+                {"type": type(error).__name__, "message": redact(str(error))},
+            )
+            raise MicrostepInterrupted(str(error)) from error
+
+    def _launch_once(self, request, install):
         self._task(request.task_ref)
         if len(request.run_ids) != 1:
             raise ValueError("One research rollout at a time")
@@ -144,6 +184,17 @@ class ResearchAdapter(CravingAdapter):
                 raise ValueError(
                     "Research solver returned files outside editable allowlist"
                 )
+            stage_root = Path(self.task.get("declarations_root", self.root.parent))
+            declaration_path = stage_root / "declarations.json"
+            try:
+                source_hypothesis = json.loads(output["files"]["hypothesis.json"])
+            except ValueError:
+                source_hypothesis = None
+            output = repair_hypothesis(
+                self.runtime, output, run_id,
+                json.loads(read_regular(declaration_path, 2 * 1024 * 1024))
+                if declaration_path.exists() else {},
+            )
             hypothesis = json.loads(output["files"]["hypothesis.json"])
             required = {
                 "hypothesis",
@@ -170,8 +221,6 @@ class ResearchAdapter(CravingAdapter):
                 )
             # Preserve every declaration, including failed attempts. These are declared
             # scientific configurations; semantic compliance remains a human review duty.
-            stage_root = Path(self.task.get("declarations_root", self.root.parent))
-            declaration_path = stage_root / "declarations.json"
             with (stage_root / ".declarations.lock").open("a") as lock:
                 fcntl.flock(lock, fcntl.LOCK_EX)
                 declarations = (
@@ -199,7 +248,21 @@ class ResearchAdapter(CravingAdapter):
                     key in declarations
                     and declarations[key]["hypothesis"] != hypothesis
                 ):
-                    raise ResumeMismatchError("A previous preregistration changed")
+                    correction = output.get("_source_correction")
+                    if (
+                        declarations[key].get("admitted")
+                        or not correction
+                        or correction.get("accepted_shape") is not True
+                        or declarations[key]["hypothesis"] != source_hypothesis
+                    ):
+                        raise ResumeMismatchError("A previous preregistration changed")
+                    # Отказанная регистрация остаётся неизменной; исправленный
+                    # документ регистрируется отдельно до первого расчёта.
+                    key += "/source-correction/" + digest(json_bytes(hypothesis))
+                    if key in declarations and declarations[key]["hypothesis"] != hypothesis:
+                        raise ResumeMismatchError("A corrected preregistration changed")
+                    if key not in declarations and "probe/" + run_id in self.runtime.journal.data["operations"]:
+                        raise ResumeMismatchError("Cannot register a correction after probe")
                 declarations[key] = {"hypothesis": hypothesis, "admitted": True}
                 for field, cap in (
                     ("configurations", self.task["max_configurations"]),
@@ -245,12 +308,28 @@ class ResearchAdapter(CravingAdapter):
             )
             write_tree(staging, output["files"])
             (staging / "answer.md").write_text(output["answer"], encoding="utf-8")
+            scientific = {"status": "not_required"}
+            if self.task.get("measured_evidence_required"):
+                from .critic import machine_assessment
+
+                try:
+                    scientific = {
+                        "status": "complete_for_review",
+                        "assessment": machine_assessment(
+                            probe, self.task["id"], "inconclusive"
+                        ),
+                    }
+                except (ValueError, KeyError, TypeError) as error:
+                    scientific = {"status": "evidence_incomplete", "reason": str(error)}
             projection = {
                 "type": "text",
                 "part": {
                     "type": "text",
                     "text": "[DEVELOPMENT PROBE; NOT SCIENTIFIC ACCEPTANCE]\n"
-                    + json.dumps(redact(probe), ensure_ascii=False),
+                    + json.dumps(
+                        {"probe": redact(probe), "scientific_validation": scientific},
+                        ensure_ascii=False,
+                    ),
                 },
             }
             events = (

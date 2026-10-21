@@ -217,7 +217,7 @@ class Journal:
             fcntl.flock(self.lock, fcntl.LOCK_UN)
             self.lock.close()
 
-    def cached(self, operation, fingerprint):
+    def cached(self, operation, fingerprint, *, retry_failed=False):
         record = self.data["operations"].get(operation)
         if not record:
             if self.data["status"] == "paused_quota":
@@ -268,6 +268,13 @@ class Journal:
                 self.compact_history()
                 self.save()
             return result["result"]
+        if (
+            retry_failed and record["status"] == "failed"
+            and record["role"] == "experiment" and not output.exists()
+        ):
+            # Повторяется тот же незавершённый расчёт с прежним fingerprint;
+            # begin сохраняет историю и применяет общий бюджет попыток.
+            return None
         if record["status"] in ("completed", "running", "failed"):
             raise ResumeMismatchError(
                 "Исход операции неизвестен либо завершён с ошибкой; автоматический повтор запрещён: "

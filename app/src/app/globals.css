@@ -1,0 +1,56 @@
+@import '@nutrifit/web-ui/fonts.css';
+@import 'tailwindcss';
+@import '@heroui/styles';
+@import '@heroui-pro/react/css';
+@import '@nutrifit/web-ui/theme.css';
+@import 'katex/dist/katex.min.css';
+
+@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-primary-50: oklch(0.979 0.021 166.113);
+  --color-primary-100: oklch(0.95 0.052 163.051);
+  --color-primary-200: oklch(0.905 0.093 164.15);
+  --color-primary-300: oklch(0.845 0.143 164.978);
+  --color-primary-400: oklch(0.765 0.177 163.223);
+  --color-primary-500: oklch(0.596 0.145 163.225);
+  --color-primary-600: oklch(0.508 0.118 165.612);
+  --color-primary-700: oklch(0.432 0.095 166.913);
+  --color-primary-800: oklch(0.378 0.077 168.94);
+  --color-primary-900: oklch(0.32 0.06 170);
+  --color-primary-950: oklch(0.262 0.051 172.552);
+  --color-primary: var(--color-primary-600);
+}
+
+:root {
+  color-scheme: light dark;
+  --focus-ring: color-mix(in oklch, var(--color-primary-600) 45%, transparent);
+  --ring: var(--focus-ring);
+  --heroui-primary: 161 94% 30%;
+  --heroui-primary-foreground: 0 0% 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #09090b);
+}
+
+/* Полное удаление любых теней в шапке (navbar) по запросу пользователя */
+header,
+header *,
+[data-slot="navbar"],
+[data-slot="navbar"] * {
+  box-shadow: none !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+

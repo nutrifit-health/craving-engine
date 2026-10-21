@@ -138,7 +138,7 @@ def frozen_manifest(repo, up, plan, inputs, profile):
             p.relative_to(up).as_posix(): digest(p.read_bytes())
             for p in sorted((up / "harness2").rglob("*.py"))
         },
-        "research_head": git(repo, "rev-parse", "HEAD"),
+        "research_head": git(repo, "log", "-1", "--format=%H", "--", "."),
         "python_version": sys.version,
         "evaluator": evaluator_manifest(),
         "sources": {
@@ -431,6 +431,9 @@ def run_round(root, task, sources, profile, manifest, *, prior=None):
         else {},
     )
     runtime = Runtime(profile, root, round_manifest)
+    # Исходный manifest остаётся идентичностью опыта. Новое исполнение контроллера
+    # отдельно записывается в execution-manifests и receipt восстановления.
+    round_manifest = runtime.manifest
     adapter = ResearchAdapter(root, runtime, inputs, task, base=base)
     # Read a frozen prior library, write new experience into this round only.
     frozen_library = (
@@ -456,19 +459,26 @@ def run_round(root, task, sources, profile, manifest, *, prior=None):
     receipt = None
     try:
         runtime.prepare(model_access=True)
+        # Производные контексты upstream пересоздаются; предыдущие проходы
+        # сохраняются. Durable операции и rollouts остаются в том же round.
+        passes = root / "core-passes"
+        passes.mkdir(exist_ok=True)
+        core_root = passes / f"{len(list(passes.iterdir())) + 1:06d}"
+        core_root.mkdir()
+        atomic_json(root / "core-current.json", {"path": str(core_root.relative_to(root))})
         result = run_task(
             task["id"],
             1,
             adapter=adapter,
             prop=IsolatedProposer(adapter, "proposer"),
             selector_prop=IsolatedProposer(adapter, "selector"),
-            runs_root=root / "core",
+            runs_root=core_root,
             modes=("agg",),
             seed=None,
             library=library,
             tag="campaign",
         )
-        restore_execution_inventory(result, adapter, root / "core", tag="campaign")
+        restore_execution_inventory(result, adapter, core_root, tag="campaign")
         require_harness_stages(result, adapter)
         selection = result.selections["agg"]
         chosen = Path(selection["chosen_run_dir"]).resolve()
@@ -477,6 +487,27 @@ def run_round(root, task, sources, profile, manifest, *, prior=None):
         ):
             raise ValueError("Research selection outside supervisor rollouts")
         probe = load_json(chosen / "probe.json")
+        atomic_json(
+            root / "selection.json",
+            {
+                "schema": "craving-selected-operation/v1",
+                "rollout": chosen.relative_to(root).as_posix(),
+                "receipt_sha256": digest((chosen / "receipt.json").read_bytes()),
+                "operation": "probe/" + load_json(chosen / "receipt.json")["run_id"],
+            },
+        )
+        analysis = {"status": "not_required"}
+        if task.get("measured_evidence_required"):
+            from .critic import machine_assessment
+
+            try:
+                analysis = {
+                    "status": "complete_for_review",
+                    **machine_assessment(probe, task["id"], "inconclusive"),
+                }
+            except (ValueError, KeyError, TypeError) as error:
+                analysis = {"status": "evidence_incomplete", "reason": str(error)}
+        atomic_json(root / "scientific-analysis.json", analysis)
         report_input = dict(
             inputs,
             **{
@@ -484,79 +515,114 @@ def run_round(root, task, sources, profile, manifest, *, prior=None):
             },
         )
         report_input["selected/probe.json"] = json_bytes(probe).decode()
+        report_input["scientific-analysis.json"] = json_bytes(analysis).decode()
+        report_operation = None
+        for report_attempt in range(1, profile.get("max_role_attempts", 4) + 1):
+            operation = (
+                "campaign/report"
+                if report_attempt == 1
+                else f"campaign/report/retry-{report_attempt}"
+            )
+            record = runtime.journal.data["operations"].get(operation, {})
+            rejected = (
+                root / "report-rejections" / (digest(operation.encode()) + ".json")
+            )
+            if record.get("status") != "failed" and not rejected.exists():
+                report_operation = operation
+                break
+        if report_operation is None:
+            raise BudgetExhaustedError(
+                "Исчерпаны попытки отчёта; готовые расчёты сохранены"
+            )
         reflection = runtime.execute(
             report_input,
             {
                 "kind": "agent",
                 "role": "proposer",
-                "operation_id": "campaign/report",
-                "mission": "Write a grounded research report in Russian using only the supplied measured probe and program. Все отчеты, гипотезы, претензии и формулировки выводов должны быть написаны исключительно на русском языке для пользователя. In answer return a JSON object with hypothesis (string in Russian), next_hypothesis (string in Russian), decision (continue|request_review|blocked), finding_status (executed|evidence_incomplete|inconclusive|refuted|provisional_candidate), claims (list of {id,text,evidence:[relative paths]} covering every empirical claim in report, all claim texts must be in Russian), report (Markdown string fully written in Russian). Allowed evidence paths: probe.json and chosen/experiment/experiment.py and chosen/hypothesis.json. files must be {}. Preserve failed/negative findings and uncertainties. Never claim scientific acceptance, live-user benefit, new citations, or inspect confirmation. request_review means the independent evidence critic should assess criteria; it does not request a human interaction in autonomous mode. Otherwise propose the next bounded within-stage experiment.",
+                "operation_id": report_operation,
+                "mission": "Write a grounded research report in Russian using only the supplied measured probe and program. Все отчеты, гипотезы, претензии и формулировки выводов должны быть написаны исключительно на русском языке для пользователя. In answer return a JSON object directly (a JSON-encoded string is also accepted) with hypothesis (string in Russian), next_hypothesis (string in Russian), decision (continue|request_review|blocked), finding_status (executed|evidence_incomplete|inconclusive|refuted|provisional_candidate), claims (list of {id,text,evidence:[relative paths]} covering every empirical claim in report, all claim texts must be in Russian), report (Markdown string fully written in Russian). Allowed evidence paths: probe.json, scientific-analysis.json, chosen/experiment/experiment.py and chosen/hypothesis.json. files must be {}. Preserve failed/negative findings and uncertainties. Never claim scientific acceptance, live-user benefit, new citations, or inspect confirmation. request_review means the independent evidence critic should assess criteria; it does not request a human interaction in autonomous mode. Otherwise propose the next bounded within-stage experiment.",
             },
             model_role="proposer",
         )
-        hypothesis = json.loads(reflection["answer"])
-        if (
-            not isinstance(hypothesis, dict)
-            or set(hypothesis)
-            != {
-                "hypothesis",
-                "next_hypothesis",
-                "decision",
-                "finding_status",
-                "claims",
-                "report",
-            }
-            or hypothesis["decision"] not in {"continue", "request_review", "blocked"}
-            or hypothesis["finding_status"]
-            not in {
-                "executed",
-                "evidence_incomplete",
-                "inconclusive",
-                "refuted",
-                "provisional_candidate",
-            }
-            or any(
-                not isinstance(hypothesis[k], str) or not hypothesis[k].strip()
-                for k in hypothesis
-                if k != "claims"
-            )
-        ):
-            raise ValueError("Invalid campaign reflection schema")
-        (root / "research-report.md").write_text(
-            hypothesis.pop("report"), encoding="utf-8"
-        )
-        atomic_json(root / "hypothesis.json", hypothesis)
-        atomic_json(root / "probe.json", probe)
-        write_tree(root / "chosen", adapter.deliverable_files(chosen))
-        claims = hypothesis.pop("claims")
-        if not isinstance(claims, list) or not 1 <= len(claims) <= 64:
-            raise ValueError("Finite empirical claim/evidence mapping required")
-        allowed_evidence = {
-            "probe.json",
-            "chosen/experiment/experiment.py",
-            "chosen/hypothesis.json",
-        }
-        for claim in claims:
+        try:
+            hypothesis = json.loads(reflection["answer"])
             if (
-                not isinstance(claim, dict)
-                or set(claim) != {"id", "text", "evidence"}
-                or not isinstance(claim["id"], str)
-                or not isinstance(claim["text"], str)
-                or not isinstance(claim["evidence"], list)
-                or not claim["evidence"]
-                or not set(claim["evidence"]) <= allowed_evidence
+                not isinstance(hypothesis, dict)
+                or set(hypothesis)
+                != {
+                    "hypothesis",
+                    "next_hypothesis",
+                    "decision",
+                    "finding_status",
+                    "claims",
+                    "report",
+                }
+                or hypothesis["decision"]
+                not in {"continue", "request_review", "blocked"}
+                or hypothesis["finding_status"]
+                not in {
+                    "executed",
+                    "evidence_incomplete",
+                    "inconclusive",
+                    "refuted",
+                    "provisional_candidate",
+                }
+                or any(
+                    not isinstance(hypothesis[k], str) or not hypothesis[k].strip()
+                    for k in hypothesis
+                    if k != "claims"
+                )
             ):
-                raise ValueError("Invalid report claim evidence mapping")
-            claim["evidence"] = {
-                name: digest((root / name).read_bytes()) for name in claim["evidence"]
+                raise ValueError("Invalid campaign reflection schema")
+            (root / "research-report.md").write_text(
+                hypothesis.pop("report"), encoding="utf-8"
+            )
+            atomic_json(root / "hypothesis.json", hypothesis)
+            atomic_json(root / "probe.json", probe)
+            write_tree(root / "chosen", adapter.deliverable_files(chosen))
+            claims = hypothesis.pop("claims")
+            if not isinstance(claims, list) or not 1 <= len(claims) <= 64:
+                raise ValueError("Finite empirical claim/evidence mapping required")
+            allowed_evidence = {
+                "probe.json",
+                "scientific-analysis.json",
+                "chosen/experiment/experiment.py",
+                "chosen/hypothesis.json",
             }
-        atomic_json(root / "claims.json", claims)
-        atomic_json(root / "hypothesis.json", hypothesis)
+            for claim in claims:
+                if (
+                    not isinstance(claim, dict)
+                    or set(claim) != {"id", "text", "evidence"}
+                    or not isinstance(claim["id"], str)
+                    or not isinstance(claim["text"], str)
+                    or not isinstance(claim["evidence"], list)
+                    or not claim["evidence"]
+                    or not set(claim["evidence"]) <= allowed_evidence
+                ):
+                    raise ValueError("Invalid report claim evidence mapping")
+                claim["evidence"] = {
+                    name: digest((root / name).read_bytes())
+                    for name in claim["evidence"]
+                }
+            atomic_json(root / "claims.json", claims)
+            atomic_json(root / "hypothesis.json", hypothesis)
+        except (ValueError, TypeError, KeyError) as error:
+            atomic_json(
+                root
+                / "report-rejections"
+                / (digest(report_operation.encode()) + ".json"),
+                {
+                    "operation": report_operation,
+                    "answer_sha256": digest(reflection["answer"].encode()),
+                    "reason": str(error),
+                },
+            )
+            raise
         namespace = Namespace(
             adapter.spec.name, adapter.substrate.name, "agg", 1, None, "campaign"
         )
         harness = (
-            namespace.task_dir(root / "core", task["id"])
+            namespace.task_dir(core_root, task["id"])
             / "harnesses"
             / selection["chosen_label"]
         )
@@ -568,6 +634,8 @@ def run_round(root, task, sources, profile, manifest, *, prior=None):
             "hypothesis.json",
             "probe.json",
             "core-result.json",
+            "selection.json",
+            "scientific-analysis.json",
             "chosen/experiment/experiment.py",
             "chosen/report.md",
             "chosen/hypothesis.json",
@@ -582,6 +650,7 @@ def run_round(root, task, sources, profile, manifest, *, prior=None):
             "schema": "craving-research-round/v1",
             "task": task["id"],
             "manifest_sha256": digest(json_bytes(round_manifest)),
+            "execution_manifest_sha256": digest(json_bytes(runtime.execution_manifest)),
             "decision": hypothesis["decision"],
             "execution_complete": probe.get("execution_complete") is True,
             "scientific_acceptance": "manual_required",

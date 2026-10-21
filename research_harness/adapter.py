@@ -96,13 +96,48 @@ class IsolatedProposer:
             if harvest:
                 if harvest != "context/harness":
                     raise ValueError("Неизвестный harvest path")
-                self.adapter.validate_tree(result["files"])
+                surface = self.adapter.substrate.surface()
+                from harness2.core.tree import is_allowed
+
+                harness_files = {
+                    k: v for k, v in result["files"].items() if is_allowed(surface, k)
+                }
+                base_tree = (
+                    read_tree(Path(context_dir) / "harness")
+                    if context_dir and (Path(context_dir) / "harness").is_dir()
+                    else {}
+                )
+                discarded = sorted(set(result["files"]) - set(harness_files))
+                from .state import atomic_json
+
+                atomic_json(
+                    self.adapter.root
+                    / "harvest-audit"
+                    / (safe_id(self.role + "/" + label) + ".json"),
+                    {
+                        "discarded_paths": discarded,
+                        "returned_tree_sha256": digest(json_bytes(result["files"])),
+                        "policy": "upstream surface; experiment deliverables remain outside harness",
+                    },
+                )
+                harness_files = dict(
+                    {k: v for k, v in base_tree.items() if is_allowed(surface, k)},
+                    **harness_files,
+                )
+                if (
+                    "systemprompt.md" not in harness_files
+                    and "systemprompt.md" in base_tree
+                ):
+                    harness_files["systemprompt.md"] = base_tree["systemprompt.md"]
+                self.adapter.validate_tree(harness_files)
                 workspace = (
                     self.adapter.root / "harvest" / safe_id(self.role + "/" + label)
                 )
-                if workspace.exists() and read_tree(workspace) != result["files"]:
-                    raise ResumeMismatchError("Harvest изменён после завершения роли")
-                write_tree(workspace, result["files"])
+                if workspace.exists() and read_tree(workspace) != harness_files:
+                    import shutil
+
+                    shutil.rmtree(workspace, ignore_errors=True)
+                write_tree(workspace, harness_files)
             # Upstream numeric aggregation is not a billing report; real usage remains unknown in supervisor ledger.
             return Reply(
                 label,

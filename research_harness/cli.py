@@ -75,7 +75,7 @@ def manifest(repo: Path, upstream_root: Path, profile: dict) -> dict:
         "schema": "craving-harness-manifest/v1",
         "protocol": PROTOCOL,
         "research_baseline": RESEARCH_COMMIT,
-        "research_head": git(repo, "rev-parse", "HEAD"),
+        "research_head": git(repo, "log", "-1", "--format=%H", "--", "."),
         "upstream": UPSTREAM_COMMIT,
         "sources": source_manifest(repo),
         "evaluator": evaluator_manifest(),
